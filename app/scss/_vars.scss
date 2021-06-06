@@ -1,0 +1,32 @@
+// === MIXIN ===
+// === FONT-FAMILY ==
+@mixin Lato {
+    font-family: 'Lato', sans-serif;
+}
+
+@mixin Montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+// === ANIMATION ===
+$transition: 0.3s;
+// === FONT-WEIGHT ===
+$fw-regular: 400;
+$fw-Semi-bold: 600;
+$fw-bold: 700;
+$fw-heavy: 900;
+// === COLOR ===
+$color-primary-50: #275553;
+$color-primary-100: #F47648;
+$color-primary-200: #FFFFFF;
+$color-primary-300: #212121;
+$color-primary-400: #5A5A5A;
+$color-primary-500: #BABABA;
+// === FONT-SIZE ===
+$fs-x-small: 14px;
+$fs-xs: 16px;
+$fs-s: 18px;
+$fs-m: 24px;
+$fs-l: 40px;
+$fs-xxl: 56px;
+$fs-xxl-big: 64px;

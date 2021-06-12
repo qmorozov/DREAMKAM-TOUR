@@ -76,4 +76,59 @@ body {
     }
 }
 
+.title__block {
+    display: flex;
+    // &-decor {
+    //     margin-top: 5px;
+    //     width: 32px;
+    //     height: 32px;
+    //     border: 3px solid #6C6C6C;
+    //     border-radius: 100%;
+    //     position: relative;
+    //     &::before {
+    //         content: "";
+    //         position: absolute;
+    //         top: 50%;
+    //         left: 50%;
+    //         transform: translate(-50%, -50%);
+    //         border-radius: 100%;
+    //         width: 16px;
+    //         height: 16px;
+    //         background-color: $color-primary-100;
+    //     }
+    // }
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        border: 3px solid #6c6c6c;
+        border-radius: 100%;
+        left: -50px;
+        top: 8px;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background-color: $color-primary-100;
+        border-radius: 100%;
+        left: -39px;
+        top: 19px
+    }
+    &-text {
+        @include Montserrat;
+        font-weight: $fw-bold;
+        font-size: 40px;
+        line-height: 50px;
+        color: $color-primary-200;
+        margin-bottom: 48px;
+        span {
+            color: $color-primary-100;
+        }
+    }
+}
+
 @import '_media';

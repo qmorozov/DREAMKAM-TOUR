@@ -413,15 +413,16 @@
         left: -9%;
         z-index: 1;
     }
-    // &::before {
-    //     content: "";
-    //     position: absolute;
-    //     bottom: 0;
-    //     right: 0;
-    //     background: url(../images/default/gull.png) no-repeat;
-    //     width: 373px;
-    //     height: 315px;
-    // }
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -9%;
+        right: 9%;
+        background: url(../images/default/gull.png) no-repeat;
+        width: 373px;
+        height: 315px;
+        z-index: 2;
+    }
     &-day-content {
         .title-block {
             max-width: 533px;
@@ -435,5 +436,74 @@
     }
 }
 
+.fifth-sixth__wrapper {
+    height: 1505px;
+    padding: 124px 0px 90px;
+    background: url(../images/default/fifth-sixth-bg.jpg) round;
+    background-size: contain;
+    position: relative;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 0;
+    }
+    &::before {
+        background-image: url(../images/default/fifth-top.png);
+        background-position: top center;
+        top: -1px;
+    }
+    &::after {
+        background-image: url(../images/default/fifth-bottom.png);
+        background-position: bottom center;
+        bottom: 0;
+    }
+}
+
 // === FIFTH ===
+.fifth {
+    &-day-content {
+        z-index: 2;
+        max-width: 461px;
+        .day__content-text {
+            color: $color-primary-200;
+        }
+    }
+    .day__wrapper {
+        justify-content: space-between;
+    }
+    .slider__button-next,
+    .slider__button-prev {
+        border-color: $color-primary-200;
+        path {
+            fill: $color-primary-200;
+        }
+    }
+    .day__slider {
+        z-index: 2;
+    }
+}
+
+// === SIXTH ===
+.sixth {
+    &-day-content {
+        z-index: 2;
+        max-width: 506px;
+        .day__content-text {
+            color: $color-primary-200;
+        }
+    }
+    .day__wrapper {
+        justify-content: space-between;
+        align-items: center
+    }
+    .day__slider {
+        z-index: 2;
+    }
+}
+
 @import '_media';

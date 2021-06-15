@@ -3,17 +3,17 @@
 @import '_fonts';
 // === HEADER ===
 .header {
-    height: 100vh;
     background: url(../images/upload/bg.jpg) top center no-repeat;
     background-size: cover;
     overflow: hidden;
+    height: 100vh;
 }
 
 .header__top {
-    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 70px;
     &-menu {
         margin-left: auto;
     }
@@ -23,34 +23,31 @@
 }
 
 // === MENU ===
-.menu {
-    &-list {
-        display: flex;
-        &__item {
-            line-height: 19px;
-            transition: all $transition;
-            padding: 10px;
-            position: relative;
-            &::before {
-                content: "";
-                position: absolute;
-                width: 0%;
-                height: 2px;
-                background-color: $color-primary-100;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                transition: all $transition;
-            }
-            &:hover {
-                &::before {
-                    width: 100%;
-                }
-            }
-            &+& {
-                margin-left: 46px;
-            }
-        }
+.menu__list {
+    display: flex;
+}
+
+.menu__list-item {
+    position: relative;
+    padding: 10px;
+    line-height: 19px;
+    transition: all $transition;
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 0%;
+        height: 2px;
+        background-color: $color-primary-100;
+        transition: all $transition;
+    }
+    &:hover::before {
+        width: 100%;
+    }
+    &+& {
+        margin-left: 46px;
     }
 }
 
@@ -60,14 +57,14 @@
 }
 
 .header__info {
-    margin-top: 30px;
+    position: relative;
     height: 80vh;
     max-width: 616px;
-    position: relative;
+    margin-top: 53px;
     color: $color-primary-200;
     &-title {
         @include Montserrat;
-        font-weight: 900;
+        font-weight: $fw-heavy;
         font-size: $fs-xxl;
         line-height: 64px;
         margin-bottom: 25px;
@@ -81,7 +78,7 @@
         margin-bottom: 40px;
         span {
             @include Montserrat;
-            font-weight: bold;
+            font-weight: $fw-bold;
             font-size: 30px;
             line-height: 56px;
         }
@@ -91,54 +88,53 @@
         line-height: 28px;
         margin-bottom: 14px;
     }
-    &-schedule {
-        $parent: &;
-        display: inline-flex;
+}
+
+.header__info-schedule {
+    $parent: &;
+    display: inline-flex;
+    align-items: center;
+    font-size: $fs-s;
+    text-decoration: underline;
+    transition: all $transition;
+    &-icon {
+        display: flex;
         align-items: center;
-        font-size: $fs-s;
-        line-height: 24px;
-        text-decoration: underline;
+        justify-content: center;
+        width: 64px;
+        height: 64px;
+        margin-left: 18px;
+        border-radius: 100%;
+        border: 1px solid $color-primary-200;
         transition: all $transition;
-        &-icon {
-            border-radius: 100%;
-            border: 1px solid $color-primary-200;
-            width: 64px;
-            height: 64px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-left: 18px;
+        path {
             transition: all $transition;
-            path {
-                transition: all $transition;
-            }
         }
-        &:hover {
-            color: $color-primary-100;
-            #{$parent}-icon {
-                border-color: $color-primary-100;
-                path {
-                    fill: $color-primary-100;
-                }
+    }
+    &:hover {
+        color: $color-primary-100;
+        #{$parent}-icon {
+            border-color: $color-primary-100;
+            path {
+                fill: $color-primary-100;
             }
         }
     }
-    &-social {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        &-item {
-            &+& {
-                margin-left: 25px;
-            }
-            path {
-                transition: all $transition;
-            }
-            &:hover {
-                path {
-                    fill: $color-primary-100
-                }
-            }
+}
+
+.header__info-social {
+    position: absolute;
+    bottom: 15%;
+    left: 0;
+    &-item {
+        &+& {
+            margin-left: 25px;
+        }
+        path {
+            transition: all $transition;
+        }
+        &:hover path {
+            fill: $color-primary-100
         }
     }
 }
@@ -150,133 +146,22 @@
 
 .header__slider {
     margin-top: auto;
-}
-
-.slider__container {
-    width: 50vw;
-    overflow: hidden;
-}
-
-.slider__wrapper {
-    display: flex;
-    padding-bottom: 60px;
-}
-
-.slider__item {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    ////
-    $parent: &;
-    flex-shrink: 0;
-    min-width: 211px;
-    height: 209px;
-    margin-top: auto;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: drop-shadow(0px 6px 14px rgba(0, 0, 0, 0.25));
-    transition: all $transition;
-    position: relative;
-    &::after {
-        content: "";
-        position: absolute;
-        background: $color-primary-300;
-        opacity: 0.3;
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        transition: all $transition;
-    }
-    &-active {
-        min-width: 269px;
-        height: 267px;
-        transition: all $transition;
-        position: relative;
-        &::before {
-            content: "";
-            position: absolute;
-            background: linear-gradient(2.71deg, rgba(0, 0, 0, 0.78) 1.78%, rgba(0, 0, 0, 0) 60.08%);
-            width: 100%;
-            height: 50%;
-            bottom: 0;
-            background-size: cover;
-            transition: all $transition;
-        }
-        &::after {
-            background: none;
-        }
-        #{$parent}-title {
-            bottom: 13px;
-            left: 12px;
-        }
-    }
-    &-info {
-        padding: 24px 16px;
-    }
-    &-title {
-        font-weight: $fw-bold;
-        font-size: $fs-x-small;
-        line-height: 24px;
-        color: $color-primary-200;
-        transition: all $transition;
-    }
-    &-text {
-        margin-top: 4px;
-        font-size: $fs-x-small;
-        line-height: 24px;
-        color: darken($color-primary-200, 10%);
-    }
-}
-
-.slider__button {
-    display: flex;
-}
-
-.slider__button-next,
-.slider__button-prev {
-    position: static;
-    cursor: pointer;
-    border: 1px solid $color-primary-200;
-    border-radius: 100%;
-    width: 64px;
-    height: 64px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all $transition;
-    path {
-        transition: all $transition;
-    }
-    &:hover {
-        border-color: $color-primary-100;
-        path {
-            fill: $color-primary-100;
-        }
-    }
-    &::after,
-    &::before {
-        font-size: 0;
-    }
-}
-
-.slider__button-next {
-    margin-left: 16px;
+    margin-bottom: 4.5%;
 }
 
 // === JOURNEY ===
 .journey {
-    padding-top: 120px;
     background: url(../images/default/journey-bg.png) no-repeat bottom center;
     background-size: contain;
+    padding-top: 120px;
     &__inner {
         position: relative;
         height: 1407px;
     }
     &__wrapper {
-        height: 100%;
         background-repeat: no-repeat;
-        background-position: /* top 45% */
-        center right -45%;
+        background-position: right -40% center;
+        height: 100%;
         overflow: hidden;
         z-index: 5;
     }
@@ -287,11 +172,11 @@
     font-size: 150px;
     font-weight: $fw-bold;
     color: $color-primary-400;
-    opacity: 0.3;
     position: absolute;
     top: 37%;
     right: -11%;
     z-index: 0;
+    opacity: 0.3;
 }
 
 .journey__top {
@@ -299,7 +184,7 @@
     margin-bottom: 27px;
     &-title {
         @include Montserrat;
-        font-weight: bold;
+        font-weight: $fw-bold;
         font-size: 48px;
         line-height: 56px;
     }
@@ -314,9 +199,8 @@
         margin-bottom: 35px;
     }
     &-text {
-        font-weight: normal;
+        font-weight: $fw-regular;
         font-size: $fs-xs;
-        line-height: 24px;
         opacity: 0.8;
     }
 }
@@ -337,13 +221,11 @@
     &-text {
         @include Montserrat;
         font-size: $fs-x-small;
-        line-height: 24px;
         opacity: .8;
     }
     &-title {
-        font-weight: bold;
+        font-weight: $fw-bold;
         font-size: $fs-xs;
-        line-height: 24px;
     }
 }
 
@@ -385,40 +267,25 @@
     }
 }
 
-// === ARRIVE ===
-.arrive {
-    background: url(../images/default/arrive-bg.jpg) no-repeat bottom center;
+// === FIRST ===
+.first {
     height: 889px;
-    background-size: cover;
     padding-top: 80px;
-    &__wrapper {
-        display: flex;
+    background: url(../images/default/arrive-bg.jpg) no-repeat bottom center;
+    background-size: cover;
+    &-day-content {
+        max-width: 461px;
     }
-}
-
-.arrive__content {
-    max-width: 458px;
-    &-text {
-        &+& {
-            margin-top: 35px;
-        }
-        line-height: 24px;
-        color: #ACACAC;
-        &_distinguish {
-            font-weight: $fw-Semi-bold;
-            line-height: 24px;
-            color: $color-primary-200;
-        }
-        &_underline {
-            border-bottom: 1px solid #ACACAC;
-        }
+    .day__wrapper {
+        justify-content: space-between;
+        align-items: center;
     }
 }
 
 // === SECOND ===
 .second {
-    padding-top: 80px;
     position: relative;
+    padding-top: 80px;
     background: url(../images/default/second-bg.png) no-repeat top right;
     &::before {
         content: "";
@@ -426,8 +293,8 @@
         background: url(../images/default/clouds.png) no-repeat bottom center;
         background-size: contain;
         width: 100%;
-        height: 82%;
-        top: -59%;
+        height: 31%;
+        top: -13%;
     }
 }
 
@@ -437,7 +304,7 @@
         max-width: 856px;
         margin-bottom: 48px;
         .title__block-text {
-            color: $color-primary-300;
+            color: inherit;
         }
     }
     &-text {
@@ -445,21 +312,22 @@
             margin-top: 30px;
         }
         max-width: 548px;
-        font-size: 16px;
-        line-height: 24px;
-        color: $color-primary-300;
     }
 }
 
 .second__content {
     display: flex;
-    &-slider {}
+    justify-content: space-between;
+    &-slider {
+        margin-top: auto;
+    }
     &-info {
         max-width: 478px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     &-text {
-        font-size: 16px;
-        line-height: 24px;
         &+& {
             margin-top: 30px;
         }
@@ -469,87 +337,103 @@
     }
 }
 
+.second__content-slider,
+.second__content-info {
+    width: 50%;
+}
+
 // === CARDS ===
 .cards {
     padding-top: 104px;
-    &__wrapper {}
     &__items {
         display: flex;
         justify-content: space-between;
     }
-    &__item {
-        margin-bottom: 32px;
-        &+& {
-            margin-left: 32px;
-        }
-        max-width: 288px;
-        background: #FFFFFF;
-        box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-        &-img {
-            img {
-                border-radius: 5px 5px 0px 0px;
-            }
-        }
-        &-info {
-            padding: 34px 24px 32px 24px;
-        }
-        &-title {
-            @include Montserrat;
-            font-weight: $fw-bold;
-            font-size: 18px;
-            line-height: 24px;
-            margin-bottom: 14px;
-        }
-        &-text {
-            font-size: 14px;
-            line-height: 24px;
-            color: $color-primary-400;
-        }
+}
+
+.cards__item {
+    margin-bottom: 32px;
+    &+& {
+        margin-left: 32px;
+    }
+    max-width: 288px;
+    background: $color-primary-200;
+    box-shadow: 0px 6px 14px rgba($color-secondary-100, 0.1);
+    border-radius: 5px;
+    transition: box-shadow .4s ease-in-out;
+    &-img img {
+        border-radius: 5px 5px 0px 0px;
+    }
+    &-info {
+        padding: 34px 24px 32px 24px;
+    }
+    &-title {
+        @include Montserrat;
+        font-weight: $fw-bold;
+        font-size: $fs-s;
+        margin-bottom: 14px;
+    }
+    &-text {
+        font-size: $fs-x-small;
+        color: $color-primary-400;
+    }
+    &:hover {
+        box-shadow: 0px 6px 20px rgba($color-secondary-100, 0.3);
     }
 }
 
 // === THIRD ===
+.third-day-content {
+    max-width: 505px;
+}
+
 .third {
-    min-height: 797px;
+    height: 796px;
     padding-top: 72px;
-    background: url(../images/default/third-bg.png) no-repeat bottom center;
+    background: url(../images/default/111.jpg) no-repeat bottom center;
     background-size: contain;
-    // position: relative;
+    margin-bottom: -3px;
+    .day__wrapper {
+        justify-content: space-between;
+    }
+}
+
+// === FOURTH ===
+.fourth {
+    padding: 165px 0px;
+    background: $color-secondary-100;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        background: url(../images/default/eagle.png) no-repeat;
+        width: 530px;
+        height: 299px;
+        top: -20%;
+        left: -9%;
+        z-index: 1;
+    }
     // &::before {
     //     content: "";
     //     position: absolute;
-    //     background: url(../images/default/eagle.png) no-repeat;
-    //     width: 100%;
-    //     height: 100%;
-    //     bottom: -12%;
-    //     left: -10%;
+    //     bottom: 0;
+    //     right: 0;
+    //     background: url(../images/default/gull.png) no-repeat;
+    //     width: 373px;
+    //     height: 315px;
     // }
-    &__wrapper {
-        display: flex;
-    }
-}
-
-.third__slider {
-    flex: 1;
-}
-
-.third__info {
-    flex: 2;
-    max-width: 505px;
-    &-title {
-        // margin-bottom: 48px;
-        .title__block-text {
-            color: $color-primary-300;
+    &-day-content {
+        .title-block {
+            max-width: 533px;
+        }
+        .day__content-text {
+            max-width: 461px;
         }
     }
-    &-text {
-        font-size: 16px;
-        line-height: 24px;
-        &+& {
-            margin-top: 33px;
-        }
+    .day__wrapper {
+        align-items: center;
     }
 }
 
+// === FIFTH ===
 @import '_media';

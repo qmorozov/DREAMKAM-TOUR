@@ -1,4 +1,16 @@
 // === MIXIN ===
+@mixin input {
+    padding: 13px 8px;
+    font-weight: $fw-regular;
+    font-size: 20px;
+    line-height: 24px;
+    border-bottom: 1px solid $color-primary-300;
+    color: $color-primary-300;
+    &::placeholder {
+        color: #999999;
+    }
+}
+
 // === FONT-FAMILY ==
 @mixin Lato {
     font-family: 'Lato', sans-serif;

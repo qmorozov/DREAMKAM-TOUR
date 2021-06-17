@@ -15,6 +15,19 @@ p {
     margin: 0px;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input,
+button {
+    background: none;
+    border: none;
+    outline: none;
+}
+
 ul,
 li {
     margin: 0;
@@ -54,6 +67,7 @@ body {
 }
 
 .btn {
+    cursor: pointer;
     position: relative;
     display: inline-block;
     padding: 11px 20px;
@@ -81,6 +95,15 @@ body {
         &::before {
             width: 100%;
         }
+    }
+    &_orange {
+        background: #F47648;
+        border: none;
+        color: $color-primary-200;
+        &::before {
+            border-radius: 5px;
+        }
+        &:hover {}
     }
 }
 

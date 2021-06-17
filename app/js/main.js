@@ -17,3 +17,25 @@ let swiper = new Swiper('.slider__container', {
         prevEl: '.slider__button-prev',
     },
 });
+
+const minus = document.querySelector('.btn-minus'),
+    plus = document.querySelector('.btn-plus'),
+    requestInput = document.querySelector('.request-input');
+
+minus.addEventListener('click', () => {
+    let total = requestInput.value;
+    total--;
+    requestInput.value = total;
+    if (requestInput.value < 1) {
+        requestInput.value = 1;
+    }
+});
+
+plus.addEventListener('click', () => {
+    let total = requestInput.value;
+    total++;
+    requestInput.value = total;
+    if (requestInput.value > 20) {
+        requestInput.value = 20;
+    }
+});

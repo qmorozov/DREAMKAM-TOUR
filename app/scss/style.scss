@@ -95,8 +95,6 @@
     display: inline-flex;
     align-items: center;
     font-size: $fs-s;
-    text-decoration: underline;
-    transition: all $transition;
     &-icon {
         display: flex;
         align-items: center;
@@ -118,6 +116,10 @@
             path {
                 fill: $color-primary-100;
             }
+        }
+        .text-underline_light {
+            transition: all $transition;
+            border-bottom-color: $color-primary-100;
         }
     }
 }
@@ -193,6 +195,7 @@
 .journey__info {
     max-width: 597px;
     margin-bottom: 64px;
+    opacity: 0.6;
     &-title {
         font-size: $fs-m;
         line-height: 32px;
@@ -251,19 +254,6 @@
     &-author {
         font-weight: $fw-medium;
         line-height: 19px;
-        span {
-            position: relative;
-            &::before {
-                content: "";
-                position: absolute;
-                background-color: $color-primary-200;
-                height: 1px;
-                width: 100%;
-                bottom: -2px;
-                left: 0;
-                right: 0;
-            }
-        }
     }
 }
 
@@ -330,9 +320,6 @@
     &-text {
         &+& {
             margin-top: 30px;
-        }
-        &_underline {
-            border-bottom: 1px solid $color-primary-300;
         }
     }
 }
@@ -490,6 +477,7 @@
 
 // === SIXTH ===
 .sixth {
+    padding-top: 90px;
     &-day-content {
         z-index: 2;
         max-width: 506px;
@@ -503,6 +491,75 @@
     }
     .day__slider {
         z-index: 2;
+    }
+}
+
+// === SEVENTH ===
+.seventh {
+    padding-top: 116px;
+    padding-bottom: 57px;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        background: url(../images/default/clouds.png) no-repeat bottom center;
+        background-size: cover;
+        width: 100%;
+        height: 36%;
+        top: -13%;
+    }
+    &__wrapper {}
+    &__top-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__content {
+        &-title {
+            max-width: 708px;
+            .title__block-text {
+                color: #212121;
+            }
+        }
+        &-text {
+            max-width: 548px;
+            &+& {
+                margin-top: 35px;
+            }
+        }
+    }
+    &__photo {}
+}
+
+.seventh__information {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 48px;
+    .slider_left-content {
+        width: 50vw;
+    }
+}
+
+.seventh__info {
+    max-width: 481px;
+    &-text {
+        margin-bottom: 48px;
+        color: $color-secondary-200;
+    }
+}
+
+// === EIGHTH ===
+.eighth {
+    background: url(../images/default/eighth-bg.png) no-repeat top center;
+    background-size: cover;
+    height: 718px;
+    position: relative;
+    &-wrapper {}
+    &-day-content {
+        position: absolute;
+        bottom: 16%;
+        right: 3%;
+        max-width: 504px
     }
 }
 

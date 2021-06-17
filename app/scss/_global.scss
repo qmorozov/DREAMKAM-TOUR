@@ -397,6 +397,7 @@ body {
 }
 
 .extra__item {
+    $parent: &;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -420,6 +421,13 @@ body {
         max-width: 247px;
         margin-right: 31px;
         opacity: 0.7;
+    }
+    &:hover {
+        #{$parent}-title,
+        #{$parent}-text {
+            transition: all $transition;
+            color: $color-primary-100;
+        }
     }
 }
 
@@ -457,10 +465,77 @@ body {
 
 .text-underline {
     &_dark {
+        transition: all $transition;
         border-bottom: 1px solid$color-primary-300;
     }
     &_light {
-        border-bottom: 1px solid $color-primary-200;
+        transition: all $transition;
+        border-bottom: 1px solid $color-primary-500;
+    }
+}
+
+.action {
+    $parent: &;
+    display: inline-flex;
+    align-items: center;
+    font-size: $fs-s;
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 64px;
+        height: 64px;
+        margin-left: 18px;
+        border-radius: 100%;
+        border: 1px solid $color-primary-200;
+        transition: all $transition;
+        path {
+            transition: all $transition;
+        }
+    }
+    &:hover {
+        .action__text {
+            color: $color-primary-100;
+        }
+        #{$parent}__icon {
+            border-color: $color-primary-100;
+            path {
+                fill: $color-primary-100;
+            }
+        }
+        .text-underline_light,
+        .text-underline_dark {
+            border-bottom-color: $color-primary-100;
+            border-bottom-color: $color-primary-100;
+        }
+    }
+}
+
+.action_light {
+    .action {
+        &__text {
+            color: $color-primary-200;
+        }
+        &__icon {
+            border: 1px solid $color-primary-200;
+            path {
+                fill: $color-primary-200;
+            }
+        }
+    }
+}
+
+.action_dark {
+    .action {
+        &__text {
+            color: $color-primary-300;
+        }
+        &__icon {
+            border: 1px solid $color-primary-300;
+            path {
+                fill: $color-primary-300;
+            }
+        }
     }
 }
 

@@ -90,40 +90,6 @@
     }
 }
 
-.header__info-schedule {
-    $parent: &;
-    display: inline-flex;
-    align-items: center;
-    font-size: $fs-s;
-    &-icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 64px;
-        height: 64px;
-        margin-left: 18px;
-        border-radius: 100%;
-        border: 1px solid $color-primary-200;
-        transition: all $transition;
-        path {
-            transition: all $transition;
-        }
-    }
-    &:hover {
-        color: $color-primary-100;
-        #{$parent}-icon {
-            border-color: $color-primary-100;
-            path {
-                fill: $color-primary-100;
-            }
-        }
-        .text-underline_light {
-            transition: all $transition;
-            border-bottom-color: $color-primary-100;
-        }
-    }
-}
-
 .header__info-social {
     position: absolute;
     bottom: 15%;
@@ -505,8 +471,8 @@
         background: url(../images/default/clouds.png) no-repeat bottom center;
         background-size: cover;
         width: 100%;
-        height: 36%;
-        top: -13%;
+        height: 23%;
+        top: -9%;
     }
     &__wrapper {}
     &__top-content {
@@ -560,6 +526,140 @@
         bottom: 16%;
         right: 3%;
         max-width: 504px
+    }
+}
+
+// === PRICE ===
+.price {
+    padding-top: 120px;
+    &-wrapper {
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 90%;
+            height: 4px;
+            background-color: $color-primary-300;
+            bottom: 0;
+            left: 0;
+        }
+    }
+}
+
+.price-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 56px;
+    &__content {}
+    &__title {
+        @include Montserrat;
+        font-weight: bold;
+        font-size: $fs-xxl-big;
+        line-height: 72px;
+        color: $color-primary-300;
+        margin-bottom: 76px;
+    }
+    .extra__item {
+        padding: 47px 0px;
+        &-title {
+            font-weight: $fw-regular;
+            font-size: 20px;
+        }
+        &-text {
+            font-weight: $fw-bold;
+            font-size: $fs-m;
+            color: $color-secondary-100;
+            opacity: 1;
+        }
+    }
+}
+
+.price-top__link-items {
+    margin-right: 79px;
+    .action {
+        margin-top: 90px;
+    }
+}
+
+.price-top__link-item {
+    font-size: $fs-s;
+    color: $color-primary-100;
+    &+& {
+        margin-top: 24px;
+    }
+    .text-underline_dark {
+        border-bottom-color: $color-primary-100;
+    }
+    &:hover {
+        color: $color-primary-300;
+        .text-underline_dark {
+            border-bottom-color: $color-primary-300;
+        }
+    }
+}
+
+.price__items {
+    display: flex;
+    padding-bottom: 134px;
+}
+
+.price-item {
+    max-width: 350px;
+    &+& {
+        margin-left: 80px;
+    }
+    &__title {
+        position: relative;
+        margin-bottom: 20px;
+        padding-left: 35px;
+        font-weight: $fw-bold;
+        font-size: $fs-m;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }
+    &__list-text {
+        position: relative;
+        padding-left: 14px;
+        color: $color-secondary-200;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            bottom: 50%;
+            transform: translate(-50%, -50%);
+            width: 6px;
+            height: 6px;
+            border-radius: 100%;
+            background-color: $color-secondary-300;
+        }
+        &+& {
+            margin-top: 16px;
+        }
+    }
+}
+
+.price-item_green {
+    .price-item__title {
+        color: #275553;
+        &:before {
+            background: url(../images/icon/tick.svg) no-repeat;
+        }
+    }
+}
+
+.price-item_black {
+    .price-item__title::before {
+        background: url(../images/icon/money.svg) no-repeat;
     }
 }
 

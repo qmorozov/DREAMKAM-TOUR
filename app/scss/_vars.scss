@@ -3,12 +3,18 @@
     padding: 13px 8px;
     font-weight: $fw-regular;
     font-size: 20px;
-    line-height: 24px;
     border-bottom: 1px solid $color-primary-300;
     color: $color-primary-300;
     &::placeholder {
         color: #999999;
     }
+}
+
+@mixin title {
+    @include Montserrat;
+    font-weight: $fw-bold;
+    font-size: $fs-xxl-big;
+    line-height: 72px;
 }
 
 // === FONT-FAMILY ==
@@ -40,6 +46,7 @@ $color-secondary-50: #ACACAC;
 $color-secondary-100:#000000;
 $color-secondary-200:#313131;
 $color-secondary-300:#D3E7E3;
+$color-secondary-400:#363636;
 // === FONT-SIZE ===
 $fs-x-small: 14px;
 $fs-xs: 16px;

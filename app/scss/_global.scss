@@ -21,6 +21,10 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
 input,
 button {
     background: none;
@@ -55,9 +59,9 @@ h6 {
 
 body {
     @include Lato;
-    font-size: $fs-xs;
+    font-size: $fs-xs; // 16
     line-height: 24px;
-    color: $color-primary-300;
+    color: $color-primary-300; // 212121
 }
 
 .section-container {
@@ -97,7 +101,7 @@ body {
         }
     }
     &_orange {
-        background: #F47648;
+        background: $color-primary-100;
         border: none;
         color: $color-primary-200;
         &::before {

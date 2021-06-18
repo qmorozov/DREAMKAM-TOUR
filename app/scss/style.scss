@@ -552,10 +552,7 @@
     align-items: flex-end;
     margin-bottom: 56px;
     &__title {
-        @include Montserrat;
-        font-weight: $fw-bold;
-        font-size: $fs-xxl-big;
-        line-height: 72px;
+        @include title;
         color: $color-primary-300;
         margin-bottom: 76px;
     }
@@ -756,6 +753,7 @@
     &-item {
         display: flex;
         align-items: center;
+        cursor: pointer;
         &+& {
             margin-top: 35px;
         }
@@ -811,6 +809,7 @@
         padding-left: 0px;
         &::-webkit-calendar-picker-indicator {
             background: url(../images/icon/date.svg) no-repeat;
+            cursor: pointer;
         }
     }
 }
@@ -868,6 +867,280 @@
     }
     &__btn {
         margin-left: 23px;
+    }
+}
+
+// === ABOUT ===
+.about {
+    padding: 120px 0px 113px;
+}
+
+.about-top {
+    margin-bottom: 79px;
+    &__title {
+        @include title;
+        margin-bottom: 59px;
+        max-width: 960px;
+    }
+    &__text {
+        font-size: 16px;
+        line-height: 24px;
+        opacity: 0.8;
+        max-width: 511px;
+    }
+}
+
+.about-slider {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 60px;
+}
+
+.about-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-item {
+    &__img {
+        width: 352px;
+        height: 466px;
+    }
+    &__info {
+        display: flex;
+        font-size: $fs-s;
+        margin-top: 24px;
+    }
+    &__name {
+        font-weight: $fw-Semi-bold;
+        margin-right: 5px;
+    }
+    &__instagram {
+        color: $color-primary-100;
+    }
+}
+
+.about-button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    &__next {
+        margin-left: 16px;
+    }
+    &__prev,
+    &__next {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $color-primary-300;
+        border-radius: 100%;
+        width: 38px;
+        height: 38px;
+        transition: all $transition;
+        path {
+            transition: all $transition;
+            fill: $color-primary-300;
+        }
+        &:hover {
+            border-color: $color-primary-100;
+            path {
+                fill: $color-primary-100;
+            }
+        }
+    }
+}
+
+// === FOOTER ===
+.footer {
+    background-color: $color-primary-300;
+    padding-top: 63px;
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 47px;
+        &__item {
+            padding: 0px 15px;
+            &:last-child {
+                padding: 0px 0px 0px 15px;
+            }
+        }
+    }
+}
+
+.footer-menu {
+    &__logo {
+        margin-bottom: 40px;
+    }
+    &__list {}
+    &__item {
+        color: $color-primary-500;
+        transition: all $transition;
+        &:hover {
+            color: $color-primary-100;
+        }
+        &+& {
+            margin-top: 16px;
+        }
+    }
+    &__link {}
+}
+
+.footer-instagram {
+    max-width: 364px;
+    width: 100%;
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 16px;
+    }
+    &__account {
+        @include Montserrat;
+        font-weight: $fw-bold;
+        line-height: 28px;
+        color: $color-primary-500;
+        transition: all $transition;
+        &:hover {
+            color: $color-primary-100;
+        }
+    }
+    &__subscribe {
+        color: $color-primary-200;
+        border-color: $color-primary-200;
+        &::before {
+            background-color: $color-primary-100;
+        }
+    }
+    &__photo {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        justify-content: space-between;
+    }
+    &__item {
+        margin-bottom: 5.5px;
+        transition: all $transition;
+        &:hover {
+            box-shadow: 0px 0px 6px 2px rgba(255, 255, 255, 0.2);
+        }
+        img {
+            width: 105.36px;
+            height: 112.81px;
+        }
+    }
+}
+
+.footer-recall {
+    max-width: 338px;
+    width: 100%;
+    &__top {
+        display: flex;
+        margin-bottom: 46px;
+    }
+    &__info {
+        margin-left: 18px;
+    }
+    &__title {
+        @include Montserrat;
+        font-weight: $fw-Semi-bold;
+        color: $color-primary-200;
+        margin-bottom: 6px;
+    }
+    &__instagram-link {
+        color: $color-primary-500;
+        transition: all $transition;
+        &:hover {
+            color: $color-primary-100;
+        }
+    }
+    &__social {
+        &-title {
+            @include Montserrat;
+            font-weight: $fw-Semi-bold;
+            color: $color-primary-200;
+            margin-bottom: 8px;
+        }
+        &-items {
+            display: flex;
+        }
+        &-item {
+            width: 24px;
+            height: 24px;
+            fill: $color-primary-500;
+            transition: all $transition;
+            &:hover {
+                fill: $color-primary-100;
+            }
+            &+& {
+                margin-left: 16px;
+            }
+        }
+    }
+}
+
+.footer-contact {
+    max-width: 221px;
+    width: 100%;
+    &__top {
+        margin-bottom: 34px;
+    }
+    &__phone {
+        @include Montserrat;
+        font-weight: $fw-Semi-bold;
+        font-size: 20px;
+        line-height: 32px;
+        color: $color-primary-200;
+        transition: all $transition;
+        &:hover {
+            color: $color-primary-100;
+        }
+    }
+    &__date {
+        font-size: $fs-x-small;
+        line-height: 32px;
+        color: $color-primary-500;
+    }
+    &__bottom {
+        color: $color-primary-200;
+    }
+    &__email,
+    &__address {
+        position: relative;
+        padding-left: 24px;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            left: 0;
+            top: 16%;
+        }
+    }
+    &__email::before {
+        background: url(../images/icon/email.svg) no-repeat;
+    }
+    &__address {
+        margin-top: 12px;
+        &::before {
+            background: url(../images/icon/mark.svg) no-repeat;
+        }
+    }
+}
+
+.footer-copyright {
+    padding: 22px 0px 16px 0px;
+    color: $color-primary-200;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $color-secondary-400;
+        height: 2px;
+        width: 100%;
     }
 }
 

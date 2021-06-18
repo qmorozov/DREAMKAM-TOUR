@@ -17,6 +17,21 @@ let swiper = new Swiper('.slider__container', {
         prevEl: '.slider__button-prev',
     },
 });
+/////////////////////////////
+
+let aboutSwiper = new Swiper('.about-slider', {
+    slidesPerView: 3,
+    spaceBetween: 96,
+    grabCursor: true,
+    slideClass: 'about-item',
+    wrapperClass: 'about-items',
+    slideActiveClass: 'about-item_active',
+    loop: true,
+    navigation: {
+        nextEl: '.about-button__next',
+        prevEl: '.about-button__prev',
+    },
+});
 
 const minus = document.querySelector('.btn-minus'),
     plus = document.querySelector('.btn-plus'),

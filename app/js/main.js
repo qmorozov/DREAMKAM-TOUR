@@ -1,20 +1,16 @@
-const slider = document.querySelector('.slider__container');
+// const slider = document.querySelector('.slider-container');
 
-let swiper = new Swiper('.slider__container', {
+let swiper = new Swiper('.slider-container', {
     spaceBetween: 35,
-    // slidesPerView: 2.5,
     slidesPerView: 'auto',
     grabCursor: true,
     loop: true,
-    // mousewheel: {
-    //     invert: true,
-    // },
-    slideClass: 'slider__item',
-    wrapperClass: 'slider__wrapper',
-    slideActiveClass: 'slider__item_active',
+    slideClass: 'slider-item',
+    wrapperClass: 'slider-wrapper',
+    slideActiveClass: 'slider-item_active',
     navigation: {
-        nextEl: '.slider__button-next',
-        prevEl: '.slider__button-prev',
+        nextEl: '.slider-button__next',
+        prevEl: '.slider-button__prev',
     },
 });
 /////////////////////////////
@@ -54,3 +50,4 @@ plus.addEventListener('click', () => {
         requestInput.value = 20;
     }
 });
+////////////

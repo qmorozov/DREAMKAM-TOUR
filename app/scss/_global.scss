@@ -59,15 +59,25 @@ h6 {
 
 body {
     @include Lato;
-    font-size: $fs-xs; // 16
+    font-size: $fs-xs;
     line-height: 24px;
-    color: $color-primary-300; // 212121
+    color: $color-primary-300;
 }
 
 .section-container {
     max-width: 1276px;
     margin: 0 auto;
     padding: 0px 15px;
+}
+
+.logo {
+    &__image {
+        max-width: 167px;
+        width: 100%;
+        max-height: 37px;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 .btn {
@@ -111,7 +121,7 @@ body {
     }
 }
 
-.title__block {
+.title-block {
     display: flex;
     position: relative;
     &::before {
@@ -134,7 +144,7 @@ body {
         background-color: $color-primary-100;
         border-radius: 100%;
     }
-    &-text {
+    &__text {
         @include Montserrat;
         font-weight: $fw-bold;
         font-size: $fs-l;
@@ -149,18 +159,18 @@ body {
 
 // === SLIDER ===
 .slider {
-    &__container {
+    &-container {
         overflow: hidden;
         width: 49.5vw;
     }
-    &__wrapper {
+    &-wrapper {
         display: flex;
         padding-bottom: 60px;
     }
 }
 
 // === SLIDER SLIDE ===
-.slider__item {
+.slider-item {
     $parent: &;
     //////////////////
     position: relative;
@@ -216,30 +226,30 @@ body {
             left: 12px;
         }
     }
-    &-info {
+    &__info {
         font-size: $fs-x-small;
         line-height: 24px;
         padding: 24px 16px;
         max-width: 251px;
     }
-    &-title {
+    &__title {
         font-weight: $fw-bold;
         color: $color-primary-200;
     }
-    &-text {
+    &__text {
         margin-top: 4px;
         color: darken($color-primary-200, 10%);
     }
 }
 
 // === SLIDER BUTTon ===
-.slider__button {
+.slider-button {
     display: flex;
-    &-next {
+    &__next {
         margin-left: 16px;
     }
-    &-next,
-    &-prev {
+    &__next,
+    &__prev {
         z-index: 1;
         position: static;
         cursor: pointer;
@@ -273,14 +283,14 @@ body {
 
 // === MODIFIER-SLIDER ===
 .slider_small-slide {
-    .slider__item {
+    .slider-item {
         $parent: &;
         max-width: 211px;
         height: 209px;
         &_active {
             max-width: 269px;
             height: 268px;
-            #{$parent}-info {
+            #{$parent}__info {
                 z-index: 1;
             }
         }
@@ -288,7 +298,7 @@ body {
 }
 
 .slider_no-active {
-    .slider__item {
+    .slider-item {
         max-width: 320px;
         height: 320px;
         &_active {
@@ -296,10 +306,10 @@ body {
             height: 320px;
         }
     }
-    .slider__button {
+    .slider-button {
         justify-content: flex-end;
-        &-next,
-        &-prev {
+        &__next,
+        &__prev {
             border: 1px solid $color-primary-300;
             path {
                 fill: $color-primary-300;
@@ -309,11 +319,11 @@ body {
 }
 
 .slider_left-content {
-    width: 30vw;
-    .slider__button {
+    // width: 30vw;
+    .slider-button {
         justify-content: flex-end;
-        &-next,
-        &-prev {
+        &__next,
+        &__prev {
             border: 1px solid $color-primary-300;
             path {
                 fill: $color-primary-300;
@@ -330,40 +340,40 @@ body {
 
 // === DAY SECTION ===
 .day {
-    &__wrapper {
+    &-wrapper {
         display: flex;
     }
-    &__slider {
+    &-slider {
         // margin-top: auto;
     }
 }
 
-.day__slider,
-.day__content {
+.day-slider,
+.day-content {
     width: 50%;
 }
 
-.day__wrapper_left-slider {
-    .day__slider {
+.day-wrapper_left-slider {
+    .day-slider {
         order: 0;
     }
-    .day__content {
+    .day-content {
         order: 1;
     }
 }
 
-.day__wrapper_right-slider {
-    .day__slider {
+.day-wrapper_right-slider {
+    .day-slider {
         order: 1;
     }
-    .day__content {
+    .day-content {
         order: 0;
     }
 }
 
-.day__content {
-    &-title {}
-    &-text {
+.day-content {
+    &__title {}
+    &__text {
         line-height: 24px;
         &+& {
             margin-top: 35px;
@@ -389,41 +399,56 @@ body {
             }
         }
     }
-    .day__content {
-        &-text {
+    .day-content {
+        &__text {
             color: $color-primary-300;
             &_underline {
                 color: $color-primary-300;
             }
         }
-        .title__block-text {
+        .title-block__text {
             color: $color-primary-300;
         }
     }
 }
 
 .day_dark-bg {
-    .day__content {
-        &-text {
+    .day-content {
+        &__text {
             color: $color-secondary-50;
-            .title__block-text {
+            .title-block__text {
                 color: $color-primary-200;
+            }
+        }
+    }
+    .slider-button {
+        &__next,
+        &__prev {
+            border: 1px solid $color-primary-200;
+            path {
+                fill: $color-primary-200;
+            }
+            &:hover {
+                border-color: $color-primary-100;
+                path {
+                    fill: $color-primary-100;
+                }
             }
         }
     }
 }
 
 .extra {
-    &__title {
+    margin-top: 59px;
+    &-title {
         @include Montserrat;
         font-size: 20px;
         line-height: 28px;
         margin-bottom: 31px;
-        margin-top: 59px;
     }
 }
 
-.extra__item {
+.extra-item {
     $parent: &;
     display: flex;
     justify-content: space-between;
@@ -440,18 +465,18 @@ body {
             background-color: $color-primary-500;
         }
     }
-    &-title {
+    &__title {
         font-weight: $fw-bold;
         margin-left: 8px;
     }
-    &-text {
+    &__text {
         max-width: 247px;
         margin-right: 31px;
         opacity: 0.7;
     }
     &:hover {
-        #{$parent}-title,
-        #{$parent}-text {
+        #{$parent}__title,
+        #{$parent}__text {
             transition: all $transition;
             color: $color-primary-100;
         }
@@ -460,14 +485,14 @@ body {
 
 .extra_light-bg {
     .extra {
-        &__title {
+        &-title {
             color: $color-primary-300;
         }
-        &__item {
-            &-title {
+        &-item {
+            &__title {
                 color: $color-secondary-100;
             }
-            &-text {
+            &__text {
                 color: $color-secondary-200;
             }
         }
@@ -476,14 +501,14 @@ body {
 
 .extra_dark-bg {
     .extra {
-        &__title {
+        &-title {
             color: $color-primary-200;
         }
-        &__item {
-            &-title {
+        &-item {
+            &__title {
                 color: $color-primary-200;
             }
-            &-text {
+            &__text {
                 color: $color-primary-500;
             }
         }
@@ -501,7 +526,7 @@ body {
     }
 }
 
-.action {
+.action-btn {
     $parent: &;
     display: inline-flex;
     align-items: center;
@@ -517,11 +542,12 @@ body {
         border: 1px solid $color-primary-200;
         transition: all $transition;
         path {
+            fill: $color-primary-200;
             transition: all $transition;
         }
     }
     &:hover {
-        .action__text {
+        .action-btn__text {
             color: $color-primary-100;
         }
         #{$parent}__icon {
@@ -538,8 +564,8 @@ body {
     }
 }
 
-.action_light {
-    .action {
+.action-btn_light {
+    .action-btn {
         &__text {
             color: $color-primary-200;
         }
@@ -552,8 +578,8 @@ body {
     }
 }
 
-.action_dark {
-    .action {
+.action-btn_dark {
+    .action-btn {
         &__text {
             color: $color-primary-300;
         }
@@ -562,6 +588,33 @@ body {
             path {
                 fill: $color-primary-300;
             }
+        }
+    }
+}
+
+.journey-time {
+    display: inline-block;
+    background: linear-gradient(91.82deg, #FB8B62 5.83%, #F47648 89.73%), #F47648;
+    border-radius: 16px;
+    text-align: center;
+    padding: 2px 24px;
+    span {
+        @include Montserrat;
+        font-weight: $fw-bold;
+        font-size: 30px;
+        line-height: 56px;
+    }
+}
+
+.social {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    &__item {
+        fill: $color-primary-200;
+        transition: all $transition;
+        &:hover {
+            fill: $color-primary-100
         }
     }
 }

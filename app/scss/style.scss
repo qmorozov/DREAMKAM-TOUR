@@ -75,7 +75,7 @@
         position: relative;
         padding: 10px;
         line-height: 19px;
-        transition: all $transition;
+        transition: all $transition ease-in-out;
         &::before {
             content: "";
             position: absolute;
@@ -85,7 +85,7 @@
             width: 0%;
             height: 2px;
             background-color: $color-primary-100;
-            transition: all $transition;
+            transition: all $transition ease-in-out;
         }
         &:hover::before {
             width: 100%;
@@ -200,6 +200,23 @@
     }
     &__author {
         font-weight: $fw-medium;
+        transition: all $transition ease-in-out;
+        span {
+            cursor: pointer;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 0%;
+                height: 1.5px;
+                bottom: -2px;
+                background-color: $color-primary-200;
+                transition: all $transition ease-in-out;
+            }
+            &:hover::before {
+                width: 100%;
+            }
+        }
     }
 }
 
@@ -232,6 +249,9 @@
         height: 32%;
         top: -12%;
     }
+    .section-container {
+        // position: relative;
+    }
 }
 
 .second-top {
@@ -255,6 +275,9 @@
     justify-content: space-between;
     &__slider {
         margin-top: auto;
+        margin-left: -29%;
+        width: 83%;
+        .slider-container {}
     }
     &__info {
         max-width: 478px;
@@ -269,11 +292,10 @@
     }
 }
 
-.second-content__slider,
-.second-content__info {
-    width: 50%;
-}
-
+// .second-content__slider,
+// .second-content__info {
+//     width: 50%;
+// }
 // === CARDS ===
 .cards {
     padding-top: 104px;
@@ -460,7 +482,7 @@
         background: url(../images/default/clouds.png) no-repeat center;
         background-size: cover;
         width: 100%;
-        height: 20%;
+        height: 22%;
         top: -7%;
     }
     &-top__content {
@@ -469,6 +491,7 @@
         align-items: center;
     }
     &-content {
+        z-index: 2;
         &__title {
             max-width: 708px;
             .title-block__text {
@@ -482,12 +505,35 @@
             }
         }
     }
-    &-photo img {
-        max-width: 665px;
-        width: 100%;
-        max-height: 466px;
-        height: 100%;
-        object-fit: cover;
+    &-photo {
+        position: absolute;
+        top: 15%;
+        right: 0;
+        img {
+            max-width: 665px;
+            width: 100%;
+            max-height: 466px;
+            height: 100%;
+            object-fit: cover;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            background: url(../images/default/seventh-img-bg.png) no-repeat;
+            background-size: cover;
+            /////////////////
+            width: 164%;
+            height: 164%;
+            top: -50%;
+            left: -64%;
+            /////////////////
+        }
+    }
+    &-slider {
+        margin-top: auto;
+        margin-left: -45%;
+        width: 105%;
+        .slider-container {}
     }
 }
 
@@ -495,9 +541,9 @@
     display: flex;
     justify-content: space-between;
     margin-top: 48px;
-    .slider_left-content {
-        width: 50vw;
-    }
+    // .slider_left-content {
+    //     width: 50vw;
+    // }
 }
 
 .seventh-info {
@@ -657,6 +703,14 @@
     padding: 96px 0px;
     background: url(../images/default/request-bg.png) no-repeat bottom center;
     background-size: contain;
+    &-wrapper {
+        input {
+            transition: all $transition ease-in-out;
+            &:focus {
+                border-color: $color-primary-100;
+            }
+        }
+    }
     &-order {
         width: 90%;
         display: flex;
@@ -688,7 +742,7 @@
             width: 30px;
             height: 30px;
             path {
-                transition: all $transition;
+                transition: all $transition ease-in-out;
                 fill: $color-secondary-100;
             }
         }
@@ -792,7 +846,7 @@
         height: 12px;
         background-color: $color-primary-50;
         border-radius: 100%;
-        transition: opacity $transition;
+        transition: opacity $transition ease-in-out;
         opacity: 0;
     }
 }
@@ -920,6 +974,19 @@
     }
     &__instagram {
         color: $color-primary-100;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            background-color: $color-primary-100;
+            bottom: -2px;
+            transition: all $transition ease-in-out;
+        }
+        &:hover::before {
+            width: 100%;
+        }
     }
 }
 
@@ -941,9 +1008,9 @@
         border-radius: 100%;
         width: 38px;
         height: 38px;
-        transition: all $transition;
+        transition: all $transition ease-in-out;
         path {
-            transition: all $transition;
+            transition: all $transition ease-in-out;
             fill: $color-primary-300;
         }
         &:hover {
@@ -978,7 +1045,7 @@
     }
     &__item {
         color: $color-primary-500;
-        transition: all $transition;
+        transition: all $transition ease-in-out;
         &:hover {
             color: $color-primary-100;
         }
@@ -1002,7 +1069,7 @@
         font-weight: $fw-bold;
         line-height: 28px;
         color: $color-primary-500;
-        transition: all $transition;
+        transition: all $transition ease-in-out;
         &:hover {
             color: $color-primary-100;
         }
@@ -1022,7 +1089,7 @@
     }
     &__item {
         margin-bottom: 5.5px;
-        transition: all $transition;
+        transition: all $transition ease-in-out;
         &:hover {
             box-shadow: 0px 0px 6px 2px rgba(255, 255, 255, 0.2);
         }
@@ -1059,7 +1126,7 @@
     }
     &__instagram-link {
         color: $color-primary-500;
-        transition: all $transition;
+        transition: all $transition ease-in-out;
         &:hover {
             color: $color-primary-100;
         }
@@ -1078,7 +1145,7 @@
             width: 24px;
             height: 24px;
             fill: $color-primary-500;
-            transition: all $transition;
+            transition: all $transition ease-in-out;
             &:hover {
                 fill: $color-primary-100;
             }
@@ -1101,7 +1168,7 @@
         font-size: 20px;
         line-height: 32px;
         color: $color-primary-200;
-        transition: all $transition;
+        transition: all $transition ease-in-out;
         &:hover {
             color: $color-primary-100;
         }

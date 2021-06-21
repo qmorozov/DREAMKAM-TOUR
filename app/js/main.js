@@ -1,10 +1,9 @@
-// const slider = document.querySelector('.slider-container');
-
 let swiper = new Swiper('.slider-container', {
     spaceBetween: 35,
     slidesPerView: 'auto',
     grabCursor: true,
     loop: true,
+
     slideClass: 'slider-item',
     wrapperClass: 'slider-wrapper',
     slideActiveClass: 'slider-item_active',
@@ -12,6 +11,7 @@ let swiper = new Swiper('.slider-container', {
         nextEl: '.slider-button__next',
         prevEl: '.slider-button__prev',
     },
+    speed: 650,
 });
 /////////////////////////////
 
@@ -27,7 +27,10 @@ let aboutSwiper = new Swiper('.about-slider', {
         nextEl: '.about-button__next',
         prevEl: '.about-button__prev',
     },
+    speed: 650,
 });
+
+//////////////////////////////
 
 const minus = document.querySelector('.btn-minus'),
     plus = document.querySelector('.btn-plus'),

@@ -92,7 +92,7 @@ body {
     border: 1px solid $color-primary-300;
     border-radius: 5px;
     z-index: 0;
-    transition: $transition;
+    transition: $transition ease-in-out;
     &::before {
         content: "";
         position: absolute;
@@ -161,7 +161,7 @@ body {
 .slider {
     &-container {
         overflow: hidden;
-        width: 49.5vw;
+        // width: 49.5vw;
     }
     &-wrapper {
         display: flex;
@@ -189,7 +189,7 @@ body {
     //////////////////
     margin-top: auto;
     /////////////////
-    filter: drop-shadow(0px 6px 14px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0px 6px 8px rgba(0, 0, 0, 0.25));
     border-radius: 5px;
     transition: all $transition ease-in-out;
     &::after,
@@ -301,9 +301,20 @@ body {
     .slider-item {
         max-width: 320px;
         height: 320px;
-        &_active {
-            max-width: 320px;
-            height: 320px;
+        &::after {
+            opacity: 0;
+        }
+        &::before {
+            background: linear-gradient(179.37deg, #000000 1.87%, rgba(0, 0, 0, 0.572235) 58.73%, rgba(0, 0, 0, 0) 94.86%);
+            opacity: 0.75;
+            transform: rotate(180deg);
+        }
+        &__info {
+            max-width: 288px;
+            z-index: 1;
+        }
+        &__text {
+            color: $color-primary-500;
         }
     }
     .slider-button {
@@ -314,12 +325,32 @@ body {
             path {
                 fill: $color-primary-300;
             }
+            &:hover {
+                border-color: $color-primary-100;
+                path {
+                    fill: $color-primary-100;
+                }
+            }
         }
+    }
+}
+
+.slider_right-content {
+    &.slider-container {
+        overflow: hidden;
+        width: 49.5vw;
     }
 }
 
 .slider_left-content {
     // width: 30vw;
+    &.slider-container {
+        // width: 85%;
+        // width: 34vw;
+        // padding-left: 31%;
+        width: 98%;
+        padding-left: 45%;
+    }
     .slider-button {
         justify-content: flex-end;
         &__next,
@@ -344,7 +375,10 @@ body {
         display: flex;
     }
     &-slider {
-        // margin-top: auto;
+        margin-top: auto;
+        &_left {
+            margin-left: -12%;
+        }
     }
 }
 
@@ -468,16 +502,17 @@ body {
     &__title {
         font-weight: $fw-bold;
         margin-left: 8px;
+        transition: all $transition ease-in-out;
     }
     &__text {
         max-width: 247px;
         margin-right: 31px;
         opacity: 0.7;
+        transition: all $transition ease-in-out;
     }
     &:hover {
         #{$parent}__title,
         #{$parent}__text {
-            transition: all $transition;
             color: $color-primary-100;
         }
     }
@@ -517,11 +552,11 @@ body {
 
 .text-underline {
     &_dark {
-        transition: all $transition;
+        transition: all $transition ease-in-out;
         border-bottom: 1px solid$color-primary-300;
     }
     &_light {
-        transition: all $transition;
+        transition: all $transition ease-in-out;
         border-bottom: 1px solid $color-primary-500;
     }
 }
@@ -540,10 +575,10 @@ body {
         margin-left: 18px;
         border-radius: 100%;
         border: 1px solid $color-primary-200;
-        transition: all $transition;
+        transition: all $transition ease-in-out;
         path {
             fill: $color-primary-200;
-            transition: all $transition;
+            transition: all $transition ease-in-out;
         }
     }
     &:hover {
@@ -612,7 +647,7 @@ body {
     display: flex;
     &__item {
         fill: $color-primary-200;
-        transition: all $transition;
+        transition: all $transition ease-in-out;
         &:hover {
             fill: $color-primary-100
         }

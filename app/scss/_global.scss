@@ -46,6 +46,16 @@ a {
     color: inherit;
 }
 
+// === SCROLLBAR ===
+// ::-webkit-scrollbar {
+//     width: auto;
+// }
+// ::-webkit-scrollbar-track {
+//     background: #393131;
+// }
+// ::-webkit-scrollbar-thumb {
+//     background-color: $color-primary-100;
+// }
 h1,
 h2,
 h3,
@@ -71,6 +81,7 @@ body {
 }
 
 .logo {
+    z-index: 11;
     &__image {
         max-width: 167px;
         width: 100%;
@@ -91,7 +102,7 @@ body {
     line-height: 19px;
     border: 1px solid $color-primary-300;
     border-radius: 5px;
-    z-index: 0;
+    z-index: 10;
     transition: $transition ease-in-out;
     &::before {
         content: "";
@@ -117,7 +128,6 @@ body {
         &::before {
             border-radius: 5px;
         }
-        &:hover {}
     }
 }
 
@@ -339,6 +349,7 @@ body {
     &.slider-container {
         overflow: hidden;
         width: 49.5vw;
+        // width: 50vw;
     }
 }
 
@@ -406,7 +417,6 @@ body {
 }
 
 .day-content {
-    &__title {}
     &__text {
         line-height: 24px;
         &+& {
@@ -651,6 +661,66 @@ body {
         &:hover {
             fill: $color-primary-100
         }
+    }
+}
+
+.burger {
+    position: relative;
+    width: 24px;
+    height: 19px;
+    cursor: pointer;
+    display: none;
+    z-index: 10;
+    span {
+        position: absolute;
+        top: 8px;
+        height: 3px;
+        width: 100%;
+        border-radius: 1px;
+        background-color: $color-primary-300;
+        transition: all .2s ease-in-out;
+    }
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        border-radius: 1px;
+        background-color: $color-primary-300;
+        transition: all .3s ease-in-out;
+    }
+    &::before {
+        top: 0;
+    }
+    &::after {
+        bottom: 0;
+    }
+    &_active {
+        span {
+            opacity: 0;
+            visibility: hidden;
+        }
+        &::before {
+            top: 33%;
+            transform: rotate(45deg);
+        }
+        &::after {
+            bottom: 50%;
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+.header_active {
+    .menu-list {
+        opacity: 1;
+        visibility: visible;
+    }
+    &.header::before {
+        opacity: 1;
+        visibility: visible;
     }
 }
 

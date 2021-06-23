@@ -1,3 +1,12 @@
+// === FUNCTIOn ===
+@function strip-unit($num) {
+    @return $num / ($num * 0 + 1);
+}
+
+@function rem($num) {
+    @return (strip-unit($num) / 16) * 1rem;
+}
+
 // === MIXIN ===
 @mixin input {
     padding: 13px 8px;
@@ -26,6 +35,8 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+// === BASE ===
+$base: 4px;
 // === ANIMATION ===
 $transition: 0.3s;
 // === FONT-WEIGHT ===
@@ -48,11 +59,23 @@ $color-secondary-200:#313131;
 $color-secondary-300:#D3E7E3;
 $color-secondary-400:#363636;
 $color-secondary-500:#DEDEDE;
+$color-secondary-500:#999999;
 // === FONT-SIZE ===
-$fs-x-small: 14px;
-$fs-xs: 16px;
-$fs-s: 18px;
-$fs-m: 24px;
-$fs-l: 40px;
-$fs-xxl: 56px;
-$fs-xxl-big: 64px;
+$fs-x-small: rem(14px);
+$fs-xs: rem(16px);
+$fs-s: rem(18px);
+$fs-m: rem(24px);
+$fs-l: rem(40px);
+$fs-xxl: rem(56px);
+$fs-xxl-big: rem(64px);
+// === ADAPTIVE ===
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+//////////
+$screen-s-max: 450px;
+$screen-xs-max: 576px;
+$screen-sm-max: 770px;
+$screen-md-max: 991px;
+$screen-lg-max: 1199px;

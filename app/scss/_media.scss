@@ -141,7 +141,29 @@
         }
     }
     // === JOURNEY ===
-    .journey {}
+    .journey {
+        padding-top: 70px;
+        &-inner {
+            height: 915px;
+        }
+        &-top {
+            margin-bottom: 15px;
+            &__title {
+                font-size: 40px;
+                line-height: 40px;
+            }
+        }
+        &-text {
+            &__title {
+                font-size: 20px;
+                line-height: 25px;
+                margin-bottom: 15px;
+            }
+        }
+        &-info {
+            margin-bottom: 35px;
+        }
+    }
 }
 
 // 576px
@@ -162,6 +184,45 @@
         &__title {
             font-size: $base*11.25;
             line-height: $base*15;
+        }
+    }
+    // === JOURNEY ===
+    .journey {
+        background-image: url(../images/default/journey-bg-mobile.png);
+        &-inner {
+            height: 950px;
+        }
+        &-top {
+            &__title {
+                font-size: 32px;
+                line-height: 35px;
+            }
+        }
+        &-content {
+            &__title {
+                font-size: 20px;
+                line-height: 26px;
+                margin-bottom: 15px;
+            }
+        }
+        &-text {
+            &__title {
+                font-size: 16px;
+                line-height: 20px;
+                margin-bottom: 10px;
+            }
+            &__word {
+                font-size: 15px;
+            }
+        }
+        &-items {
+            flex-wrap: wrap;
+        }
+        &-item {
+            max-width: 150px;
+            margin-left: 0;
+            flex-basis: 50%;
+            margin-bottom: 40px;
         }
     }
 }
@@ -199,6 +260,27 @@
             }
         }
     }
+    // === JOURNEY ===
+    .journey {
+        &-top {
+            &__title {
+                font-size: 25px;
+                line-height: 25px;
+            }
+        }
+        &-text__word {
+            font-size: 14px;
+        }
+        &-content {
+            &__title {
+                font-size: 16px;
+                line-height: 20px;
+            }
+            &__text {
+                font-size: 14px;
+            }
+        }
+    }
 }
 
 @media (max-width: 350px) {
@@ -229,6 +311,28 @@
         &__item {
             padding: $base*3.75 0px;
             font-size: $base*5;
+        }
+    }
+    // === JOURNEY ===
+    .journey {
+        &-top {
+            &__title {
+                font-size: 20px;
+            }
+        }
+        &-text {
+            &__title {
+                font-size: 15px;
+                line-height: 18px;
+            }
+        }
+        &-item {
+            &+& {
+                margin-left: 0px;
+            }
+            &__title {
+                font-size: 14px;
+            }
         }
     }
 }

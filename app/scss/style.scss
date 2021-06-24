@@ -314,14 +314,13 @@
     &-items {
         display: flex;
         justify-content: space-between;
+        flex-wrap: nowrap;
     }
 }
 
 .cards-item {
+    flex-shrink: 0;
     margin-bottom: 32px;
-    &+& {
-        margin-left: 32px;
-    }
     max-width: 288px;
     background: $color-primary-200;
     box-shadow: 0px 6px 14px rgba($color-secondary-100, 0.1);
@@ -347,8 +346,10 @@
         font-size: $fs-x-small;
         color: $color-primary-400;
     }
-    &:hover {
-        box-shadow: 0px 6px 20px rgba($color-secondary-100, 0.3);
+    @media (any-hover: hover) {
+        &:hover {
+            box-shadow: 0px 6px 20px rgba($color-secondary-100, 0.3);
+        }
     }
 }
 

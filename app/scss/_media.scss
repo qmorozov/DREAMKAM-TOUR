@@ -132,7 +132,7 @@
             }
             &__info {
                 order: -1;
-                margin-bottom: 40px;
+                margin-bottom: $base*10;
             }
         }
     }
@@ -173,7 +173,7 @@
         }
         &-social {
             right: 20%;
-            bottom: 5%;
+            bottom: -1%;
             left: auto;
         }
         &-content {
@@ -238,8 +238,12 @@
     // === DAY ===
     .day-content__text {
         &+& {
-            margin-top: 10px;
+            margin-top: $base*2.5;
         }
+    }
+    // === CARDS ===
+    .cards {
+        padding-top: 30px;
     }
 }
 
@@ -255,16 +259,21 @@
         line-height: $base*7.5;
     }
     // === HEADER ===
-    .header-info {
-        margin-top: 17%;
-        &__journey-time {
-            font-size: $base*7.5;
-            line-height: $base*14;
-            margin-bottom: $base*8;
+    .header {
+        &-social {
+            bottom: -4%;
         }
-        &__title {
-            font-size: $base*11.25;
-            line-height: $base*15;
+        &-info {
+            margin-top: 17%;
+            &__journey-time {
+                font-size: $base*7.5;
+                line-height: $base*14;
+                margin-bottom: $base*8;
+            }
+            &__title {
+                font-size: $base*11.25;
+                line-height: $base*15;
+            }
         }
     }
     // === JOURNEY ===
@@ -308,9 +317,9 @@
     }
     // === SECOND DAY ===
     .second {
-        padding-top: 35px;
+        padding-top: $base*8.75;
         &-top {
-            margin-bottom: 15px;
+            margin-bottom: $base*3.75;
         }
     }
 }
@@ -384,16 +393,16 @@
     // === SECOND DAY ===
     .second {
         &-wrapper {
-            font-size: 15px;
+            font-size: $base*3.75;
         }
         &-top__text {
             &+& {
-                margin-top: 15px;
+                margin-top: $base*3.75;
             }
         }
         &-content__text {
             &+& {
-                margin-top: 15px;
+                margin-top: $base*3.75;
             }
         }
     }

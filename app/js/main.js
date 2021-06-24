@@ -1,8 +1,11 @@
+// const { default: Swiper } = require("swiper");
+
 let swiper = new Swiper('.slider-container', {
     spaceBetween: 35,
     slidesPerView: 'auto',
     grabCursor: true,
     loop: true,
+    centeredSlides: true,
     slideClass: 'slider-item',
     wrapperClass: 'slider-wrapper',
     slideActiveClass: 'slider-item_active',
@@ -11,7 +14,11 @@ let swiper = new Swiper('.slider-container', {
         prevEl: '.slider-button__prev',
     },
     speed: 650,
-
+    breakpoints: {
+        700: {
+            centeredSlides: false,
+        }
+    }
 });
 /////////////////////////////
 
@@ -29,6 +36,38 @@ let aboutSwiper = new Swiper('.about-slider', {
     },
     speed: 650,
 });
+
+////////////////////////////////////////
+const slider = document.querySelector('.cards-wrapper');
+
+let mySwiper;
+
+function mobileSlider() {
+    if (window.innerWidth <= 1199 && slider.dataset.mobile == 'false') {
+        mySwiper = new Swiper(slider, {
+            slidesPerView: 'auto',
+            spaceBetween: 32,
+            loop: true,
+            centeredSlides: true,
+            slideClass: 'cards-item',
+            wrapperClass: 'cards-items',
+            speed: 650,
+
+        })
+        slider.dataset.mobile = 'true;'
+    }
+    if (window.innerWidth > 1199) {
+        slider.dataset.mobile = 'false';
+        if (slider.classList.contains('swiper-container-initialized')) {
+            mySwiper.destroy();
+        }
+    }
+}
+mobileSlider();
+
+window.addEventListener('resize', () => {
+    mobileSlider();
+})
 
 //////////////////////////////
 

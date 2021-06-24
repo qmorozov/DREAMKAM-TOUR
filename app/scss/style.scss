@@ -771,7 +771,7 @@
 .request-form__name input,
 .request-form__count input {
     @include input;
-    min-width: 260px;
+    max-width: 260px;
     width: 100%;
 }
 
@@ -892,6 +892,9 @@
     height: 666px;
     display: flex;
     align-items: flex-end;
+    &__form {
+        display: flex;
+    }
     &__inner {
         display: flex;
         align-items: center;
@@ -926,7 +929,7 @@
         @include input;
         border-bottom-color: $color-primary-200;
         padding-left: 0px;
-        max-width: 564px;
+        // max-width: 564px;
         width: 100%;
         color: $color-secondary-500;
     }

@@ -71,30 +71,30 @@ window.addEventListener('resize', () => {
 
 //////////////////////////////
 
-// const minus = document.querySelector('.btn-minus'),
-//     plus = document.querySelector('.btn-plus'),
-//     requestInput = document.querySelector('.request-input');
+const minus = document.querySelector('.btn-minus'),
+    plus = document.querySelector('.btn-plus'),
+    requestInput = document.querySelector('.request-input');
 
-// minus.addEventListener('click', () => {
-//     let total = requestInput.value;
-//     total--;
-//     requestInput.value = total;
-//     if (requestInput.value < 1) {
-//         requestInput.value = 1;
-//     }
-// });
+minus.addEventListener('click', () => {
+    let total = requestInput.value;
+    total--;
+    requestInput.value = total;
+    if (requestInput.value < 1) {
+        requestInput.value = 1;
+    }
+});
 
-// plus.addEventListener('click', () => {
-//     let total = requestInput.value;
-//     total++;
-//     requestInput.value = total;
-//     if (requestInput.value > 20) {
-//         requestInput.value = 20;
-//     }
-// });
+plus.addEventListener('click', () => {
+    let total = requestInput.value;
+    total++;
+    requestInput.value = total;
+    if (requestInput.value > 20) {
+        requestInput.value = 20;
+    }
+});
 ////////////
-const navigation = document.querySelector('.header');
-const btn = document.querySelector('.burger');
+const navigation = document.querySelector('.header'),
+    btn = document.querySelector('.burger');
 btn.addEventListener('click', function(event) {
     btn.classList.toggle('burger_active');
     navigation.classList.toggle('header_active');

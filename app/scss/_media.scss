@@ -282,6 +282,29 @@
             }
         }
     }
+    // === REQUEST ===
+    .request {
+        padding: 40px 0px;
+        &-order {
+            flex-direction: column;
+            width: 100%;
+        }
+        &-info {
+            margin-bottom: 40px;
+        }
+        &-knowledge {
+            height: 400px;
+            &__info {
+                margin-left: 0px;
+            }
+            &__img {
+                display: none;
+            }
+        }
+        &-form-inner {
+            width: 100%;
+        }
+    }
 }
 
 // 770px
@@ -433,6 +456,24 @@
             }
         }
     }
+    // === REQUEST ===
+    .request {
+        &-knowledge {
+            height: 230px;
+            &__title {
+                font-size: 25px;
+                line-height: 30px;
+            }
+            &__text {
+                font-size: 16px;
+                line-height: 20px;
+                margin-bottom: 15px;
+            }
+        }
+        &-content {
+            width: 100%;
+        }
+    }
 }
 
 // 576px
@@ -445,6 +486,9 @@
     .title-block__text {
         font-size: $base*6.25;
         line-height: $base*7.5;
+    }
+    .radio-btn__text {
+        font-size: 16px;
     }
     .extra {
         margin-top: 15px;
@@ -595,13 +639,47 @@
             }
         }
     }
+    // === REQUEST ===
+    .request {
+        &-info {
+            &__title {
+                font-size: 30px;
+                line-height: 30px;
+                margin-bottom: 15px;
+            }
+        }
+        .request-social__item+.request-social__item {
+            margin-left: 10px;
+        }
+        &-form-top {
+            justify-content: space-between;
+        }
+        &-tariff {
+            margin: 25px 0px 25px 0px;
+        }
+        .radio-btn {
+            &__text {
+                max-width: 200px;
+            }
+            &__price {
+                font-size: 17px;
+            }
+        }
+        &-content__title {
+            margin-bottom: 0px;
+        }
+        &-knowledge__title {
+            font-size: 20px;
+            line-height: 20px;
+        }
+    }
 }
 
 // 450px
 @media (max-width: $screen-s-max) {
     // === GLOBAL ===
     .btn {
-        max-width: $base*40;
+        // max-width: $base*40;
     }
     .logo__image {
         max-width: $base*37.5;
@@ -681,6 +759,38 @@
     }
     // === PRICE ===
     .price {}
+    // === REQUEST ===
+    .request {
+        input {
+            font-size: 16px;
+        }
+        &-info {
+            margin-bottom: 10px;
+        }
+        .radio-btn__price {
+            font-size: 15px;
+        }
+        &-form__count {
+            font-size: 14px;
+            margin-left: 20px;
+        }
+        &-knowledge {
+            &__info {
+                color: $color-primary-300;
+            }
+            &__form {
+                display: block;
+            }
+            &__btn {
+                margin-left: 0px;
+                margin-top: 20px;
+            }
+        }
+        &-social__item-link svg {
+            width: 25px;
+            height: 25px;
+        }
+    }
 }
 
 @media (max-width: 350px) {
@@ -690,7 +800,7 @@
     }
     .btn {
         padding: $base*2 $base*2.25;
-        max-width: $base*32.5;
+        // max-width: $base*32.5;
     }
     // === HEADER ===
     .header {
@@ -752,6 +862,25 @@
         &-top__title {
             font-size: 25px;
             line-height: 15px;
+        }
+    }
+    // === REQUEST ===
+    .request {
+        &-info__title {
+            font-size: 25px;
+            line-height: 20px;
+            margin-bottom: 15px;
+        }
+        &-knowledge {
+            &__title {
+                font-size: 16px;
+                line-height: 18px;
+            }
+            &__text {
+                font-size: 14px;
+                line-height: 16px;
+                margin-bottom: 0px;
+            }
         }
     }
 }

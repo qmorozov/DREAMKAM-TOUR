@@ -138,9 +138,10 @@
             }
         }
     }
-    // === THIRD ===
+    // === THIRD DAY ===
     .third {
         padding-top: $base*10;
+        padding-bottom: $base*10;
         height: 100%;
         .day-content {
             order: -1;
@@ -162,7 +163,21 @@
                         height: $base*70.5;
                     }
                 }
+                &-button {
+                    display: none;
+                }
             }
+        }
+    }
+    // === FOURTH DAY ===
+    .fourth {
+        &::before,
+        &::after {
+            display: none;
+        }
+        padding: 40px 0px;
+        .slider_right-content .slider-wrapper {
+            padding-bottom: 80px;
         }
     }
 }
@@ -181,7 +196,7 @@
         display: none;
     }
     .title-block__text {
-        font-size: $base*7.5;
+        font-size: 23px;
         line-height: $base*8.75;
         margin-bottom: $base*5;
     }
@@ -271,6 +286,12 @@
     // === CARDS ===
     .cards {
         padding-top: $base*7.5;
+    }
+    // === FOURTH DAY ===
+    .fourth {
+        .slider_right-content .slider-wrapper {
+            padding-bottom: 0px;
+        }
     }
 }
 

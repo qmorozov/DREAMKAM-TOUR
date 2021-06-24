@@ -168,6 +168,10 @@ body {
 }
 
 // === SLIDER ===
+.swiper-container {
+    // overflow: inherit;
+}
+
 .slider {
     &-container {
         overflow: hidden;

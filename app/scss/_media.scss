@@ -43,13 +43,15 @@
         &.slider-container {
             width: 94vw;
         }
-        .slider-wrapper {
-            padding-bottom: 0px;
-        }
-        .slider-item_active {
-            max-width: $base*70.75;
-            width: 100%;
-            height: $base*70.5;
+        .slider {
+            &-wrapper {
+                padding-bottom: 0px;
+            }
+            &-item_active {
+                max-width: $base*70.75;
+                width: 100%;
+                height: $base*70.5;
+            }
         }
     }
     // === HEADER ===
@@ -133,6 +135,33 @@
             &__info {
                 order: -1;
                 margin-bottom: $base*10;
+            }
+        }
+    }
+    // === THIRD ===
+    .third {
+        padding-top: $base*10;
+        height: 100%;
+        .day-content {
+            order: -1;
+        }
+        .day-slider {
+            &_left {
+                margin-left: 0px;
+            }
+            .slider {
+                &_left-content {
+                    &.slider-container {
+                        width: 100%;
+                        padding-left: 0px;
+                    }
+                }
+                &-item {
+                    &_active {
+                        max-width: $base*70.75;
+                        height: $base*70.5;
+                    }
+                }
             }
         }
     }
@@ -233,8 +262,6 @@
             margin-bottom: $base*8.75;
         }
     }
-    // === FIRST DAY ===
-    .first {}
     // === DAY ===
     .day-content__text {
         &+& {
@@ -243,7 +270,7 @@
     }
     // === CARDS ===
     .cards {
-        padding-top: 30px;
+        padding-top: $base*7.5;
     }
 }
 

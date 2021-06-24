@@ -245,6 +245,43 @@
             padding: 0px 10px;
         }
     }
+    // === PRICE ===
+    .price {
+        padding-top: 50px;
+        .extra {
+            margin-top: 10px;
+            &-item {
+                &__title {
+                    margin-left: 0px;
+                }
+                &__text {
+                    margin-right: 0px;
+                }
+            }
+        }
+        .price-action {
+            margin-top: 15px;
+        }
+        &-top {
+            flex-direction: column;
+            align-items: center;
+            &__title {
+                font-size: 50px;
+            }
+            &__link-items {
+                margin-right: 0px;
+            }
+        }
+        &-items {
+            justify-content: space-between;
+            padding-bottom: 60px;
+        }
+        &-item {
+            &+& {
+                margin-left: 0px;
+            }
+        }
+    }
 }
 
 // 770px
@@ -264,6 +301,9 @@
         font-size: 23px;
         line-height: $base*8.75;
         margin-bottom: $base*5;
+    }
+    .action-btn {
+        margin-bottom: 0%;
     }
     // === HEADER ===
     .header {
@@ -375,6 +415,22 @@
         .day-content__text {
             font-size: 18px;
             line-height: 30px;
+        }
+    }
+    // === PRICE ===
+    .price {
+        &-top {
+            display: block;
+            margin-bottom: 30px;
+        }
+        &-items {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &-item {
+            &+& {
+                margin-top: 40px;
+            }
         }
     }
 }
@@ -515,6 +571,30 @@
             line-height: 40px;
         }
     }
+    // === PRICE ===
+    .price {
+        &-top {
+            &__title {
+                font-size: 25px;
+                line-height: 15px;
+            }
+            .extra-item {
+                padding: 20px 0px;
+                &__title {
+                    font-size: 16px;
+                }
+                &__text {
+                    font-size: 17px;
+                }
+            }
+            &__link-items {
+                margin-top: 20px;
+            }
+            &__title {
+                font-size: 30px;
+            }
+        }
+    }
 }
 
 // 450px
@@ -599,6 +679,8 @@
             }
         }
     }
+    // === PRICE ===
+    .price {}
 }
 
 @media (max-width: 350px) {
@@ -663,6 +745,13 @@
         .day-content__text {
             font-size: 15px;
             line-height: 20px;
+        }
+    }
+    // === PRICE ===
+    .price {
+        &-top__title {
+            font-size: 25px;
+            line-height: 15px;
         }
     }
 }

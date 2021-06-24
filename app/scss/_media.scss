@@ -17,6 +17,20 @@
             margin-bottom: $base*6.75;
         }
     }
+    // === SEVENTH ===
+    .seventh {
+        &-content {
+            &__title {
+                max-width: 100%;
+            }
+            &__text {
+                max-width: 100%;
+            }
+        }
+        &-photo {
+            display: none;
+        }
+    }
 }
 
 // 991px
@@ -206,6 +220,31 @@
             padding-bottom: 60px;
         }
     }
+    // === SEVENTH ===
+    .seventh {
+        &-slider {
+            margin-left: 0%;
+            width: 100%;
+            .slider_left-content.slider-container {
+                padding-left: 0%;
+                width: 100%;
+            }
+        }
+        &-info {
+            order: -1;
+            max-width: 100%;
+        }
+        &-information {
+            flex-direction: column;
+        }
+    }
+    // === EIGHTH ===
+    .eighth {
+        height: 500px;
+        &-day-content {
+            padding: 0px 10px;
+        }
+    }
 }
 
 // 770px
@@ -323,6 +362,21 @@
     .sixth .slider-wrapper {
         padding-bottom: 0px;
     }
+    // === EIGHTH ===
+    .eighth {
+        &-day-content {
+            bottom: 16%;
+            right: 0;
+        }
+        .title-block__text {
+            font-size: 40px;
+            line-height: 50px;
+        }
+        .day-content__text {
+            font-size: 18px;
+            line-height: 30px;
+        }
+    }
 }
 
 // 576px
@@ -338,6 +392,20 @@
     }
     .extra {
         margin-top: 15px;
+        &-title {
+            margin-bottom: 15px;
+        }
+        &-item {
+            &__text {
+                max-width: 216px;
+                font-size: 14px;
+                margin-right: 0px;
+            }
+            &__title {
+                font-size: 15px;
+                margin-left: 0px;
+            }
+        }
     }
     // === HEADER ===
     .header {
@@ -415,6 +483,37 @@
     // === SIXTH ===
     .sixth {
         padding-top: 0px;
+    }
+    // === SEVENTH ===
+    .seventh {
+        padding: 55px 0px 55px 0px;
+        &-content {
+            &__text {
+                &+& {
+                    margin-top: 10px;
+                }
+            }
+        }
+        &-slider {
+            .slider-wrapper {
+                padding-bottom: 0px;
+                margin-top: 25px;
+            }
+        }
+        &-information {
+            margin-top: 10px;
+        }
+    }
+    // === EIGHTH ===
+    .eighth {
+        height: 400px;
+        &-day-content {
+            bottom: 0%;
+        }
+        .title-block__text {
+            font-size: 30px;
+            line-height: 40px;
+        }
     }
 }
 
@@ -553,5 +652,17 @@
     // === FIRST DAY ===
     .first {
         height: $base*240;
+    }
+    // === EIGHTH ===
+    .eighth {
+        height: 300px;
+        .title-block__text {
+            font-size: 20px;
+            line-height: 30px;
+        }
+        .day-content__text {
+            font-size: 15px;
+            line-height: 20px;
+        }
     }
 }

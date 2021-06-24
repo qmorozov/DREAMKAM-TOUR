@@ -30,8 +30,31 @@
         max-width: $base*321.5;
         padding: 0px $base*5;
     }
+    .title-block {
+        &::before,
+        &::after {
+            display: none;
+        }
+        &__text {
+            margin-bottom: $base*9;
+        }
+    }
+    .slider_right-content {
+        &.slider-container {
+            width: 94vw;
+        }
+        .slider-wrapper {
+            padding-bottom: 0px;
+        }
+        .slider-item_active {
+            max-width: $base*70.75;
+            width: 100%;
+            height: $base*70.5;
+        }
+    }
     // === HEADER ===
     .header {
+        height: $base*180;
         &-info__title {
             font-size: $base*10;
             line-height: $base*11.75;
@@ -53,10 +76,10 @@
             background: none;
         }
         &-inner {
-            height: 1000px;
+            height: $base*250;
         }
         &-content {
-            bottom: 30px;
+            bottom: $base*7.5;
         }
         &-title {
             display: none;
@@ -66,7 +89,50 @@
         }
         &-item {
             &+& {
-                margin-left: 10px;
+                margin-left: $base*2.5;
+            }
+        }
+    }
+    // === FIRST DAY ===
+    .first {
+        height: $base*221.25;
+        padding-top: $base*10;
+        &-day-content {
+            max-width: 100%;
+        }
+    }
+    // === DAY ===
+    .day {
+        &-wrapper {
+            flex-direction: column;
+        }
+        &-content {
+            margin-bottom: $base*11.75;
+        }
+        &-slider,
+        &-content {
+            width: 100%;
+        }
+    }
+    // === SECOND DAY ===
+    .second {
+        background-image: none;
+        &::before {
+            height: 20%;
+            top: -7%;
+        }
+        &-content {
+            flex-direction: column;
+            &__slider {
+                margin-left: 2%;
+                width: 100%;
+                .slider-button {
+                    justify-content: flex-start;
+                }
+            }
+            &__info {
+                order: -1;
+                margin-bottom: 40px;
             }
         }
     }
@@ -84,6 +150,11 @@
     }
     .slider-button {
         display: none;
+    }
+    .title-block__text {
+        font-size: $base*7.5;
+        line-height: $base*8.75;
+        margin-bottom: $base*5;
     }
     // === HEADER ===
     .header {
@@ -142,26 +213,32 @@
     }
     // === JOURNEY ===
     .journey {
-        padding-top: 70px;
+        padding-top: $base*17.5;
         &-inner {
-            height: 915px;
+            height: $base*228.75;
         }
         &-top {
-            margin-bottom: 15px;
+            margin-bottom: $base*3.75;
             &__title {
-                font-size: 40px;
-                line-height: 40px;
+                font-size: $fs-l;
+                line-height: $base*10;
             }
         }
-        &-text {
-            &__title {
-                font-size: 20px;
-                line-height: 25px;
-                margin-bottom: 15px;
-            }
+        &-text__title {
+            font-size: $base*5;
+            line-height: $base*6.25;
+            margin-bottom: $base*3.75;
         }
         &-info {
-            margin-bottom: 35px;
+            margin-bottom: $base*8.75;
+        }
+    }
+    // === FIRST DAY ===
+    .first {}
+    // === DAY ===
+    .day-content__text {
+        &+& {
+            margin-top: 10px;
         }
     }
 }
@@ -173,9 +250,13 @@
         width: $base*12.5;
         height: $base*12.5;
     }
+    .title-block__text {
+        font-size: $base*6.25;
+        line-height: $base*7.5;
+    }
     // === HEADER ===
     .header-info {
-        margin-top: 25%;
+        margin-top: 17%;
         &__journey-time {
             font-size: $base*7.5;
             line-height: $base*14;
@@ -190,39 +271,46 @@
     .journey {
         background-image: url(../images/default/journey-bg-mobile.png);
         &-inner {
-            height: 950px;
+            height: $base*237.5;
         }
-        &-top {
-            &__title {
-                font-size: 32px;
-                line-height: 35px;
-            }
+        &-top__title {
+            font-size: $base*8;
+            line-height: $base*8.75;
         }
-        &-content {
-            &__title {
-                font-size: 20px;
-                line-height: 26px;
-                margin-bottom: 15px;
-            }
+        &-content__title {
+            font-size: $base*5;
+            line-height: $base*6.5;
+            margin-bottom: $base*3.75;
         }
         &-text {
             &__title {
-                font-size: 16px;
-                line-height: 20px;
-                margin-bottom: 10px;
+                font-size: $fs-xs;
+                line-height: $base*5;
+                margin-bottom: $base*2.5;
             }
             &__word {
-                font-size: 15px;
+                font-size: $base*3.75;
             }
         }
         &-items {
             flex-wrap: wrap;
         }
         &-item {
-            max-width: 150px;
+            max-width: $base*37.5;
             margin-left: 0;
             flex-basis: 50%;
-            margin-bottom: 40px;
+            margin-bottom: $base*10;
+        }
+    }
+    // === DAY ===
+    .day-content__text {
+        font-size: $base*3.75;
+    }
+    // === SECOND DAY ===
+    .second {
+        padding-top: 35px;
+        &-top {
+            margin-bottom: 15px;
         }
     }
 }
@@ -240,8 +328,14 @@
         font-size: $fs-xs;
         line-height: $base*7.5;
     }
+    .title-block__text {
+        font-size: $base*5;
+        line-height: $base*6.75;
+        margin-bottom: $base*2.5;
+    }
     // === HEADER ===
     .header {
+        height: $base*155;
         &-top__button {
             margin-right: $base*5;
             margin-left: $base*1.25;
@@ -262,22 +356,44 @@
     }
     // === JOURNEY ===
     .journey {
-        &-top {
-            &__title {
-                font-size: 25px;
-                line-height: 25px;
-            }
+        &-top__title {
+            font-size: $base*6.25;
+            line-height: $base*6.25;
         }
         &-text__word {
-            font-size: 14px;
+            font-size: $fs-x-small;
         }
         &-content {
             &__title {
-                font-size: 16px;
-                line-height: 20px;
+                font-size: $fs-xs;
+                line-height: $base*5;
             }
             &__text {
-                font-size: 14px;
+                font-size: $fs-x-small;
+            }
+        }
+    }
+    // === DAY ===
+    .day-content__text {
+        font-size: $fs-x-small;
+    }
+    // === FIRST DAY ===
+    .first {
+        height: $base*220;
+    }
+    // === SECOND DAY ===
+    .second {
+        &-wrapper {
+            font-size: 15px;
+        }
+        &-top__text {
+            &+& {
+                margin-top: 15px;
+            }
+        }
+        &-content__text {
+            &+& {
+                margin-top: 15px;
             }
         }
     }
@@ -315,24 +431,24 @@
     }
     // === JOURNEY ===
     .journey {
-        &-top {
-            &__title {
-                font-size: 20px;
-            }
+        &-top__title {
+            font-size: $base*5;
         }
-        &-text {
-            &__title {
-                font-size: 15px;
-                line-height: 18px;
-            }
+        &-text__title {
+            font-size: $base*3.75;
+            line-height: $base*4.5;
         }
         &-item {
             &+& {
                 margin-left: 0px;
             }
             &__title {
-                font-size: 14px;
+                font-size: $fs-x-small;
             }
         }
+    }
+    // === FIRST DAY ===
+    .first {
+        height: $base*240;
     }
 }

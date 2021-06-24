@@ -3,7 +3,6 @@ let swiper = new Swiper('.slider-container', {
     slidesPerView: 'auto',
     grabCursor: true,
     loop: true,
-
     slideClass: 'slider-item',
     wrapperClass: 'slider-wrapper',
     slideActiveClass: 'slider-item_active',
@@ -12,6 +11,7 @@ let swiper = new Swiper('.slider-container', {
         prevEl: '.slider-button__prev',
     },
     speed: 650,
+
 });
 /////////////////////////////
 

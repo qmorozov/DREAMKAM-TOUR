@@ -138,8 +138,25 @@
             }
         }
     }
-    // === THIRD DAY ===
-    .third {
+    // === FIFTH SIXTH ===
+    .fifth-sixth__wrapper {
+        padding: 40px 0px 90px;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        &::before,
+        &::after {
+            background-size: initial;
+        }
+    }
+    // === THIRD DAY and FIFTH ===
+    .thisd {
+        .slider-button {
+            display: none;
+        }
+    }
+    .third,
+    .fifth {
         padding-top: $base*10;
         padding-bottom: $base*10;
         height: 100%;
@@ -163,9 +180,6 @@
                         height: $base*70.5;
                     }
                 }
-                &-button {
-                    display: none;
-                }
             }
         }
     }
@@ -178,6 +192,18 @@
         padding: 40px 0px;
         .slider_right-content .slider-wrapper {
             padding-bottom: 80px;
+        }
+    }
+    // === FIFTH ===
+    .fifth {
+        .day-content {
+            order: -1;
+        }
+    }
+    // === SIXTH ===
+    .sixth {
+        .slider-wrapper {
+            padding-bottom: 60px;
         }
     }
 }
@@ -293,6 +319,10 @@
             padding-bottom: 0px;
         }
     }
+    // === SIXTH ===
+    .sixth .slider-wrapper {
+        padding-bottom: 0px;
+    }
 }
 
 // 576px
@@ -305,6 +335,9 @@
     .title-block__text {
         font-size: $base*6.25;
         line-height: $base*7.5;
+    }
+    .extra {
+        margin-top: 15px;
     }
     // === HEADER ===
     .header {
@@ -369,6 +402,19 @@
         &-top {
             margin-bottom: $base*3.75;
         }
+    }
+    // === THIRD AND FIFTH ===
+    .fifth {
+        padding-top: 0px;
+    }
+    .third,
+    .fifth {
+        padding-bottom: 0px;
+        height: 100%;
+    }
+    // === SIXTH ===
+    .sixth {
+        padding-top: 0px;
     }
 }
 

@@ -31,6 +31,21 @@
             display: none;
         }
     }
+    // === FOOTER ===
+    .footer {
+        &-content__item {
+            padding: 0px 10px;
+            &:first-child {
+                padding: 0px 10px 0px 0px;
+            }
+            &:last-child {
+                padding: 0px 0px 0px 10px;
+            }
+        }
+        &-recall {
+            max-width: 284px;
+        }
+    }
 }
 
 // 991px
@@ -309,6 +324,12 @@
     .about {
         padding: 60px 0px 60px;
     }
+    // === FOOTER ===
+    .footer {
+        &-content {
+            flex-wrap: wrap;
+        }
+    }
 }
 
 // 770px
@@ -330,7 +351,7 @@
         margin-bottom: $base*5;
     }
     .action-btn {
-        margin-bottom: 0%;
+        margin-bottom: 5%;
     }
     // === HEADER ===
     .header {
@@ -490,6 +511,19 @@
         }
         &-slider {
             padding-bottom: 0px;
+        }
+    }
+    // === FOOTER ===
+    .footer {
+        &-content {
+            flex-direction: column;
+            align-items: center;
+            &__item {
+                margin-bottom: 30px;
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+            }
         }
     }
 }
@@ -856,6 +890,16 @@
             &__img img {
                 width: 300px;
                 height: 410px;
+            }
+        }
+    }
+    // === FOOTER ===
+    .footer {
+        &-instagram__item {
+            margin-bottom: 10px;
+            img {
+                width: 90px;
+                height: 90px;
             }
         }
     }

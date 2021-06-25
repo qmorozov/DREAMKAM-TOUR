@@ -1,7 +1,7 @@
 @import '_vars';
 @import '_fonts';
 // 1199px
-@media (max-width: $screen-lg-max) {
+@media (max-width: 1199px) {
     // === GLOBAL ===
     .journey-time span {
         font-size: $base*6.75;
@@ -34,22 +34,22 @@
     // === FOOTER ===
     .footer {
         &-content__item {
-            padding: 0px 10px;
+            padding: 0px $base*2.5;
             &:first-child {
-                padding: 0px 10px 0px 0px;
+                padding: 0px $base*2.5 0px 0px;
             }
             &:last-child {
-                padding: 0px 0px 0px 10px;
+                padding: 0px 0px 0px $base*2.5;
             }
         }
         &-recall {
-            max-width: 284px;
+            max-width: $base*71;
         }
     }
 }
 
 // 991px
-@media (max-width: $screen-md-max) {
+@media (max-width: 991px) {
     // === GLOBAL ===
     .journey-time span {
         font-size: $base*5.75;
@@ -169,7 +169,7 @@
     }
     // === FIFTH SIXTH ===
     .fifth-sixth__wrapper {
-        padding: 40px 0px 90px;
+        padding: $base*10 0px $base*22.5;
         height: 100%;
         background-repeat: no-repeat;
         background-size: cover;
@@ -179,7 +179,7 @@
         }
     }
     // === THIRD DAY and FIFTH ===
-    .thisd {
+    .third {
         .slider-button {
             display: none;
         }
@@ -203,11 +203,9 @@
                         padding-left: 0px;
                     }
                 }
-                &-item {
-                    &_active {
-                        max-width: $base*70.75;
-                        height: $base*70.5;
-                    }
+                &-item_active {
+                    max-width: $base*70.75;
+                    height: $base*70.5;
                 }
             }
         }
@@ -218,9 +216,9 @@
         &::after {
             display: none;
         }
-        padding: 40px 0px;
+        padding: $base*10 0px;
         .slider_right-content .slider-wrapper {
-            padding-bottom: 80px;
+            padding-bottom: $base*20;
         }
     }
     // === FIFTH ===
@@ -232,7 +230,7 @@
     // === SIXTH ===
     .sixth {
         .slider-wrapper {
-            padding-bottom: 60px;
+            padding-bottom: $base*15;
         }
     }
     // === SEVENTH ===
@@ -255,16 +253,16 @@
     }
     // === EIGHTH ===
     .eighth {
-        height: 500px;
+        height: $base*125;
         &-day-content {
-            padding: 0px 10px;
+            padding: 0px $base*2.5;
         }
     }
     // === PRICE ===
     .price {
-        padding-top: 50px;
+        padding-top: $base*12.5;
         .extra {
-            margin-top: 10px;
+            margin-top: $base*2.5;
             &-item {
                 &__title {
                     margin-left: 0px;
@@ -275,13 +273,13 @@
             }
         }
         .price-action {
-            margin-top: 15px;
+            margin-top: $base*3.75;
         }
         &-top {
             flex-direction: column;
             align-items: center;
             &__title {
-                font-size: 50px;
+                font-size: $base*12.5;
             }
             &__link-items {
                 margin-right: 0px;
@@ -289,7 +287,7 @@
         }
         &-items {
             justify-content: space-between;
-            padding-bottom: 60px;
+            padding-bottom: $base*15;
         }
         &-item {
             &+& {
@@ -299,16 +297,16 @@
     }
     // === REQUEST ===
     .request {
-        padding: 40px 0px;
+        padding: $base*10 0px;
         &-order {
             flex-direction: column;
             width: 100%;
         }
         &-info {
-            margin-bottom: 40px;
+            margin-bottom: $base*10;
         }
         &-knowledge {
-            height: 400px;
+            height: $base*100;
             &__info {
                 margin-left: 0px;
             }
@@ -322,36 +320,31 @@
     }
     // === ABOUT ===
     .about {
-        padding: 60px 0px 60px;
+        padding: $base*15 0px $base*15;
     }
     // === FOOTER ===
-    .footer {
-        &-content {
-            flex-wrap: wrap;
-        }
+    .footer-content {
+        flex-wrap: wrap;
     }
 }
 
 // 770px
-@media (max-width: $screen-sm-max) {
+@media (max-width: 770px) {
     // === GLOBAL ===
     .burger {
         display: block;
     }
     .action-btn {
         display: flex;
-        margin-bottom: 10%;
+        margin-bottom: 5%;
     }
     .slider-button {
         display: none;
     }
     .title-block__text {
-        font-size: 23px;
+        font-size: $base*5.75;
         line-height: $base*8.75;
         margin-bottom: $base*5;
-    }
-    .action-btn {
-        margin-bottom: 5%;
     }
     // === HEADER ===
     .header {
@@ -457,19 +450,19 @@
             right: 0;
         }
         .title-block__text {
-            font-size: 40px;
-            line-height: 50px;
+            font-size: $base*10;
+            line-height: $base*12.5;
         }
         .day-content__text {
-            font-size: 18px;
-            line-height: 30px;
+            font-size: $base*4.5;
+            line-height: $base*7.5;
         }
     }
     // === PRICE ===
     .price {
         &-top {
             display: block;
-            margin-bottom: 30px;
+            margin-bottom: $base*7.5;
         }
         &-items {
             flex-wrap: wrap;
@@ -477,22 +470,22 @@
         }
         &-item {
             &+& {
-                margin-top: 40px;
+                margin-top: $base*10;
             }
         }
     }
     // === REQUEST ===
     .request {
         &-knowledge {
-            height: 230px;
+            height: $base*57.5;
             &__title {
-                font-size: 25px;
-                line-height: 30px;
+                font-size: $base*6.25;
+                line-height: $base*7.5;
             }
             &__text {
-                font-size: 16px;
-                line-height: 20px;
-                margin-bottom: 15px;
+                font-size: $fs-xs;
+                line-height: $base*5;
+                margin-bottom: $base*3.75;
             }
         }
         &-content {
@@ -502,9 +495,9 @@
     // === ABOUT ===
     .about {
         &-top__title {
-            font-size: 40px;
-            line-height: 50px;
-            margin-bottom: 40px;
+            font-size: $fs-l;
+            line-height: $base*12.5;
+            margin-bottom: $base*10;
         }
         &-button {
             display: none;
@@ -514,22 +507,20 @@
         }
     }
     // === FOOTER ===
-    .footer {
-        &-content {
-            flex-direction: column;
-            align-items: center;
-            &__item {
-                margin-bottom: 30px;
-                &:last-child {
-                    margin-bottom: 0px;
-                }
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        &__item {
+            margin-bottom: $base*3.75;
+            &:last-child {
+                margin-bottom: 0px;
             }
         }
     }
 }
 
 // 576px
-@media (max-width: $screen-xs-max) {
+@media (max-width: 576px) {
     // === GLOBAL ===
     .action-btn__icon {
         width: $base*12.5;
@@ -540,21 +531,21 @@
         line-height: $base*7.5;
     }
     .radio-btn__text {
-        font-size: 16px;
+        font-size: $fs-xs;
     }
     .extra {
-        margin-top: 15px;
+        margin-top: $base*3.75;
         &-title {
-            margin-bottom: 15px;
+            margin-bottom: $base*3.75;
         }
         &-item {
             &__text {
-                max-width: 216px;
-                font-size: 14px;
+                max-width: $base*54;
+                font-size: $fs-x-small;
                 margin-right: 0px;
             }
             &__title {
-                font-size: 15px;
+                font-size: $base*3.75;
                 margin-left: 0px;
             }
         }
@@ -624,13 +615,13 @@
         }
     }
     // === THIRD AND FIFTH ===
-    .fifth {
-        padding-top: 0px;
-    }
     .third,
     .fifth {
         padding-bottom: 0px;
         height: 100%;
+    }
+    .fifth {
+        padding-top: 0px;
     }
     // === SIXTH ===
     .sixth {
@@ -638,84 +629,80 @@
     }
     // === SEVENTH ===
     .seventh {
-        padding: 55px 0px 55px 0px;
-        &-content {
-            &__text {
-                &+& {
-                    margin-top: 10px;
-                }
+        padding: $base*13.75 0px $base*13.75 0px;
+        &-content__text {
+            &+& {
+                margin-top: $base*2.5;
             }
         }
         &-slider {
             .slider-wrapper {
                 padding-bottom: 0px;
-                margin-top: 25px;
+                margin-top: $base*6.25;
             }
         }
         &-information {
-            margin-top: 10px;
+            margin-top: $base*2.5;
         }
     }
     // === EIGHTH ===
     .eighth {
-        height: 400px;
+        height: $base*100;
         &-day-content {
             bottom: 0%;
         }
         .title-block__text {
-            font-size: 30px;
-            line-height: 40px;
+            font-size: $base*7.5;
+            line-height: $base*10;
         }
     }
     // === PRICE ===
     .price {
         &-top {
             &__title {
-                font-size: 25px;
+                font-size: $base*6.25;
                 line-height: 15px;
             }
             .extra-item {
-                padding: 20px 0px;
+                padding: $base*5 0px;
                 &__title {
-                    font-size: 16px;
+                    font-size: $fs-xs;
                 }
                 &__text {
-                    font-size: 17px;
+                    font-size: $base*4.25;
                 }
             }
             &__link-items {
-                margin-top: 20px;
+                margin-top: $base*5;
             }
             &__title {
-                font-size: 30px;
+                font-size: $base*7.5;
             }
         }
     }
     // === REQUEST ===
     .request {
         background: none;
-        &-info {
-            &__title {
-                font-size: 30px;
-                line-height: 30px;
-                margin-bottom: 15px;
-            }
+        &-info__title {
+            font-size: $base*7.5;
+            line-height: $base*7.5;
+            margin-bottom: $base*3.75;
         }
         .request-social__item+.request-social__item {
-            margin-left: 10px;
+            margin-left: $base*2.5;
         }
         &-form-top {
             justify-content: space-between;
         }
         &-tariff {
-            margin: 25px 0px 25px 0px;
+            margin: $base*6.25 0px $base*6.25 0px;
         }
         .radio-btn {
             &__text {
-                max-width: 200px;
+                max-width: $base*50;
             }
             &__price {
-                font-size: 17px;
+                font-size: $base*4.25;
             }
         }
         &-content__title {
@@ -733,33 +720,28 @@
             }
             &__btn {
                 margin-left: 0px;
-                margin-top: 20px;
+                margin-top: $base*5;
             }
             &__title {
-                font-size: 20px;
-                line-height: 20px;
+                font-size: $base*5;
+                line-height: $base*5;
             }
         }
     }
     // === ABOUT ===
-    .about {
-        &-top {
-            margin-bottom: 50px;
-            &__title {
-                font-size: 30px;
-                line-height: 35px;
-                margin-bottom: 25px;
-            }
+    .about-top {
+        margin-bottom: $base*12.5;
+        &__title {
+            font-size: $base*7.5;
+            line-height: $base*8.75;
+            margin-bottom: $base*6.25;
         }
     }
 }
 
 // 450px
-@media (max-width: $screen-s-max) {
+@media (max-width: 450px) {
     // === GLOBAL ===
-    .btn {
-        // max-width: $base*40;
-    }
     .logo__image {
         max-width: $base*37.5;
     }
@@ -836,22 +818,20 @@
             }
         }
     }
-    // === PRICE ===
-    .price {}
     // === REQUEST ===
     .request {
         input {
-            font-size: 16px;
+            font-size: $fs-xs;
         }
         &-info {
-            margin-bottom: 10px;
+            margin-bottom: $base*2.5;
         }
         .radio-btn__price {
-            font-size: 15px;
+            font-size: $base*3.75;
         }
         &-form__count {
-            font-size: 14px;
-            margin-left: 20px;
+            font-size: $base*3.75;
+            margin-left: $base*5;
         }
         &-knowledge {
             &__info {
@@ -862,45 +842,43 @@
             }
             &__btn {
                 margin-left: 0px;
-                margin-top: 20px;
+                margin-top: $base*5;
             }
         }
         &-social__item-link svg {
-            width: 25px;
-            height: 25px;
+            width: $base*6.25;
+            height: $base*6.25;
         }
     }
     // === ABOUT ===
     .about {
         &-top {
             &__title {
-                font-size: 21px;
-                line-height: 25px;
-                margin-bottom: 10px;
+                font-size: $base*5.25;
+                line-height: $base*6.25;
+                margin-bottom: $base*2.25;
             }
             &__text {
-                font-size: 14px;
+                font-size: $base*3.5;
             }
         }
         &-item {
             &__info {
-                font-size: 15px;
-                margin-top: 10px;
+                font-size: $base*3.75;
+                margin-top: $base*2.25;
             }
             &__img img {
-                width: 300px;
-                height: 410px;
+                width: $base*75;
+                height: $base*102.5;
             }
         }
     }
     // === FOOTER ===
-    .footer {
-        &-instagram__item {
-            margin-bottom: 10px;
-            img {
-                width: 90px;
-                height: 90px;
-            }
+    .footer-instagram__item {
+        margin-bottom: $base*2.25;
+        img {
+            width: $base*22.5;
+            height: $base*22.5;
         }
     }
 }
@@ -959,38 +937,36 @@
     }
     // === EIGHTH ===
     .eighth {
-        height: 300px;
+        height: $base*75;
         .title-block__text {
-            font-size: 20px;
-            line-height: 30px;
+            font-size: $base*5;
+            line-height: $base*7.5;
         }
         .day-content__text {
-            font-size: 15px;
-            line-height: 20px;
+            font-size: $base*3.75;
+            line-height: $base*5;
         }
     }
     // === PRICE ===
-    .price {
-        &-top__title {
-            font-size: 25px;
-            line-height: 15px;
-        }
+    .price-top__title {
+        font-size: $base*6.25;
+        line-height: $base*3.75;
     }
     // === REQUEST ===
     .request {
         &-info__title {
-            font-size: 25px;
-            line-height: 20px;
-            margin-bottom: 15px;
+            font-size: $base*6.25;
+            line-height: $base*5;
+            margin-bottom: $base*3.75;
         }
         &-knowledge {
             &__title {
-                font-size: 16px;
-                line-height: 18px;
+                font-size: $fs-xs;
+                line-height: $base*4.5;
             }
             &__text {
-                font-size: 14px;
-                line-height: 16px;
+                font-size: $fs-x-small;
+                line-height: $base*4;
                 margin-bottom: 0px;
             }
         }

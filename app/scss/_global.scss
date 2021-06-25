@@ -47,15 +47,23 @@ a {
 }
 
 // === SCROLLBAR ===
-// ::-webkit-scrollbar {
-//     width: auto;
-// }
-// ::-webkit-scrollbar-track {
-//     background: #393131;
-// }
-// ::-webkit-scrollbar-thumb {
-//     background-color: $color-primary-100;
-// }
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #393131;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $color-primary-100;
+}
+
+:root {
+    scrollbar-color: $color-primary-100 #393131;
+    scrollbar-width: thin;
+}
+
 h1,
 h2,
 h3,
@@ -70,22 +78,25 @@ h6 {
 body {
     @include Lato;
     font-size: $fs-xs;
-    line-height: 24px;
+    line-height: $base*6;
     color: $color-primary-300;
+    //////////////////////
+    overflow-x: hidden;
+    /////////////////////
 }
 
 .section-container {
-    max-width: 1276px;
+    max-width: $base*319;
     margin: 0 auto;
-    padding: 0px 15px;
+    padding: 0px $base*3.75;
 }
 
 .logo {
     z-index: 11;
     &__image {
-        max-width: 167px;
+        max-width: $base*41.75;
         width: 100%;
-        max-height: 37px;
+        max-height: $base*9.25;
         height: 100%;
         object-fit: cover;
     }
@@ -95,13 +106,11 @@ body {
     cursor: pointer;
     position: relative;
     display: inline-block;
-    padding: 11px 20px;
-    // max-width: 176px;
-    // width: 100%;
+    padding: $base*2.75 $base*5;
     text-align: center;
-    line-height: 19px;
+    line-height: $base*6;
     border: 1px solid $color-primary-300;
-    border-radius: 5px;
+    border-radius: $base*1.25;
     z-index: 10;
     transition: $transition ease-in-out;
     &::before {
@@ -126,7 +135,7 @@ body {
         border: none;
         color: $color-primary-200;
         &::before {
-            border-radius: 5px;
+            border-radius: $base*1.25;
         }
     }
 }
@@ -137,20 +146,20 @@ body {
     &::before {
         content: "";
         position: absolute;
-        left: -50px;
-        top: 8px;
-        width: 32px;
-        height: 32px;
+        left: -$base*12.5;
+        top: $base*2;
+        width: $base*8;
+        height: $base*8;
         border: 3px solid #6c6c6c;
         border-radius: 100%;
     }
     &::after {
         content: "";
         position: absolute;
-        left: -39px;
-        top: 19px;
-        width: 16px;
-        height: 16px;
+        left: -$base*9.75;
+        top: $base*4.75;
+        width: $base*4;
+        height: $base*4;
         background-color: $color-primary-100;
         border-radius: 100%;
     }
@@ -158,9 +167,9 @@ body {
         @include Montserrat;
         font-weight: $fw-bold;
         font-size: $fs-l;
-        line-height: 50px;
+        line-height: $base*12.5;
         color: $color-primary-200;
-        margin-bottom: 48px;
+        margin-bottom: $base*12;
         span {
             color: $color-primary-100;
         }
@@ -168,10 +177,6 @@ body {
 }
 
 // === SLIDER ===
-.swiper-container {
-    // overflow: inherit;
-}
-
 .slider {
     &-container {
         overflow: hidden;
@@ -179,7 +184,7 @@ body {
     }
     &-wrapper {
         display: flex;
-        padding-bottom: 60px;
+        padding-bottom: $base*15;
     }
 }
 
@@ -194,17 +199,18 @@ body {
     justify-content: flex-end;
     flex-shrink: 0;
     // /////////////////
-    max-width: 283px;
+    max-width: $base*70.75;
     width: 100%;
-    height: 282px;
+    height: $base*70.5;
     ///////////////////
     background-repeat: no-repeat;
     background-size: cover;
     //////////////////
     margin-top: auto;
+    margin-right: $base*8.75;
     /////////////////
-    filter: drop-shadow(0px 6px 8px rgba(0, 0, 0, 0.25));
-    border-radius: 5px;
+    filter: drop-shadow(0px $base*1.5 $base*2 rgba($color-secondary-100, 0.25));
+    border-radius: $base*1.25;
     transition: all $transition ease-in-out;
     &::after,
     &::before {
@@ -217,7 +223,7 @@ body {
     &::after {
         background: $color-primary-300;
         height: 100%;
-        border-radius: 5px;
+        border-radius: $base*1.25;
     }
     &::before {
         background: linear-gradient(2.71deg, rgba(0, 0, 0, 0.78) 1.78%, rgba(0, 0, 0, 0) 60.08%);
@@ -226,9 +232,9 @@ body {
     }
     &_active {
         position: relative;
-        max-width: 320px;
+        max-width: $base*80;
         width: 100%;
-        height: 319px;
+        height: $base*79.75;
         &::before {
             opacity: 1;
         }
@@ -236,22 +242,22 @@ body {
             background: none;
         }
         #{$parent}-title {
-            bottom: 13px;
-            left: 12px;
+            bottom: $base*3.25;
+            left: $base*3;
         }
     }
     &__info {
         font-size: $fs-x-small;
-        line-height: 24px;
-        padding: 24px 16px;
-        max-width: 251px;
+        line-height: $base*6;
+        padding: $base*6 $base*4;
+        max-width: $base*62.75;
     }
     &__title {
         font-weight: $fw-bold;
         color: $color-primary-200;
     }
     &__text {
-        margin-top: 4px;
+        margin-top: $base;
         color: darken($color-primary-200, 10%);
     }
 }
@@ -260,7 +266,7 @@ body {
 .slider-button {
     display: flex;
     &__next {
-        margin-left: 16px;
+        margin-left: $base*4;
     }
     &__next,
     &__prev {
@@ -271,8 +277,8 @@ body {
         border: 1px solid $color-primary-200;
         border-radius: 100%;
         ////////////////
-        width: 64px;
-        height: 64px;
+        width: $base*16;
+        height: $base*16;
         ////////////////
         display: flex;
         justify-content: center;
@@ -299,11 +305,11 @@ body {
 .slider_small-slide {
     .slider-item {
         $parent: &;
-        max-width: 211px;
-        height: 209px;
+        max-width: $base*52.75;
+        height: $base*52.25;
         &_active {
-            max-width: 269px;
-            height: 268px;
+            max-width: $base*67.25;
+            height: $base*67;
             #{$parent}__info {
                 z-index: 1;
             }
@@ -313,8 +319,8 @@ body {
 
 .slider_no-active {
     .slider-item {
-        max-width: 320px;
-        height: 320px;
+        max-width: $base*80;
+        height: $base*80;
         &::after {
             opacity: 0;
         }
@@ -324,7 +330,7 @@ body {
             transform: rotate(180deg);
         }
         &__info {
-            max-width: 288px;
+            max-width: $base*72;
             z-index: 1;
         }
         &__text {
@@ -422,9 +428,9 @@ body {
 
 .day-content {
     &__text {
-        line-height: 24px;
+        line-height: $base*6;
         &+& {
-            margin-top: 35px;
+            margin-top: $base*8.75;
         }
         &_distinguish {
             font-weight: $fw-Semi-bold;
@@ -487,12 +493,12 @@ body {
 }
 
 .extra {
-    margin-top: 59px;
+    margin-top: $base*14.75;
     &-title {
         @include Montserrat;
-        font-size: 20px;
-        line-height: 28px;
-        margin-bottom: 31px;
+        font-size: $base*5;
+        line-height: $base*7;
+        margin-bottom: $base*7.75;
     }
 }
 
@@ -501,9 +507,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 0px;
+    padding: $base*4 0px;
     /////
-    max-width: 800px;
+    max-width: $base*200;
     width: 100%;
     &+& {
         position: relative;
@@ -518,12 +524,12 @@ body {
     }
     &__title {
         font-weight: $fw-bold;
-        margin-left: 8px;
+        margin-left: $base*2;
         transition: all $transition ease-in-out;
     }
     &__text {
-        max-width: 247px;
-        margin-right: 31px;
+        max-width: $base*61.75;
+        margin-right: $base*7.75;
         opacity: 0.7;
         transition: all $transition ease-in-out;
     }
@@ -587,9 +593,9 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 64px;
-        height: 64px;
-        margin-left: 18px;
+        width: $base*16;
+        height: $base*16;
+        margin-left: $base*4.5;
         border-radius: 100%;
         border: 1px solid $color-primary-200;
         transition: all $transition ease-in-out;
@@ -647,20 +653,20 @@ body {
 .journey-time {
     display: inline-block;
     background: linear-gradient(91.82deg, #FB8B62 5.83%, #F47648 89.73%), #F47648;
-    border-radius: 16px;
+    border-radius: $base*4;
     text-align: center;
-    padding: 2px 24px;
+    padding: 2px $base*6;
     span {
         @include Montserrat;
         font-weight: $fw-bold;
-        font-size: 30px;
-        line-height: 56px;
+        font-size: $base*7.5;
+        line-height: $base*14;
     }
 }
 
 .social {
-    width: 20px;
-    height: 20px;
+    width: $base*5;
+    height: $base*5;
     display: flex;
     &__item {
         fill: $color-primary-200;
@@ -673,14 +679,14 @@ body {
 
 .burger {
     position: relative;
-    width: 24px;
-    height: 19px;
+    width: $base*6;
+    height: $base*4.75;
     cursor: pointer;
     display: none;
     z-index: 10;
     span {
         position: absolute;
-        top: 8px;
+        top: $base*2;
         height: 3px;
         width: 100%;
         border-radius: 1px;

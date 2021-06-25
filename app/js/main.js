@@ -1,7 +1,5 @@
-// const { default: Swiper } = require("swiper");
-
 let swiper = new Swiper('.slider-container', {
-    spaceBetween: 35,
+    // spaceBetween: 35,
     slidesPerView: 'auto',
     grabCursor: true,
     loop: true,
@@ -18,7 +16,8 @@ let swiper = new Swiper('.slider-container', {
         700: {
             centeredSlides: false,
         }
-    }
+    },
+
 });
 /////////////////////////////
 

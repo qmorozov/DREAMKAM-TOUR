@@ -20,7 +20,7 @@
         width: 100vw;
         height: 100vh;
         backdrop-filter: blur(5px);
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba($color-secondary-100, 0.5);
         opacity: 0;
         visibility: hidden;
         transition: all $transition ease-in-out;
@@ -31,36 +31,36 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: $base*17.5;
     &__menu {
         margin-left: auto;
     }
     &__button {
-        margin-left: 56px;
+        margin-left: $base*14;
     }
 }
 
 .header-info {
     position: relative;
     height: 80vh;
-    max-width: 616px;
-    margin-top: 53px;
+    max-width: $base*154;
+    margin-top: $base*13.25;
     color: $color-primary-200;
     &__title {
         @include Montserrat;
         font-weight: $fw-heavy;
         font-size: $fs-xxl;
-        line-height: 64px;
-        margin-bottom: 25px;
+        line-height: $base*16;
+        margin-bottom: $base*6.25;
     }
     &__text {
-        font-size: 20px;
-        line-height: 28px;
-        margin-bottom: 14px;
-        max-width: 384px;
+        font-size: $base*5;
+        line-height: $base*7;
+        margin-bottom: $base*3.5;
+        max-width: $base*96;
     }
     &__journey-time {
-        margin-bottom: 40px;
+        margin-bottom: $base*10;
     }
 }
 
@@ -69,7 +69,7 @@
     bottom: 15%;
     left: 0;
     .social__item+.social__item {
-        margin-left: 25px;
+        margin-left: $base*6.25;
     }
 }
 
@@ -84,8 +84,8 @@
     display: flex;
     &__item {
         position: relative;
-        padding: 10px;
-        line-height: 19px;
+        padding: $base*2.5;
+        line-height: $base*4.75;
         transition: all $transition ease-in-out;
         @media (any-hover: hover) {
             &::before {
@@ -104,7 +104,7 @@
             }
         }
         &+& {
-            margin-left: 46px;
+            margin-left: $base*11.5;
         }
     }
 }
@@ -113,10 +113,10 @@
 .journey {
     background: url(../images/default/journey-bg.png) no-repeat bottom center;
     background-size: contain;
-    padding-top: 120px;
+    padding-top: $base*30;
     &-inner {
         position: relative;
-        height: 1407px;
+        height: $base*351.75;
     }
     &-wrapper {
         background: url(../images/default/journey-plane.png) no-repeat right -40% center;
@@ -127,27 +127,27 @@
 }
 
 .journey-top {
-    max-width: 728px;
-    margin-bottom: 27px;
+    max-width: $base*182;
+    margin-bottom: $base*6.75;
     &__title {
         @include Montserrat;
         font-weight: $fw-bold;
-        font-size: 48px;
-        line-height: 56px;
+        font-size: $base*12;
+        line-height: $base*14;
     }
 }
 
 .journey-info {
-    margin-bottom: 64px;
+    margin-bottom: $base*16;
 }
 
 .journey-text {
-    max-width: 597px;
+    max-width: $base*149.25;
     opacity: 0.6;
     &__title {
         font-size: $fs-m;
-        line-height: 32px;
-        margin-bottom: 35px;
+        line-height: $base*8;
+        margin-bottom: $base*8.75;
     }
     &__word {
         font-weight: $fw-regular;
@@ -159,18 +159,18 @@
 .journey-items {
     display: flex;
     justify-content: space-between;
-    max-width: 760px;
+    max-width: $base*190;
 }
 
 .journey-item {
     &+& {
-        margin-left: 64px;
+        margin-left: $base*16;
     }
     flex-basis: 25%;
     &__icon img {
-        width: 32px;
-        height: 32px;
-        margin-bottom: 8px;
+        width: $base*8;
+        height: $base*8;
+        margin-bottom: $base*2;
     }
     &__text {
         @include Montserrat;
@@ -185,7 +185,7 @@
 
 .journey-title {
     @include Montserrat;
-    font-size: 150px;
+    font-size: $base*47.5;
     font-weight: $fw-bold;
     color: $color-primary-400;
     position: absolute;
@@ -197,22 +197,22 @@
 
 .journey-content {
     position: absolute;
-    bottom: 147px;
+    bottom: $base*36.75;
     color: $color-primary-200;
-    line-height: 19px;
+    line-height: $base*4.75;
     &__title {
         @include Montserrat;
         font-weight: $fw-Semi-bold;
         font-size: $fs-m;
-        line-height: 32px;
-        max-width: 662px;
-        margin-bottom: 32px;
+        line-height: $base*8;
+        max-width: $base*165.5;
+        margin-bottom: $base*8;
     }
     &__text {
         font-size: $fs-xs;
         color: $color-secondary-500;
-        max-width: 293px;
-        margin-bottom: 13px;
+        max-width: $base*73.25;
+        margin-bottom: $base*3.25;
     }
     &__author {
         font-weight: $fw-medium;
@@ -238,12 +238,12 @@
 
 // === FIRST ===
 .first {
-    height: 889px;
-    padding-top: 80px;
+    height: $base*222.25;
+    padding-top: $base*10;
     background: url(../images/default/arrive-bg.jpg) no-repeat bottom center;
     background-size: cover;
     &-day-content {
-        max-width: 461px;
+        max-width: $base*115.25;
     }
     .day-wrapper {
         justify-content: space-between;
@@ -254,7 +254,7 @@
 // === SECOND ===
 .second {
     position: relative;
-    padding-top: 80px;
+    padding-top: $base*20;
     background: url(../images/default/second-bg.png) no-repeat top right;
     &::before {
         content: "";
@@ -268,17 +268,17 @@
 }
 
 .second-top {
-    margin-bottom: 64px;
+    margin-bottom: $base*16;
     &__title {
-        max-width: 856px;
+        max-width: $base*214;
         .title-block__text {
             color: inherit;
         }
     }
     &__text {
-        max-width: 548px;
+        max-width: $base*137;
         &+& {
-            margin-top: 30px;
+            margin-top: $base*7.5;
         }
     }
 }
@@ -292,25 +292,21 @@
         width: 83%;
     }
     &__info {
-        max-width: 478px;
+        max-width: $base*119.5;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
     &__text {
         &+& {
-            margin-top: 30px;
+            margin-top: $base*7.5;
         }
     }
 }
 
-// .second-content__slider,
-// .second-content__info {
-//     width: 50%;
-// }
 // === CARDS ===
 .cards {
-    padding-top: 104px;
+    padding-top: $base*26;
     &-items {
         display: flex;
         justify-content: space-between;
@@ -320,27 +316,27 @@
 
 .cards-item {
     flex-shrink: 0;
-    margin-bottom: 32px;
-    max-width: 288px;
+    margin-bottom: $base*8;
+    max-width: $base*72;
     background: $color-primary-200;
-    box-shadow: 0px 6px 14px rgba($color-secondary-100, 0.1);
-    border-radius: 5px;
+    box-shadow: 0px $base*1.5 $base*3.5 rgba($color-secondary-100, 0.1);
+    border-radius: $base*1.25;
     transition: box-shadow .4s ease-in-out;
     &__img img {
-        border-radius: 5px 5px 0px 0px;
-        max-width: 288px;
+        border-radius: $base*1.25 $base*1.25 0px 0px;
+        max-width: $base*72;
         width: 100%;
-        max-height: 161px;
+        max-height: $base*40.25;
         height: 100%;
     }
     &__info {
-        padding: 34px 24px 32px 24px;
+        padding: $base*8.5 $base*6 $base*8 $base*6;
     }
     &__title {
         @include Montserrat;
         font-weight: $fw-bold;
         font-size: $fs-s;
-        margin-bottom: 14px;
+        margin-bottom: $base*3.5;
     }
     &__text {
         font-size: $fs-x-small;
@@ -348,19 +344,19 @@
     }
     @media (any-hover: hover) {
         &:hover {
-            box-shadow: 0px 6px 20px rgba($color-secondary-100, 0.3);
+            box-shadow: 0px $base*1.5 $base*5 rgba($color-secondary-100, 0.3);
         }
     }
 }
 
 // === THIRD ===
 .third-day-content {
-    max-width: 505px;
+    max-width: $base*126.25;
 }
 
 .third {
-    height: 796px;
-    padding-top: 72px;
+    height: $base*199;
+    padding-top: $base*18;
     background: url(../images/default/111.jpg) no-repeat bottom center;
     background-size: contain;
     margin-bottom: -3px;
@@ -372,15 +368,15 @@
 
 // === FOURTH ===
 .fourth {
-    padding: 165px 0px;
+    padding: $base*41.25 0px;
     background: $color-secondary-100;
     position: relative;
     &::after {
         content: "";
         position: absolute;
         background: url(../images/default/eagle.png) no-repeat;
-        width: 530px;
-        height: 299px;
+        width: $base*132.5;
+        height: $base*74.75;
         top: -20%;
         left: -9%;
         z-index: 1;
@@ -391,16 +387,16 @@
         bottom: -9%;
         right: 9%;
         background: url(../images/default/gull.png) no-repeat;
-        width: 373px;
-        height: 315px;
+        width: $base*93.25;
+        height: $base*78.75;
         z-index: 2;
     }
     &-day-content {
         .title-block {
-            max-width: 533px;
+            max-width: $base*133.25;
         }
         .day-content__text {
-            max-width: 461px;
+            max-width: $base*104;
         }
     }
     .day-wrapper {
@@ -410,8 +406,8 @@
 
 // === FIFTH_SIXTH ===
 .fifth-sixth__wrapper {
-    height: 1505px;
-    padding: 124px 0px 90px;
+    height: $base*376.25;
+    padding: $base*31 0px $base*22.5;
     background: url(../images/default/fifth-sixth-bg.jpg) round;
     background-size: contain;
     position: relative;
@@ -441,7 +437,7 @@
 .fifth {
     &-day-content {
         z-index: 2;
-        max-width: 461px;
+        max-width: $base*115.25;
         .day-content__text {
             color: $color-primary-200;
         }
@@ -466,10 +462,10 @@
 
 // === SIXTH ===
 .sixth {
-    padding-top: 90px;
+    padding-top: $base*22.5;
     &-day-content {
         z-index: 2;
-        max-width: 506px;
+        max-width: $base*126.5;
         .day-content__text {
             color: $color-primary-200;
         }
@@ -487,7 +483,7 @@
 
 // === SEVENTH ===
 .seventh {
-    padding: 116px 0px 57px 0px;
+    padding: $base*29 0px $base*14.25 0px;
     position: relative;
     &::before {
         content: "";
@@ -506,15 +502,15 @@
     &-content {
         z-index: 2;
         &__title {
-            max-width: 708px;
+            max-width: $base*177;
             .title-block__text {
                 color: $color-primary-300;
             }
         }
         &__text {
-            max-width: 548px;
+            max-width: $base*137;
             &+& {
-                margin-top: 35px;
+                margin-top: $base*8.75;
             }
         }
     }
@@ -523,9 +519,9 @@
         top: 15%;
         right: 0;
         img {
-            max-width: 645px;
+            max-width: $base*161.25;
             width: 100%;
-            max-height: 446px;
+            max-height: $base*111.5;
             height: 100%;
             object-fit: cover;
         }
@@ -552,13 +548,13 @@
 .seventh-information {
     display: flex;
     justify-content: space-between;
-    margin-top: 48px;
+    margin-top: $base*12;
 }
 
 .seventh-info {
-    max-width: 481px;
+    max-width: $base*120.25;
     &__text {
-        margin-bottom: 48px;
+        margin-bottom: $base*12;
         color: $color-secondary-200;
     }
 }
@@ -567,33 +563,33 @@
 .eighth {
     background: url(../images/default/eighth-bg.png) no-repeat top center;
     background-size: cover;
-    height: 718px;
+    height: $base*179.5;
     position: relative;
     &-day-content {
         position: absolute;
         bottom: 16%;
         right: 3%;
-        max-width: 504px
+        max-width: $base*126
     }
 }
 
 // === PRICE ===
 .price {
-    padding-top: 120px;
+    padding-top: $base*30;
     &-wrapper {
         position: relative;
         &::before {
             content: "";
             position: absolute;
             width: 90%;
-            height: 4px;
+            height: $base;
             background-color: $color-primary-300;
             bottom: 0;
             left: 0;
         }
     }
     &-action {
-        margin-top: 90px;
+        margin-top: $base*22.5;
     }
 }
 
@@ -601,17 +597,16 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin-bottom: 56px;
+    margin-bottom: $base*14;
     &__title {
         @include title;
         color: $color-primary-300;
-        // margin-bottom: 76px;
     }
     .extra-item {
-        padding: 47px 0px;
+        padding: $base*11.75 0px;
         &__title {
             font-weight: $fw-regular;
-            font-size: 20px;
+            font-size: $base*5;
         }
         &__text {
             font-weight: $fw-bold;
@@ -623,14 +618,14 @@
 }
 
 .price-top__link-items {
-    margin-right: 79px;
+    margin-right: $base*19.75;
 }
 
 .price-top__link-item {
     font-size: $fs-s;
     color: $color-primary-100;
     &+& {
-        margin-top: 24px;
+        margin-top: $base*6;
     }
     .text-underline_dark {
         border-bottom-color: $color-primary-100;
@@ -645,25 +640,25 @@
 
 .price-items {
     display: flex;
-    padding-bottom: 134px;
+    padding-bottom: $base*33.5;
 }
 
 .price-item {
-    max-width: 350px;
+    max-width: $base*87.5;
     &+& {
-        margin-left: 80px;
+        margin-left: $base*20;
     }
     &__title {
         position: relative;
-        margin-bottom: 20px;
-        padding-left: 35px;
+        margin-bottom: $base*5;
+        padding-left: $base*8.75;
         font-weight: $fw-bold;
         font-size: $fs-m;
         &::before {
             content: "";
             position: absolute;
-            width: 25px;
-            height: 25px;
+            width: $base*6.25;
+            height: $base*6.25;
             top: 0;
             left: 0;
             right: 0;
@@ -672,10 +667,10 @@
     }
     &__list-text {
         position: relative;
-        padding-left: 14px;
+        padding-left: $base*3.5;
         color: $color-secondary-200;
         &+& {
-            margin-top: 16px;
+            margin-top: $base*4;
         }
         &::before {
             content: "";
@@ -684,8 +679,8 @@
             top: 50%;
             bottom: 50%;
             transform: translate(-50%, -50%);
-            width: 6px;
-            height: 6px;
+            width: $base*1.5;
+            height: $base*1.5;
             border-radius: 100%;
             background-color: $color-secondary-300;
         }
@@ -709,7 +704,7 @@
 
 // === REQUEST ===
 .request {
-    padding: 96px 0px;
+    padding: $base*24 0px;
     background: url(../images/default/request-bg.png) no-repeat bottom center;
     background-size: contain;
     &-wrapper {
@@ -726,14 +721,14 @@
         justify-content: space-between;
     }
     &-content__title {
-        margin-bottom: 18px;
+        margin-bottom: $base*4.5;
     }
     &-info__title {
         @include Montserrat;
         font-weight: $fw-bold;
-        font-size: 36px;
-        line-height: 48px;
-        margin-bottom: 30px;
+        font-size: $base*9;
+        line-height: $base*12;
+        margin-bottom: $base*7.5;
     }
     &-content,
     &-form-inner {
@@ -745,11 +740,11 @@
     display: flex;
     &__item {
         &+& {
-            margin-left: 32px;
+            margin-left: $base*8;
         }
         &-link svg {
-            width: 30px;
-            height: 30px;
+            width: $base*7.5;
+            height: $base*7.5;
             path {
                 transition: all $transition ease-in-out;
                 fill: $color-secondary-100;
@@ -764,20 +759,20 @@
 .request-form-top {
     display: flex;
     p {
-        margin-bottom: 16px;
+        margin-bottom: $base*4;
     }
 }
 
 .request-form__name input,
 .request-form__count input {
     @include input;
-    max-width: 260px;
+    max-width: $base*65;
     width: 100%;
 }
 
 .request-form__count {
     position: relative;
-    margin-left: 44px;
+    margin-left: $base*11;
     input {
         cursor: default;
     }
@@ -786,8 +781,8 @@
 .btn-minus,
 .btn-plus {
     position: absolute;
-    width: 23px;
-    height: 30px;
+    width: $base*5.75;
+    height: $base*7.5;
     cursor: pointer;
 }
 
@@ -795,7 +790,7 @@
     &-minus {
         background: url(../images/icon/less.svg) no-repeat;
         top: 73%;
-        right: 40px;
+        right: $base*10;
     }
     &-plus {
         background: url(../images/icon/more.svg) no-repeat;
@@ -806,13 +801,13 @@
 
 .request {
     &-tariff {
-        margin: 48px 0px 35px 0px;
+        margin: $base*12 0px $base*8.75 0px;
     }
     &-item {
         display: flex;
         align-items: center;
         &+& {
-            margin-top: 35px;
+            margin-top: $base*8.75;
         }
     }
 }
@@ -826,7 +821,7 @@
         display: flex;
         justify-content: space-between;
         color: $color-secondary-100;
-        margin-left: 10px;
+        margin-left: $base*2.5;
         width: 100%;
     }
     &__text {
@@ -835,14 +830,14 @@
     }
     &__price {
         font-weight: $fw-bold;
-        font-size: 20px;
+        font-size: $base*5;
     }
 }
 
 .radio-btn__fake {
     position: relative;
-    width: 16px;
-    height: 16px;
+    width: $base*4;
+    height: $base*4;
     border: 1px solid $color-primary-50;
     border-radius: 100%;
     &::before {
@@ -851,8 +846,8 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 12px;
-        height: 12px;
+        width: $base*3;
+        height: $base*3;
         background-color: $color-primary-50;
         border-radius: 100%;
         transition: opacity $transition ease-in-out;
@@ -861,7 +856,7 @@
 }
 
 .request-date {
-    margin-bottom: 37px;
+    margin-bottom: $base*9.25;
     &__input {
         @include input;
         padding-left: 0px;
@@ -873,7 +868,7 @@
 }
 
 .request-comment {
-    margin-bottom: 49px;
+    margin-bottom: $base*12.25;
     &__input {
         @include input;
         width: 100%;
@@ -889,7 +884,7 @@
 }
 
 .request-knowledge {
-    height: 666px;
+    height: $base*166.5;
     display: flex;
     align-items: flex-end;
     &__form {
@@ -902,56 +897,55 @@
     &__img {
         margin-left: -13%;
         img {
-            max-width: 356px;
+            max-width: $base*89;
             width: 100%;
-            max-height: 332px;
+            max-height: $base*83;
             height: 100%;
             object-fit: cover;
         }
     }
     &__info {
         color: $color-primary-200;
-        margin-left: 95px;
+        margin-left: $base*23.75;
     }
     &__title {
         @include Montserrat;
         font-weight: $fw-bold;
-        font-size: 36px;
-        line-height: 48px;
-        margin-bottom: 8px;
+        font-size: $base*9;
+        line-height: $base*12;
+        margin-bottom: $base*2;
     }
     &__text {
-        font-size: 20px;
-        line-height: 32px;
-        margin-bottom: 32px;
+        font-size: $base*5;
+        line-height: $base*8;
+        margin-bottom: $base*8;
     }
     &__input {
         @include input;
         border-bottom-color: $color-primary-200;
         padding-left: 0px;
-        // max-width: 564px;
         width: 100%;
         color: $color-secondary-500;
     }
     &__btn {
-        margin-left: 23px;
+        margin-left: $base*5.75;
     }
 }
 
 // === ABOUT ===
 .about {
-    padding: 120px 0px 113px;
+    padding: $base*30 0px $base*28.25;
 }
 
 .about-top {
-    margin-bottom: 79px;
+    margin-bottom: $base*19.75;
     &__title {
         @include title;
-        max-width: 960px;
-        margin-bottom: 59px;
+        max-width: $base*240;
+        margin-bottom: $base*14.75;
     }
     &__text {
-        max-width: 511px;
+        max-width: $base*127.75;
         opacity: 0.8;
     }
 }
@@ -959,7 +953,7 @@
 .about-slider {
     position: relative;
     overflow: hidden;
-    padding-bottom: 60px;
+    padding-bottom: $base*15;
 }
 
 .about-items {
@@ -970,19 +964,19 @@
 .about-item {
     &__img {
         img {
-            width: 352px;
-            height: 466px;
+            width: $base*88;
+            height: $base*116.5;
             object-fit: cover;
         }
     }
     &__info {
         display: flex;
         font-size: $fs-s;
-        margin-top: 24px;
+        margin-top: $base*6;
     }
     &__name {
         font-weight: $fw-Semi-bold;
-        margin-right: 5px;
+        margin-right: $base*1.25;
     }
     &__instagram {
         color: $color-primary-100;
@@ -1008,7 +1002,7 @@
     bottom: 0;
     display: flex;
     &__next {
-        margin-left: 16px;
+        margin-left: $base*4;
     }
     &__prev,
     &__next {
@@ -1018,8 +1012,8 @@
         align-items: center;
         border: 1px solid $color-primary-300;
         border-radius: 100%;
-        width: 38px;
-        height: 38px;
+        width: $base*9.5;
+        height: $base*9.5;
         transition: all $transition ease-in-out;
         path {
             transition: all $transition ease-in-out;
@@ -1037,18 +1031,18 @@
 // === FOOTER ===
 .footer {
     background-color: $color-primary-300;
-    padding-top: 63px;
+    padding-top: $base*15.75;
     &-content {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 47px;
+        margin-bottom: $base*11.75;
         &__item {
-            padding: 0px 15px;
+            padding: 0px $base*3.75;
             &:last-child {
-                padding: 0px 0px 0px 15px;
+                padding: 0px 0px 0px $base*3.75;
             }
             &:first-child {
-                padding: 0px 15px 0px 0px;
+                padding: 0px $base*3.75 0px 0px;
             }
         }
     }
@@ -1056,7 +1050,7 @@
 
 .footer-menu {
     &__logo {
-        margin-bottom: 40px;
+        margin-bottom: $base*10;
     }
     &__item {
         color: $color-primary-500;
@@ -1065,24 +1059,24 @@
             color: $color-primary-100;
         }
         &+& {
-            margin-top: 16px;
+            margin-top: $base*4;
         }
     }
 }
 
 .footer-instagram {
-    max-width: 364px;
+    max-width: $base*91;
     width: 100%;
     &__top {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 16px;
+        margin-bottom: $base*4;
     }
     &__account {
         @include Montserrat;
         font-weight: $fw-bold;
-        line-height: 28px;
+        line-height: $base*7;
         color: $color-primary-500;
         transition: all $transition ease-in-out;
         &:hover {
@@ -1106,30 +1100,30 @@
         margin-bottom: 5.5px;
         transition: all $transition ease-in-out;
         &:hover {
-            box-shadow: 0px 0px 6px 2px rgba(255, 255, 255, 0.2);
+            box-shadow: 0px 0px $base*1.5 2px rgba(255, 255, 255, 0.2);
         }
         img {
-            width: 105px;
-            height: 113px;
+            width: $base*26.25;
+            height: $base*28.25;
             object-fit: cover;
         }
     }
 }
 
 .footer-recall {
-    max-width: 338px;
+    max-width: $base*84.5;
     width: 100%;
     &__top {
         display: flex;
-        margin-bottom: 46px;
+        margin-bottom: $base*11.5;
     }
     &__info {
-        margin-left: 18px;
+        margin-left: $base*4.5;
     }
     &__img img {
-        max-width: 63px;
+        max-width: $base*15.75;
         width: 100%;
-        max-height: 102px;
+        max-height: $base*25.5;
         height: 100%;
         object-fit: cover
     }
@@ -1137,7 +1131,7 @@
         @include Montserrat;
         font-weight: $fw-Semi-bold;
         color: $color-primary-200;
-        margin-bottom: 6px;
+        margin-bottom: $base*1.5;
     }
     &__instagram-link {
         color: $color-primary-500;
@@ -1151,37 +1145,37 @@
             @include Montserrat;
             font-weight: $fw-Semi-bold;
             color: $color-primary-200;
-            margin-bottom: 8px;
+            margin-bottom: $base*2;
         }
         &-items {
             display: flex;
         }
         &-item {
-            width: 24px;
-            height: 24px;
+            width: $base*6;
+            height: $base*6;
             fill: $color-primary-500;
             transition: all $transition ease-in-out;
             &:hover {
                 fill: $color-primary-100;
             }
             &+& {
-                margin-left: 16px;
+                margin-left: $base*4;
             }
         }
     }
 }
 
 .footer-contact {
-    max-width: 221px;
+    max-width: $base*55.25;
     width: 100%;
     &__top {
-        margin-bottom: 34px;
+        margin-bottom: $base*8.5;
     }
     &__phone {
         @include Montserrat;
         font-weight: $fw-Semi-bold;
-        font-size: 20px;
-        line-height: 32px;
+        font-size: $base*5;
+        line-height: $base*8;
         color: $color-primary-200;
         transition: all $transition ease-in-out;
         &:hover {
@@ -1190,7 +1184,7 @@
     }
     &__date {
         font-size: $fs-x-small;
-        line-height: 32px;
+        line-height: $base*8;
         color: $color-primary-500;
     }
     &__bottom {
@@ -1199,12 +1193,12 @@
     &__email,
     &__address {
         position: relative;
-        padding-left: 24px;
+        padding-left: $base*6;
         &::before {
             content: "";
             position: absolute;
-            width: 20px;
-            height: 20px;
+            width: $base*6;
+            height: $base*6;
             left: 0;
             top: 16%;
         }
@@ -1213,7 +1207,7 @@
         background: url(../images/icon/email.svg) no-repeat;
     }
     &__address {
-        margin-top: 12px;
+        margin-top: $base*3;
         &::before {
             background: url(../images/icon/mark.svg) no-repeat;
         }
@@ -1221,7 +1215,7 @@
 }
 
 .footer-copyright {
-    padding: 22px 0px 16px 0px;
+    padding: $base*5.5 0px $base*4 0px;
     color: $color-primary-200;
     position: relative;
     &::before {

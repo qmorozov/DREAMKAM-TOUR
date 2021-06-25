@@ -9,13 +9,13 @@
 
 // === MIXIN ===
 @mixin input {
-    padding: 13px 8px;
+    padding: $base*3.25 $base*2;
     font-weight: $fw-regular;
-    font-size: 20px;
+    font-size: $base*5;
     border-bottom: 1px solid $color-primary-300;
     color: $color-primary-300;
     &::placeholder {
-        color: #999999;
+        color: $color-secondary-500;
     }
 }
 
@@ -36,7 +36,7 @@
 }
 
 // === BASE ===
-$base: 4px;
+$base: rem(4px);
 // === ANIMATION ===
 $transition: 0.3s;
 // === FONT-WEIGHT ===
@@ -61,21 +61,21 @@ $color-secondary-400:#363636;
 $color-secondary-500:#DEDEDE;
 $color-secondary-500:#999999;
 // === FONT-SIZE ===
-$fs-x-small: 14px;
-$fs-xs: 16px;
-$fs-s: 18px;
-$fs-m: 24px;
-$fs-l: 40px;
-$fs-xxl: 56px;
-$fs-xxl-big: 64px;
+$fs-x-small: rem(14px);
+$fs-xs: rem(16px);
+$fs-s: rem(18px);
+$fs-m: rem(24px);
+$fs-l: rem(40px);
+$fs-xxl: rem(56px);
+$fs-xxl-big: rem(64px);
 // === ADAPTIVE ===
-$screen-sm: 576px;
-$screen-md: 768px;
-$screen-lg: 992px;
-$screen-xl: 1200px;
+// $screen-sm: 576px;
+// $screen-md: 768px;
+// $screen-lg: 992px;
+// $screen-xl: 1200px;
 //////////
-$screen-s-max: 450px;
-$screen-xs-max: 576px;
-$screen-sm-max: 770px;
-$screen-md-max: 991px;
-$screen-lg-max: 1199px;
+// $screen-s-max: 450px;
+// $screen-xs-max: 576px;
+// $screen-sm-max: 770px;
+// $screen-md-max: 991px;
+// $screen-lg-max: 1199px;

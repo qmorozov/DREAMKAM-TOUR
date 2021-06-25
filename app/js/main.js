@@ -23,18 +23,32 @@ let swiper = new Swiper('.slider-container', {
 /////////////////////////////
 
 let aboutSwiper = new Swiper('.about-slider', {
-    slidesPerView: 3,
     spaceBetween: 96,
     grabCursor: true,
+    slidesPerView: 'auto',
     slideClass: 'about-item',
     wrapperClass: 'about-items',
     slideActiveClass: 'about-item_active',
     loop: true,
+    centeredSlides: true,
     navigation: {
         nextEl: '.about-button__next',
         prevEl: '.about-button__prev',
     },
     speed: 650,
+    breakpoints: {
+        600: {
+            spaceBetween: 30,
+        },
+        1000: {
+            spaceBetween: 60,
+        },
+        1200: {
+            spaceBetween: 96,
+            slidesPerView: 3,
+
+        }
+    }
 });
 
 ////////////////////////////////////////

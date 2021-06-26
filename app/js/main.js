@@ -163,3 +163,11 @@ for (let anchor of anchors) {
     });
 };
 ////////////////////
+
+AOS.init();
+
+AOS.init({
+    offset: 100,
+    duration: 400,
+    once: true,
+});

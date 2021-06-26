@@ -24,7 +24,6 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700&family=Montserrat:wght@600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -37,7 +36,7 @@
             <div class="header-top">
                 <div class="logo">
                     <a class="logo__link" href="#" aria-label="Logo">
-                        <img class="logo__image" src="images/default/logo.svg" alt="Logo">
+                        <img class="logo__image lazyload" data-src="images/default/logo.svg" alt="Logo">
                     </a>
                 </div>
                 <div class="header-top__menu">
@@ -74,12 +73,12 @@
                         </span>
                     </a>
                     <div class="social header-social">
-                        <a class="social__item" href="https://www.facebook.com/kam41reg" target="_blank" aria-label="Facebook">
+                        <a class="social__item" href="https://www.facebook.com/kam41reg" target="_blank" rel="noreferrer" aria-label="Facebook">
                             <svg width="19" height="20" viewBox="0 0 19 20">
                                 <path d="M14.3098 0H11.7209C8.57656 0 6.54594 1.98843 6.54594 5.06678V7.03521H3.94016C3.69688 7.03521 3.5 7.22377 3.5 7.45661V10.8421C3.5 11.0749 3.69688 11.2621 3.94016 11.2621H6.54594V19.58C6.54594 19.8114 6.74281 20 6.98469 20H10.655C10.8997 20 11.0966 19.8114 11.0966 19.58V11.2606H14.3084C14.5517 11.2606 14.7486 11.0735 14.7486 10.8407L14.75 7.45661C14.7494 7.40097 14.7376 7.34604 14.7154 7.2952C14.6931 7.24435 14.6609 7.19866 14.6206 7.16092C14.5363 7.0809 14.4252 7.03647 14.3098 7.03664H11.0966V5.42247C11.0966 4.47111 11.3342 3.98829 12.6336 3.98829L14.3098 3.98257C14.5517 3.98257 14.7486 3.79544 14.7486 3.5626V0.41997C14.75 0.188558 14.5531 0 14.3098 0Z"/>
                             </svg>
                         </a>
-                        <a class="social__item" href="https://www.instagram.com/dreamkamtour/" target="_blank" aria-label="Instagram">
+                        <a class="social__item" href="https://www.instagram.com/dreamkamtour/" target="_blank" rel="noreferrer" aria-label="Instagram">
                             <svg width="20" height="20" viewBox="0 0 20 20">
                                 <path d="M5.71429 0H14.2857C15.8012 0 17.2547 0.602039 18.3263 1.67368C19.398 2.74531 20 4.19876 20 5.71429V14.2857C20 15.8012 19.398 17.2547 18.3263 18.3263C17.2547 19.398 15.8012 20 14.2857 20H5.71429C4.19876 20 2.74531 19.398 1.67368 18.3263C0.602039 17.2547 0 15.8012 0 14.2857V5.71429C0 4.19876 0.602039 2.74531 1.67368 1.67368C2.74531 0.602039 4.19876 0 5.71429 0ZM10 14.2857C11.1366 14.2857 12.2267 13.8342 13.0305 13.0305C13.8342 12.2267 14.2857 11.1366 14.2857 10C14.2857 8.86336 13.8342 7.77327 13.0305 6.96954C12.2267 6.16582 11.1366 5.71429 10 5.71429C8.86336 5.71429 7.77327 6.16582 6.96954 6.96954C6.16582 7.77327 5.71429 8.86336 5.71429 10C5.71429 11.1366 6.16582 12.2267 6.96954 13.0305C7.77327 13.8342 8.86336 14.2857 10 14.2857ZM14.92 6.34857C15.0903 6.35428 15.2599 6.32568 15.4189 6.26447C15.5779 6.20325 15.723 6.11067 15.8454 5.99224C15.9679 5.87382 16.0653 5.73196 16.1318 5.57511C16.1983 5.41827 16.2326 5.24965 16.2326 5.07929C16.2326 4.90892 16.1983 4.7403 16.1318 4.58346C16.0653 4.42661 15.9679 4.28476 15.8454 4.16633C15.723 4.0479 15.5779 3.95532 15.4189 3.89411C15.2599 3.83289 15.0903 3.80429 14.92 3.81C14.5907 3.82105 14.2786 3.95961 14.0496 4.19645C13.8206 4.43328 13.6926 4.74984 13.6926 5.07929C13.6926 5.40874 13.8206 5.7253 14.0496 5.96213C14.2786 6.19896 14.5907 6.33752 14.92 6.34857Z" />
                             </svg>
@@ -163,31 +162,31 @@
                             </div>
                         </div>
                     </div>
-                    <div class="journey-items">
+                    <div class="journey-items" data-aos="fade-right">
                         <div class="journey-item">
                             <div class="journey-item__icon">
-                                <img src="images/icon/journey-1.svg" alt="Difficult">
+                                <img data-src="images/icon/journey-1.svg" class="lazyload" alt="Difficult">
                             </div>
                             <div class="journey-item__text">Сложность</div>
                             <div class="journey-item__title">Для семейного отдыха</div>
                         </div>
                         <div class="journey-item">
                             <div class="journey-item__icon">
-                                <img src="images/icon/journey-2.svg" alt="Period">
+                                <img data-src="images/icon/journey-2.svg" class="lazyload" alt="Period">
                             </div>
                             <div class="journey-item__text">Период</div>
                             <div class="journey-item__title">Июль - сентябрь</div>
                         </div>
                         <div class="journey-item">
                             <div class="journey-item__icon">
-                                <img src="images/icon/journey-3.svg" alt="Duration">
+                                <img data-src="images/icon/journey-3.svg" class="lazyload" alt="Duration">
                             </div>
                             <div class="journey-item__text">Длительность</div>
                             <div class="journey-item__title">7 дней / 6 ночей</div>
                         </div>
                         <div class="journey-item">
                             <div class="journey-item__icon">
-                                <img src="images/icon/journey-4.svg" alt="Abode">
+                                <img data-src="images/icon/journey-4.svg" class="lazyload" alt="Abode">
                             </div>
                             <div class="journey-item__text">Проживание</div>
                             <div class="journey-item__title">Отель, без палаток</div>
@@ -195,13 +194,13 @@
                     </div>
                     <div class="journey-title">КАМЧАТКА</div>
                     <div class="journey-content">
-                        <div class="journey-content__title">
+                        <div class="journey-content__title" data-aos="fade-up">
                             Камчатка – земля великолепной заснеженной природы, действующих вулканов и диких мест, где ещё не ступала нога человека.
                         </div>
-                        <div class="journey-content__text">
+                        <div class="journey-content__text" data-aos="fade-up">
                             Когда мы подлетали к Камчатке, у меня захватило дух от увиденного. Это за гранью реальности. Невероятно!
                         </div>
-                        <a class="journey-content__author" href="#">
+                        <a class="journey-content__author" href="#" data-aos="fade-up">
                             Максим, <span>@max_max</span>
                         </a>
                     </div>
@@ -216,23 +215,23 @@
         <div class="section-container">
             <div class="day-wrapper day-wrapper_right-slider">
                 <div class="day-content first-day-content">
-                    <div class="day-content__title title-block">
+                    <div class="day-content__title title-block" data-aos="fade-up">
                         <h2 class="title-block__text">
                             <span>День 1.</span> Прибытие. Встреча в аэропорту и размещение
                         </h2>
                     </div>
-                    <div class="day-content__text">
+                    <div class="day-content__text" data-aos="fade-up">
                         С высоты птичьего полета вы увидите знаменитые «домашние» вулканы – Корякский, Авачинский и Козельский. У выхода в аэропорту
                         <strong class="day-content__text_distinguish"> вас встретят с табличкой «ДРИМ ТУР»</strong>.
                     </div>
-                    <div class="day-content__text">
+                    <div class="day-content__text" data-aos="fade-up">
                         <strong class="day-content__text_distinguish">По пути в гостиницу сбор средств</strong> с членов группы, инструктаж по программе этого дня (бассейн с термальной водой, шашлык, знакомство с группой, алкоголь, фейерверк не раньше
                         20:00).
                     </div>
-                    <div class="day-content__text">
+                    <div class="day-content__text" data-aos="fade-up">
                         После выезд (вид транспорта зависит от величины группы) на базу отдыха в курортный <span class="text-underline_light"> поселок Паратунка</span>.
                     </div>
-                    <div class="day-content__text">
+                    <div class="day-content__text" data-aos="fade-up">
                         <strong class="day-content__text_distinguish"> Вечером</strong>, после прибытия на Камчатку всех участников (если рейсы разные), <strong class="day-content__text_distinguish"> общая встреча</strong>, проверка снаряжения, обсуждение
                         программы завтрашнего дня.
                     </div>
@@ -315,15 +314,15 @@
         <div class="section-container">
             <div class="second-wrapper">
                 <div class="second-top">
-                    <div class="second-top__title title-block">
+                    <div class="second-top__title title-block" data-aos="fade-up">
                         <h2 class="title-block__text">
                             <span>День 2.</span> Вилючинский водопад, вулкан и Верхне-Паратунские термальные источники
                         </h2>
                     </div>
-                    <div class="second-top__text">
+                    <div class="second-top__text" data-aos="fade-up">
                         Инструктаж перед поездкой (передвижение и поведение группы в лесу, общение с медведями, форма одежды, ), снаряжение, (взять тару для воды при заезде на Зайкин ключ, купальные принадлежности).
                     </div>
-                    <div class="second-top__text">
+                    <div class="second-top__text" data-aos="fade-up">
                         Сбор участников на Роуп Джамп для прыжков с высоты над водопадом. Заранее решаем кто прыгает.
                     </div>
                 </div>
@@ -397,14 +396,14 @@
                         </div>
                     </div>
                     <div class="second-content__info">
-                        <div class="second-content__text">
+                        <div class="second-content__text" data-aos="fade-up">
                             Выезд из отеля в 10.00. Переезд в верховья реки Паратунка к подножию вулкана Вилючинский. Обзорная пешеходная экскурсия
                             <span class="text-underline_dark">к водопаду Вилючинский</span>. Термос с чаем, шоколад. Возвращение назад.
                         </div>
-                        <div class="second-content__text">
+                        <div class="second-content__text" data-aos="fade-up">
                             Обед. Купание в Верхне-Паратунских термальных источниках, расположенных на склоне сопки Горячая.
                         </div>
-                        <div class="second-content__text">
+                        <div class="second-content__text" data-aos="fade-up">
                             Продолжительность – 6-8 часов. Трансфер в гостиницу.
                         </div>
                     </div>
@@ -419,36 +418,36 @@
         <div class="section-container">
             <div class="cards-wrapper swiper-container" data-mobile="false">
                 <div class="cards-items">
-                    <div class="cards-item">
+                    <div class="cards-item" data-aos="fade">
                         <div class="cards-item__img">
-                            <img src="images/upload/cards-1.jpg" alt="Card photo 1">
+                            <img data-src="images/upload/cards-1.jpg" class="lazyload" alt="Card photo 1">
                         </div>
                         <div class="cards-item__info">
                             <h2 class="cards-item__title">Аудиосопровождение</h2>
                             <div class="cards-item__text">Новый способ увидеть и услышать, то место, где вы находитесь. С помощью аудиогида вы сможете совершить увлекательную экскурсию по городу.</div>
                         </div>
                     </div>
-                    <div class="cards-item">
+                    <div class="cards-item" data-aos="fade">
                         <div class="cards-item__img">
-                            <img src="images/upload/cards-2.jpg" alt="Card photo 2">
+                            <img data-src="images/upload/cards-2.jpg" class="lazyload" alt="Card photo 2">
                         </div>
                         <div class="cards-item__info">
                             <h2 class="cards-item__title">Разнообразное питание</h2>
                             <div class="cards-item__text">Каждый обед мы готовим с большой любовью. Кормим вас традиционными камчатскими блюдами. Еда - залог хорошего отдыха!</div>
                         </div>
                     </div>
-                    <div class="cards-item">
+                    <div class="cards-item" data-aos="fade">
                         <div class="cards-item__img">
-                            <img src="images/upload/cards-3.jpg" alt="Card photo 3">
+                            <img data-src="images/upload/cards-3.jpg" class="lazyload" alt="Card photo 3">
                         </div>
                         <div class="cards-item__info">
                             <h2 class="cards-item__title">Безопасность на маршруте</h2>
                             <div class="cards-item__text">Наша команда проводит инструктаж, рассказывает как правильно себя вести, как избежать опасных ситуаций.</div>
                         </div>
                     </div>
-                    <div class="cards-item">
+                    <div class="cards-item" data-aos="fade">
                         <div class="cards-item__img">
-                            <img src="images/upload/cards-4.jpg" alt="Card photo 4">
+                            <img data-src="images/upload/cards-4.jpg" class="lazyload" alt="Card photo 4">
                         </div>
                         <div class="cards-item__info">
                             <h2 class="cards-item__title">Потрясающие фото</h2>
@@ -466,17 +465,17 @@
         <div class="section-container">
             <div class="day-wrapper day-wrapper_left-slider">
                 <div class="day-content third-day-content">
-                    <div class="day-content__title title-block">
+                    <div class="day-content__title title-block" data-aos="fade-up">
                         <h2 class="title-block__text"><span>День 3.</span>Горные цирки и водопады вулкана Вачкажец</h2>
                     </div>
-                    <div class="day-content__text">
+                    <div class="day-content__text" data-aos="fade-up">
                         Вачкажец–горный массив и его окрестности, одно из красивейших мест первозданной камчатской природы. Небольшой пеший переход не успеет Вас утомить. А в награду за труд в конце пути открывается великолепный вид на горное озеро в чаше кратера старого потухшего
                         вулкана, обрамленное пиками старых, невысоких гор.
                     </div>
-                    <div class="day-content__text">
+                    <div class="day-content__text" data-aos="fade-up">
                         Выезд из гостиницы и переезд около 2 часов. Пеший переход около 5 км.в одну сторону к горным циркам вулкана Вачкажец, осмотр водопада. Обед. Отдых. По прибытию в машину чай с шоколадом! Обратный переход по тому же пути.
                     </div>
-                    <div class="day-content__text">
+                    <div class="day-content__text" data-aos="fade-up">
                         Продолжительность: 8 часов. Трансфер в гостиницу.
                     </div>
                 </div>
@@ -558,22 +557,22 @@
         <div class="section-container">
             <div class="day-wrapper day-wrapper_right-slider">
                 <div class="day-content fourth-day-content">
-                    <div class="day-content__title title-block">
+                    <div class="day-content__title title-block" data-aos="fade-up">
                         <h2 class="title-block__text">
                             <span>День 4.</span> Экскурсия к подножию Авачинского вулкана
                         </h2>
                     </div>
-                    <div class="day-content__text">
+                    <div class="day-content__text" data-aos="fade-up">
                         Инструктаж по поведению группы в горах. Проверка снаряжения.Выезд на автомашине на вулканическое плато (высота 900 м) к подножию <span class="text-underline_light"> Авачинского вулкана</span> (2 часа).
                     </div>
-                    <div class="day-content__text">
+                    <div class="day-content__text" data-aos="fade-up">
                         Пешеходная экскурсия к горе Верблюд, представляющую собой вулканическую экструзию. Находится в седловине между Корякским и Авачинским вулканами, относительная высота 100-150 м, ширина - около 100 м и по длине она протягивается на 500 м., состоит из трех
                         сросшихся блоков.
                     </div>
-                    <div class="day-content__text">
+                    <div class="day-content__text" data-aos="fade-up">
                         Обед. Поездка в Паратунку с купанием.
                     </div>
-                    <div class="day-content__text">
+                    <div class="day-content__text" data-aos="fade-up">
                         Продолжительность – 8 часов. Трансфер в гостиницу.
                     </div>
                 </div>
@@ -657,22 +656,22 @@
             <div class="section-container">
                 <div class="day-wrapper day-wrapper_left-slider">
                     <div class="day-content fifth-day-content">
-                        <div class="day-content__title title-block">
+                        <div class="day-content__title title-block" data-aos="fade-up">
                             <h2 class="title-block__text">
                                 <span>День 5.</span> Морская прогулка к острову Старичков
                             </h2>
                         </div>
-                        <div class="day-content__text">
+                        <div class="day-content__text" data-aos="fade-up">
                             Инструктаж по поведению группы при передвижении на плавсредствах, приему таблеток от морской болезни.
                         </div>
-                        <div class="day-content__text">
+                        <div class="day-content__text" data-aos="fade-up">
                             Выезд на причал. Морская прогулка по Авачинской бухте. Осмотр панорамы города Петропавловска-Камчатского, Авачинской губы и Авачинского залива. Маршрут пролегает мимо бухты Тихая, острова Бабушкин камень, мыса Станицкого, камней «Три брата». Увлекательная
                             возможность донной рыбалки на терпуга, ленка, камбалу у «Трех братьев», мыса Безымянный, у <span class="text-underline_light">острова Старичков</span>.
                         </div>
-                        <div class="day-content__text">
+                        <div class="day-content__text" data-aos="fade-up">
                             Осмотр птичьих базаров - смешанных колонии кайр, моевок и бакланов. Трансфер в гостиницу.
                         </div>
-                        <div class="day-content__text">
+                        <div class="day-content__text" data-aos="fade-up">
                             Продолжительность 6 часов.
                         </div>
                     </div>
@@ -756,24 +755,24 @@
             <div class="section-container">
                 <div class="day-wrapper day-wrapper_right-slider">
                     <div class="day-content sixth-day-content">
-                        <div class="day-content__title title-block">
+                        <div class="day-content__title title-block" data-aos="fade-up">
                             <h2 class="title-block__text">
                                 <span>День 6.</span> Берег Тихого океана, экскурсия по городу
                             </h2>
                         </div>
-                        <div class="day-content__text">
+                        <div class="day-content__text" data-aos="fade-up">
                             Поездка на берег Тихого океана, в район Халактырского пляжа. Прогулка. Обед в городе. Обзорная экскурсия по г. Петропавловску-Камчатскому с посещением смотровых площадок. Рыбный рынок.
                         </div>
-                        <div class="day-content__text">
+                        <div class="day-content__text" data-aos="fade-up">
                             Продолжительность -5 часов. Трансфер в гостиницу.
                         </div>
                         <div class="day-content__extra extra extra_dark-bg">
-                            <div class="extra-title">Дополнительные услуги</div>
-                            <div class="extra-item">
+                            <div class="extra-title" data-aos="fade-up">Дополнительные услуги</div>
+                            <div class="extra-item" data-aos="fade-up">
                                 <div class="extra-item__title">Серфинг</div>
                                 <div class="extra-item__text">Прыжки с высоты над водопадом. Записываться заранее. </div>
                             </div>
-                            <div class="extra-item">
+                            <div class="extra-item" data-aos="fade-up">
                                 <div class="extra-item__title">SUP борды</div>
                                 <div class="extra-item__text">Прыжки с высоты над водопадом. Записываться заранее. </div>
                             </div>
@@ -860,19 +859,19 @@
             <div class="seventh-wrapper">
                 <div class="seventh-top__content">
                     <div class="seventh-content">
-                        <div class="seventh-content__title title-block">
+                        <div class="seventh-content__title title-block" data-aos="fade-up">
                             <h2 class="title-block__text">
                                 <span>День 7.</span> Вертолетная экскурсия в Долину Гейзеров и кальдеру вулкана Узон / свободный день
                             </h2>
                         </div>
-                        <div class="seventh-content__text">Экскурсия проводится в содружестве с «ВИТЯЗЬ-ТРЕВЕЛ», крупнейшим оператором вертолётных туров на Камчатке. Выезд в аэропорт «Витязь –Аэро». К вашим услугам –современный аэропортовый комплекс, включающий в себя удобный зал ожидания,
+                        <div class="seventh-content__text" data-aos="fade-up">Экскурсия проводится в содружестве с «ВИТЯЗЬ-ТРЕВЕЛ», крупнейшим оператором вертолётных туров на Камчатке. Выезд в аэропорт «Витязь –Аэро». К вашим услугам –современный аэропортовый комплекс, включающий в себя удобный зал ожидания,
                             кафетерий, сувенирный магазин.</div>
-                        <div class="seventh-content__text">Перелёт до <span class="text-underline_dark">Долины гейзеров</span> занимает 1 час 10 минут. По пути, при благоприятных условиях, вы осмотрите два действующих вулкана – Карымский и Малый Семячик из окон вертолёта.</div>
-                        <div class="seventh-content__text">Перелёт и посадка в кальдере Узон. Кальдера образовалась в результате обрушения стенок древнего вулкана около 40 тысяч лет назад, на её дне очень ярко проявляется гидротермальная деятельность.Сотни столбов пара вырываются здесь
+                        <div class="seventh-content__text" data-aos="fade-up">Перелёт до <span class="text-underline_dark">Долины гейзеров</span> занимает 1 час 10 минут. По пути, при благоприятных условиях, вы осмотрите два действующих вулкана – Карымский и Малый Семячик из окон вертолёта.</div>
+                        <div class="seventh-content__text" data-aos="fade-up">Перелёт и посадка в кальдере Узон. Кальдера образовалась в результате обрушения стенок древнего вулкана около 40 тысяч лет назад, на её дне очень ярко проявляется гидротермальная деятельность.Сотни столбов пара вырываются здесь
                             из жёлтых фумарольных полей. Осмотр термальных полей.</div>
                     </div>
-                    <div class="seventh-photo">
-                        <img src="images/upload/seventh-img.jpg" alt="seventh-img">
+                    <div class="seventh-photo" data-aos="fade">
+                        <img data-src="images/upload/seventh-img.jpg" class="lazyload" alt="seventh-img">
                     </div>
                 </div>
                 <div class="seventh-information">
@@ -945,14 +944,14 @@
                         </div>
                     </div>
                     <div class="seventh-info">
-                        <div class="seventh-info__text">Перелёт и посадка в <span class="text-underline_dark"> Налычевской долине</span>. Купание в горячих источниках. Здесь же вам предложат обед - горячее, чай и камчатский морс. Трансфер в гостиницу. </div>
+                        <div class="seventh-info__text" data-aos="fade-up">Перелёт и посадка в <span class="text-underline_dark"> Налычевской долине</span>. Купание в горячих источниках. Здесь же вам предложат обед - горячее, чай и камчатский морс. Трансфер в гостиницу. </div>
                         <div class="seventh-info__extra extra extra_light-bg">
-                            <div class="extra-title">Дополнительные услуги</div>
-                            <div class="extra-item">
+                            <div class="extra-title" data-aos="fade-up">Дополнительные услуги</div>
+                            <div class="extra-item" data-aos="fade-up">
                                 <div class="extra-item__title">Роуп Джамп</div>
                                 <div class="extra-item__text">Прыжки с высоты над водопадом. Записываться заранее.</div>
                             </div>
-                            <div class="extra-item">
+                            <div class="extra-item" data-aos="fade-up">
                                 <div class="extra-item__title">Ледянки</div>
                                 <div class="extra-item__text">Прыжки с высоты над водопадом. Записываться заранее.</div>
                             </div>
@@ -969,12 +968,12 @@
         <div class="section-container">
             <div class="eighth-wrapper">
                 <div class="day-content eighth-day-content">
-                    <div class="day-content__title title-block">
+                    <div class="day-content__title title-block" data-aos="fade-up">
                         <h2 class="title-block__text">
                             <span>День 8.</span> Отъезд с Камчатки. Трансфер в аэропорт
                         </h2>
                     </div>
-                    <div class="day-content__text">
+                    <div class="day-content__text" data-aos="fade-up">
                         Заезд на рынок, прощальное посещение «медведей», фото на память. Возвращайтесь следующим летом!
                     </div>
                 </div>
@@ -989,34 +988,34 @@
             <div class="price-wrapper">
                 <div class="price-top">
                     <div class="price-top__content">
-                        <h2 class="price-top__title">Стоимость участия</h2>
+                        <h2 class="price-top__title" data-aos="fade-up">Стоимость участия</h2>
                         <div class="price-info__extra extra extra_light-bg">
-                            <div class="extra-item">
+                            <div class="extra-item" data-aos="fade-up">
                                 <div class="extra-item__title">Базовый (для камчадал)</div>
                                 <div class="extra-item__text">79 000 руб</div>
                             </div>
-                            <div class="extra-item">
+                            <div class="extra-item" data-aos="fade-up">
                                 <div class="extra-item__title">Базовый + проживание</div>
                                 <div class="extra-item__text">99 000 руб</div>
                             </div>
-                            <div class="extra-item">
+                            <div class="extra-item" data-aos="fade-up">
                                 <div class="extra-item__title">Базовый + проживание + долина гейзеров</div>
                                 <div class="extra-item__text">179 000 руб</div>
                             </div>
                         </div>
                     </div>
                     <div class="price-top__link-items">
-                        <div class="price-top__link-item">
+                        <div class="price-top__link-item" data-aos="fade-left">
                             <a href="#" class="text-underline_dark" aria-label="Information about reservations">Информация о бронях</a>
                         </div>
-                        <div class="price-top__link-item">
+                        <div class="price-top__link-item" data-aos="fade-left">
                             <a href="#" class="text-underline_dark" aria-label="Important information">Важная информация</a>
                         </div>
-                        <div class="price-top__link-item">
+                        <div class="price-top__link-item" data-aos="fade-left">
                             <a href="#" class="text-underline_dark" aria-label="Terms of contract and returns">Условия договора и возврата</a>
                         </div>
 
-                        <a class="action-btn price-action action-btn_dark" href="#request" aria-label="Send request">
+                        <a class="action-btn price-action action-btn_dark" href="#request" aria-label="Send request" data-aos="fade-left">
                             <span class="action-btn__text text-underline_dark">Отправить заявку</span>
                             <span class="action-btn__icon">
                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
@@ -1029,23 +1028,23 @@
                 </div>
                 <div class="price-items">
                     <div class="price-item price-item_green">
-                        <div class="price-item__title">В стоимость входит</div>
+                        <div class="price-item__title" data-aos="fade-up">В стоимость входит</div>
                         <ul class="price-item__list">
-                            <li class="price-item__list-text">встреча и проводы в аэропорту</li>
-                            <li class="price-item__list-text">питание: обеды во время экскурсий</li>
-                            <li class="price-item__list-text">услуги гида</li>
-                            <li class="price-item__list-text">все транспортные услуги ( автобусы, джипы-вездеходы 4WD)</li>
-                            <li class="price-item__list-text">все указанные в программе экскурсии</li>
+                            <li class="price-item__list-text" data-aos="fade-up">встреча и проводы в аэропорту</li>
+                            <li class="price-item__list-text" data-aos="fade-up">питание: обеды во время экскурсий</li>
+                            <li class="price-item__list-text" data-aos="fade-up">услуги гида</li>
+                            <li class="price-item__list-text" data-aos="fade-up">все транспортные услуги ( автобусы, джипы-вездеходы 4WD)</li>
+                            <li class="price-item__list-text" data-aos="fade-up">все указанные в программе экскурсии</li>
                         </ul>
                     </div>
                     <div class="price-item price-item_black">
-                        <div class="price-item__title">За дополнительную плату</div>
+                        <div class="price-item__title" data-aos="fade-up">За дополнительную плату</div>
                         <ul class="price-item__list">
-                            <li class="price-item__list-text">вертолётная экскурсия в Долину Гейзеров и кальдеру Узона, оплачивается в день вылета</li>
-                            <li class="price-item__list-text">дополнительные экскурсии и опции</li>
-                            <li class="price-item__list-text">размещение в гостинице</li>
-                            <li class="price-item__list-text">питание(кроме обедов во время экскурсий)</li>
-                            <li class="price-item__list-text">личные расходы</li>
+                            <li class="price-item__list-text" data-aos="fade-up">вертолётная экскурсия в Долину Гейзеров и кальдеру Узона, оплачивается в день вылета</li>
+                            <li class="price-item__list-text" data-aos="fade-up">дополнительные экскурсии и опции</li>
+                            <li class="price-item__list-text" data-aos="fade-up">размещение в гостинице</li>
+                            <li class="price-item__list-text" data-aos="fade-up">питание(кроме обедов во время экскурсий)</li>
+                            <li class="price-item__list-text" data-aos="fade-up">личные расходы</li>
                         </ul>
                     </div>
                 </div>
@@ -1061,12 +1060,12 @@
                 <div class="request-order">
                     <div class="request-content">
                         <div class="request-info">
-                            <div class="request-info__title">
+                            <div class="request-info__title" data-aos="fade-up">
                                 Онлайн-заявка
                             </div>
-                            <div class="request-info__social request-social">
+                            <div class="request-info__social request-social" data-aos="fade-right">
                                 <div class="request-social__item">
-                                    <a class="request-social__item-link" href="https://www.instagram.com/dreamkamtour/" target="_blank" aria-label="Instagram">
+                                    <a class="request-social__item-link" href="https://www.instagram.com/dreamkamtour/" target="_blank" rel="noreferrer" aria-label="Instagram">
                                         <svg width="23" height="23" viewBox="0 0 23 23">
                                         <path d="M16.3189 0H6.68114C2.99714 0 0 2.99714 0 6.68114V16.3189C0 20.0029 2.99714 23 6.68114 23H16.3189C20.0029 23 23 20.0029 23 16.3189V6.68114C23 2.99714 20.0029 0 16.3189 0ZM21.2031 16.3189C21.2031 19.0121 19.0121 21.2031 16.3189 21.2031H6.68114C3.98794 21.2031 1.79688 19.0121 1.79688 16.3189V6.68114C1.79688 3.98794 3.98794 1.79688 6.68114 1.79688H16.3189C19.0121 1.79688 21.2031 3.98794 21.2031 6.68114V16.3189Z"/>
                                         <path d="M11.5 5.30078C8.08171 5.30078 5.30078 8.08171 5.30078 11.5C5.30078 14.9183 8.08171 17.6992 11.5 17.6992C14.9183 17.6992 17.6992 14.9183 17.6992 11.5C17.6992 8.08171 14.9183 5.30078 11.5 5.30078ZM11.5 15.9023C9.07256 15.9023 7.09766 13.9274 7.09766 11.5C7.09766 9.07256 9.07256 7.09766 11.5 7.09766C13.9274 7.09766 15.9023 9.07256 15.9023 11.5C15.9023 13.9274 13.9274 15.9023 11.5 15.9023Z" />
@@ -1075,7 +1074,7 @@
                                     </a>
                                 </div>
                                 <div class="request-social__item">
-                                    <a class="request-social__item-link" href="https://www.facebook.com/kam41reg" target="_blank" aria-label="Facebook">
+                                    <a class="request-social__item-link" href="https://www.facebook.com/kam41reg" target="_blank" rel="noreferrer" aria-label="Facebook">
                                         <svg width="24" height="23" viewBox="0 0 24 23">
                                         <g clip-path="url(#clip0)">
                                         <path d="M13.62 22.9551H9.76908C9.12585 22.9551 8.60261 22.4546 8.60261 21.8394V13.5317H6.35592C5.71269 13.5317 5.18945 13.031 5.18945 12.416V8.8561C5.18945 8.24088 5.71269 7.74043 6.35592 7.74043H8.60261V5.95776C8.60261 4.19019 9.18291 2.68636 10.2806 1.60912C11.3832 0.526955 12.9241 -0.0449219 14.7367 -0.0449219L17.6736 -0.0403595C18.3157 -0.0393066 18.8381 0.461151 18.8381 1.07532V4.38059C18.8381 4.9958 18.315 5.49626 17.672 5.49626L15.6946 5.49696C15.0915 5.49696 14.938 5.6126 14.9051 5.64805C14.851 5.70683 14.7866 5.87301 14.7866 6.33188V7.74025H17.5234C17.7294 7.74025 17.929 7.78886 18.1005 7.88046C18.4706 8.07822 18.7006 8.45216 18.7006 8.85628L18.6992 12.4162C18.6992 13.031 18.1759 13.5315 17.5327 13.5315H14.7866V21.8394C14.7866 22.4546 14.2632 22.9551 13.62 22.9551ZM10.0124 21.6067H13.3767V12.928C13.3767 12.5172 13.7262 12.1831 14.1555 12.1831H17.2894L17.2907 9.08878H14.1553C13.726 9.08878 13.3767 8.75468 13.3767 8.34389V6.33188C13.3767 5.8051 13.4327 5.20602 13.8484 4.75575C14.3507 4.21143 15.1424 4.14861 15.6942 4.14861L17.4283 4.1479V1.30765L14.7356 1.30344C11.8226 1.30344 10.0124 3.08698 10.0124 5.95776V8.34389C10.0124 8.7545 9.66303 9.08878 9.23373 9.08878H6.59919V12.1831H9.23373C9.66303 12.1831 10.0124 12.5172 10.0124 12.928V21.6067ZM17.6709 1.308H17.671H17.6709Z" />
@@ -1089,7 +1088,7 @@
                                     </a>
                                 </div>
                                 <div class="request-social__item">
-                                    <a class="request-social__item-link" href="https://vk.com/dreamkamtour" target="_blank" aria-label="Vkontakte">
+                                    <a class="request-social__item-link" href="https://vk.com/dreamkamtour" target="_blank" rel="noreferrer" aria-label="Vkontakte">
                                         <svg width="24" height="16" viewBox="0 0 24 16">
                                         <path d="M12.145 15.5C15.617 15.5 14.379 13.302 14.647 12.67C14.643 12.198 14.639 11.744 14.655 11.468C14.875 11.53 15.394 11.793 16.466 12.835C18.121 14.505 18.544 15.5 19.881 15.5H22.342C23.122 15.5 23.528 15.177 23.731 14.906C23.927 14.644 24.119 14.184 23.909 13.468C23.36 11.744 20.158 8.767 19.959 8.453C19.989 8.395 20.037 8.318 20.062 8.278H20.06C20.692 7.443 23.104 3.829 23.459 2.383C23.46 2.381 23.461 2.378 23.461 2.375C23.653 1.715 23.477 1.287 23.295 1.045C23.021 0.683 22.585 0.5 21.996 0.5H19.535C18.711 0.5 18.086 0.915 17.77 1.672C17.241 3.017 15.755 5.783 14.641 6.762C14.607 5.375 14.63 4.316 14.648 3.529C14.684 1.994 14.8 0.5 13.207 0.5H9.339C8.341 0.5 7.386 1.59 8.42 2.884C9.324 4.018 8.745 4.65 8.94 7.796C8.18 6.981 6.828 4.78 5.872 1.967C5.604 1.206 5.198 0.501 4.055 0.501H1.594C0.596 0.501 0 1.045 0 1.956C0 4.002 4.529 15.5 12.145 15.5ZM4.055 2.001C4.272 2.001 4.294 2.001 4.455 2.458C5.434 5.341 7.63 9.607 9.234 9.607C10.439 9.607 10.439 8.372 10.439 7.907L10.438 4.205C10.372 2.98 9.926 2.37 9.633 2L13.141 2.004C13.143 2.021 13.121 6.099 13.151 7.087C13.151 8.49 14.265 9.294 16.004 7.534C17.839 5.463 19.108 2.367 19.159 2.241C19.234 2.061 19.299 2 19.535 2H21.996H22.006C22.005 2.003 22.005 2.006 22.004 2.009C21.779 3.059 19.558 6.405 18.815 7.444C18.803 7.46 18.792 7.477 18.781 7.494C18.454 8.028 18.188 8.618 18.826 9.448H18.827C18.885 9.518 19.036 9.682 19.256 9.91C19.94 10.616 22.286 13.03 22.494 13.99C22.356 14.012 22.206 13.996 19.881 14.001C19.386 14.001 18.999 13.261 17.522 11.771C16.194 10.479 15.332 9.951 14.547 9.951C13.023 9.951 13.134 11.188 13.148 12.684C13.153 14.306 13.143 13.793 13.154 13.895C13.065 13.93 12.81 14 12.145 14C5.8 14 1.668 3.929 1.509 2.004C1.564 1.999 2.321 2.002 4.055 2.001Z" />
                                     </svg>
@@ -1101,11 +1100,11 @@
                     <div class="request-form-inner">
                         <form action="#" class="request-form">
                             <div class="request-form-top">
-                                <div class="request-form__name">
+                                <div class="request-form__name" data-aos="fade-up">
                                     <label for="request-form__name" class="request-form__text">Имя участника</label>
                                     <input type="text" id="request-form__name" placeholder="Имя" required>
                                 </div>
-                                <div class="request-form__count">
+                                <div class="request-form__count" data-aos="fade-up">
                                     <label for="request-form__count" class="request-form__text">Количество человек</label>
                                     <div class="btn-minus"></div>
                                     <input class="request-input" id="request-form__count" type="number" value="1" readonly>
@@ -1113,8 +1112,8 @@
                                 </div>
                             </div>
                             <div class="request-tariff">
-                                <div class="request-content__title">Тариф</div>
-                                <div class="request-tariff__item request-item">
+                                <div class="request-content__title" data-aos="fade-up">Тариф</div>
+                                <div class="request-tariff__item request-item" data-aos="fade-up">
                                     <input type="radio" class="radio-btn" id="request-item__base" name="request-item__radio" checked>
                                     <span class="radio-btn__fake"></span>
                                     <div class="radio-btn__info">
@@ -1122,7 +1121,7 @@
                                         <div class="radio-btn__price">79 000 руб</div>
                                     </div>
                                 </div>
-                                <div class="request-tariff__item request-item">
+                                <div class="request-tariff__item request-item" data-aos="fade-up">
                                     <input type="radio" class="radio-btn" id="request-item__average" name="request-item__radio">
                                     <span class="radio-btn__fake"></span>
                                     <div class="radio-btn__info">
@@ -1130,7 +1129,7 @@
                                         <div class="radio-btn__price">99 000 руб</div>
                                     </div>
                                 </div>
-                                <div class="request-tariff__item request-item">
+                                <div class="request-tariff__item request-item" data-aos="fade-up">
                                     <input type="radio" class="radio-btn" id="request-item__expensive" name="request-item__radio">
                                     <span class="radio-btn__fake"></span>
                                     <div class="radio-btn__info">
@@ -1139,29 +1138,29 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="request-date">
-                                <div class="request-content__title">Дата тура</div>
-                                <input type="date" class="request-date__input" name="request-date__input" value="2021-06-17">
+                            <div class="request-date" data-aos="fade-up">
+                                <label class="request-content__title" for="request-date__input">Дата тура</label>
+                                <input type="date" class="request-date__input" id="request-date__input" name="request-date__input" value="2021-06-17">
                             </div>
-                            <div class="request-comment">
-                                <div class="request-content__title">Комментарий</div>
-                                <input type="text" class="request-comment__input" placeholder="Напишите ваш комментарий здесь">
+                            <div class="request-comment" data-aos="fade-up">
+                                <label for="request-comment__input" class="request-content__title">Комментарий</label>
+                                <input type="text" class="request-comment__input" id="request-comment__input" placeholder="Напишите ваш комментарий здесь">
                             </div>
-                            <button type="submit" class="request-btn btn btn_orange">Отправить заявку</button>
+                            <button type="submit" class="request-btn btn btn_orange" data-aos="fade-up">Отправить заявку</button>
                         </form>
                     </div>
                 </div>
                 <div class="request-knowledge">
                     <div class="request-knowledge__inner">
                         <div class="request-knowledge__img">
-                            <img src="images/upload/request-book.png" alt="Request book">
+                            <img data-src="images/upload/request-book.png" class="lazyload" alt="Request book">
                         </div>
                         <div class="request-knowledge__info">
-                            <h2 class="request-knowledge__title">Что нужно знать отправляясь на Камчатку?</h2>
-                            <div class="request-knowledge__text">Получите памятку туриста просто оставив свой e-mail.</div>
+                            <h2 class="request-knowledge__title" data-aos="fade-up">Что нужно знать отправляясь на Камчатку?</h2>
+                            <div class="request-knowledge__text" data-aos="fade-up">Получите памятку туриста просто оставив свой e-mail.</div>
                             <form action="#" class="request-knowledge__form">
-                                <input type="text" class="request-knowledge__input" name="request-knowledge__input" placeholder="Ваш e-mail">
-                                <button type="submit" class="request-knowledge__btn btn btn_orange">Получить</button>
+                                <input type="text" class="request-knowledge__input" data-aos="fade-up" name="request-knowledge__input" placeholder="Ваш e-mail">
+                                <button type="submit" class="request-knowledge__btn btn btn_orange" data-aos="fade-up">Получить</button>
                             </form>
                         </div>
                     </div>
@@ -1175,14 +1174,14 @@
     <section class="about" id="team">
         <div class="section-container">
             <div class="about-top">
-                <h2 class="about-top__title">Про нашу супер крутую команду Dreamkam Tour</h2>
-                <div class="about-top__text">Наша команда - это люди влюбленные в свою работу. Каждый из них обладает проффесиональными знаниями, хорошей физической подготовкой. Следят за вашей безпасностью в туре, и тем чтобы каждый из вас получил максимальное колличество эмоций.</div>
+                <h2 class="about-top__title" data-aos="fade-up">Про нашу супер крутую команду Dreamkam Tour</h2>
+                <div class="about-top__text" data-aos="fade-up">Наша команда - это люди влюбленные в свою работу. Каждый из них обладает проффесиональными знаниями, хорошей физической подготовкой. Следят за вашей безпасностью в туре, и тем чтобы каждый из вас получил максимальное колличество эмоций.</div>
             </div>
             <div class="about-slider">
                 <div class="about-items">
                     <div class="about-item">
                         <div class="about-item__img">
-                            <img src="images/upload/about-slider-1.jpg" alt="About slider 1" loading="lazy">
+                            <img data-src="images/upload/about-slider-1.jpg" class="lazyload" alt="About slider 1">
                         </div>
                         <div class="about-item__info">
                             <div class="about-item__name">Алина Гончарова,</div>
@@ -1191,7 +1190,7 @@
                     </div>
                     <div class="about-item">
                         <div class="about-item__img">
-                            <img src="images/upload/about-slider-2.jpg" alt="About slider 2" loading="lazy">
+                            <img data-src="images/upload/about-slider-2.jpg" class="lazyload" alt="About slider 2">
                         </div>
                         <div class="about-item__info">
                             <div class="about-item__name">Евгений Барсуков,</div>
@@ -1200,7 +1199,7 @@
                     </div>
                     <div class="about-item">
                         <div class="about-item__img">
-                            <img src="images/upload/about-slider-3.jpg" alt="About slider 3" loading="lazy">
+                            <img data-src="images/upload/about-slider-3.jpg" class="lazyload" alt="About slider 3">
                         </div>
                         <div class="about-item__info">
                             <div class="about-item__name">Дмитрий Осипов,</div>
@@ -1229,11 +1228,11 @@
     <footer class="footer">
         <div class="section-container">
             <div class="footer-wrapper">
-                <div class="footer-content">
+                <div class="footer-content" data-aos="fade">
                     <div class="footer-menu footer-content__item">
                         <div class="logo footer-menu__logo">
                             <a class="logo__link" href="#" aria-label="Logo">
-                                <img class="logo__image" src="images/icon/footer-logo.png" alt="Logo">
+                                <img class="logo__image lazyload" dat-src="images/icon/footer-logo.png" alt="Logo">
                             </a>
                         </div>
                         <ul class="footer-menu__list">
@@ -1253,51 +1252,51 @@
                     </div>
                     <div class="footer-instagram footer-content__item">
                         <div class="footer-instagram__top">
-                            <a class="footer-instagram__account" href="https://www.instagram.com/dreamkamtour/" target="_blank" aria-label="Instagram dreamkamtour">@dreamkamtour</a>
-                            <a class="footer-instagram__subscribe btn" href="https://www.instagram.com/dreamkamtour/" target="_blank" aria-label="Subscribe">Подписаться</a>
+                            <a class="footer-instagram__account" href="https://www.instagram.com/dreamkamtour/" target="_blank" rel="noreferrer" aria-label="Instagram dreamkamtour">@dreamkamtour</a>
+                            <a class="footer-instagram__subscribe btn" href="https://www.instagram.com/dreamkamtour/" target="_blank" rel="noreferrer" aria-label="Subscribe">Подписаться</a>
                         </div>
                         <div class="footer-instagram__photo">
                             <div class="footer-instagram__item">
-                                <img src="images/upload/footer-photo-1.png" alt="Footer photo 1">
+                                <img data-src="images/upload/footer-photo-1.png" class="lazyload" alt="Footer photo 1">
                             </div>
                             <div class="footer-instagram__item">
-                                <img src="images/upload/footer-photo-2.png" alt="Footer photo 2">
+                                <img data-src="images/upload/footer-photo-2.png" class="lazyload" alt="Footer photo 2">
                             </div>
                             <div class="footer-instagram__item">
-                                <img src="images/upload/footer-photo-3.png" alt="Footer photo 3">
+                                <img data-src="images/upload/footer-photo-3.png" class="lazyload" alt="Footer photo 3">
                             </div>
                             <div class="footer-instagram__item">
-                                <img src="images/upload/footer-photo-4.png" alt="Footer photo 4">
+                                <img data-src="images/upload/footer-photo-4.png" class="lazyload" alt="Footer photo 4">
                             </div>
                             <div class="footer-instagram__item">
-                                <img src="images/upload/footer-photo-5.png" alt="Footer photo 5">
+                                <img dat-src="images/upload/footer-photo-5.png" class="lazyload" alt="Footer photo 5">
                             </div>
                             <div class="footer-instagram__item">
-                                <img src="images/upload/footer-photo-6.png" alt="Footer photo 6">
+                                <img data-src="images/upload/footer-photo-6.png" class="lazyload" alt="Footer photo 6">
                             </div>
                         </div>
                     </div>
                     <div class="footer-recall footer-content__item">
                         <div class="footer-recall__top">
                             <div class="footer-recall__img">
-                                <img src="images/upload/footer-recall-img.png" alt="Footer recall img">
+                                <img data-src="images/upload/footer-recall-img.png" class="lazyload" alt="Footer recall img">
                             </div>
                             <div class="footer-recall__info">
                                 <div class="footer-recall__title">Смотрите видео отзывы наших клиентов</div>
-                                <a class="footer-recall__instagram-link" href="https://www.instagram.com/dreamkamtour/" target="_blank" aria-label="Go to instargam">Перейти в Instagram</a>
+                                <a class="footer-recall__instagram-link" href="https://www.instagram.com/dreamkamtour/" target="_blank" rel="noreferrer" aria-label="Go to instargam">Перейти в Instagram</a>
                             </div>
                         </div>
                         <div class="footer-recall__social">
                             <div class="footer-recall__social-title">Социальные сети</div>
                             <div class="footer-recall__social-items">
-                                <a class="footer-recall__social-item" href="https://www.instagram.com/dreamkamtour/" target="_blank" aria-label="Instagram">
+                                <a class="footer-recall__social-item" href="https://www.instagram.com/dreamkamtour/" target="_blank" rel="noreferrer" aria-label="Instagram">
                                     <svg width="23" height="23" viewBox="0 0 23 23">
                                     <path d="M16.3189 0H6.68114C2.99714 0 0 2.99714 0 6.68114V16.3189C0 20.0029 2.99714 23 6.68114 23H16.3189C20.0029 23 23 20.0029 23 16.3189V6.68114C23 2.99714 20.0029 0 16.3189 0ZM21.2031 16.3189C21.2031 19.0121 19.0121 21.2031 16.3189 21.2031H6.68114C3.98794 21.2031 1.79688 19.0121 1.79688 16.3189V6.68114C1.79688 3.98794 3.98794 1.79688 6.68114 1.79688H16.3189C19.0121 1.79688 21.2031 3.98794 21.2031 6.68114V16.3189Z"/>
                                     <path d="M11.5 5.30078C8.08171 5.30078 5.30078 8.08171 5.30078 11.5C5.30078 14.9183 8.08171 17.6992 11.5 17.6992C14.9183 17.6992 17.6992 14.9183 17.6992 11.5C17.6992 8.08171 14.9183 5.30078 11.5 5.30078ZM11.5 15.9023C9.07256 15.9023 7.09766 13.9274 7.09766 11.5C7.09766 9.07256 9.07256 7.09766 11.5 7.09766C13.9274 7.09766 15.9023 9.07256 15.9023 11.5C15.9023 13.9274 13.9274 15.9023 11.5 15.9023Z"/>
                                     <path d="M17.7891 6.10938C18.2853 6.10938 18.6875 5.70713 18.6875 5.21094C18.6875 4.71474 18.2853 4.3125 17.7891 4.3125C17.2929 4.3125 16.8906 4.71474 16.8906 5.21094C16.8906 5.70713 17.2929 6.10938 17.7891 6.10938Z"/>
                                 </svg>
                                 </a>
-                                <a class="footer-recall__social-item" href="https://www.facebook.com/kam41reg" target="_blank" aria-label="facebook">
+                                <a class="footer-recall__social-item" href="https://www.facebook.com/kam41reg" target="_blank" rel="noreferrer" aria-label="facebook">
                                     <svg width="24" height="23" viewBox="0 0 24 23">
                                     <g clip-path="url(#clip0)">
                                         <path d="M13.62 22.9551H9.76908C9.12585 22.9551 8.60261 22.4546 8.60261 21.8394V13.5317H6.35592C5.71269 13.5317 5.18945 13.031 5.18945 12.416V8.8561C5.18945 8.24088 5.71269 7.74043 6.35592 7.74043H8.60261V5.95776C8.60261 4.19019 9.18291 2.68636 10.2806 1.60912C11.3832 0.526955 12.9241 -0.0449219 14.7367 -0.0449219L17.6736 -0.0403595C18.3157 -0.0393066 18.8381 0.461151 18.8381 1.07532V4.38059C18.8381 4.9958 18.315 5.49626 17.672 5.49626L15.6946 5.49696C15.0915 5.49696 14.938 5.6126 14.9051 5.64805C14.851 5.70683 14.7866 5.87301 14.7866 6.33188V7.74025H17.5234C17.7294 7.74025 17.929 7.78886 18.1005 7.88046C18.4706 8.07822 18.7006 8.45216 18.7006 8.85628L18.6992 12.4162C18.6992 13.031 18.1759 13.5315 17.5327 13.5315H14.7866V21.8394C14.7866 22.4546 14.2632 22.9551 13.62 22.9551ZM10.0124 21.6067H13.3767V12.928C13.3767 12.5172 13.7262 12.1831 14.1555 12.1831H17.2894L17.2907 9.08878H14.1553C13.726 9.08878 13.3767 8.75468 13.3767 8.34389V6.33188C13.3767 5.8051 13.4327 5.20602 13.8484 4.75575C14.3507 4.21143 15.1424 4.14861 15.6942 4.14861L17.4283 4.1479V1.30765L14.7356 1.30344C11.8226 1.30344 10.0124 3.08698 10.0124 5.95776V8.34389C10.0124 8.7545 9.66303 9.08878 9.23373 9.08878H6.59919V12.1831H9.23373C9.66303 12.1831 10.0124 12.5172 10.0124 12.928V21.6067ZM17.6709 1.308H17.671H17.6709Z"/>
@@ -1309,7 +1308,7 @@
                                     </defs>
                                 </svg>
                                 </a>
-                                <a class="footer-recall__social-item" href="https://vk.com/dreamkamtour" target="_blank" aria-label="vkontakte">
+                                <a class="footer-recall__social-item" href="https://vk.com/dreamkamtour" target="_blank" rel="noreferrer" aria-label="vkontakte">
                                     <svg width="24" height="16" viewBox="0 0 24 16">
                                     <path d="M12.145 15.5C15.617 15.5 14.379 13.302 14.647 12.67C14.643 12.198 14.639 11.744 14.655 11.468C14.875 11.53 15.394 11.793 16.466 12.835C18.121 14.505 18.544 15.5 19.881 15.5H22.342C23.122 15.5 23.528 15.177 23.731 14.906C23.927 14.644 24.119 14.184 23.909 13.468C23.36 11.744 20.158 8.767 19.959 8.453C19.989 8.395 20.037 8.318 20.062 8.278H20.06C20.692 7.443 23.104 3.829 23.459 2.383C23.46 2.381 23.461 2.378 23.461 2.375C23.653 1.715 23.477 1.287 23.295 1.045C23.021 0.683 22.585 0.5 21.996 0.5H19.535C18.711 0.5 18.086 0.915 17.77 1.672C17.241 3.017 15.755 5.783 14.641 6.762C14.607 5.375 14.63 4.316 14.648 3.529C14.684 1.994 14.8 0.5 13.207 0.5H9.339C8.341 0.5 7.386 1.59 8.42 2.884C9.324 4.018 8.745 4.65 8.94 7.796C8.18 6.981 6.828 4.78 5.872 1.967C5.604 1.206 5.198 0.501 4.055 0.501H1.594C0.596 0.501 0 1.045 0 1.956C0 4.002 4.529 15.5 12.145 15.5ZM4.055 2.001C4.272 2.001 4.294 2.001 4.455 2.458C5.434 5.341 7.63 9.607 9.234 9.607C10.439 9.607 10.439 8.372 10.439 7.907L10.438 4.205C10.372 2.98 9.926 2.37 9.633 2L13.141 2.004C13.143 2.021 13.121 6.099 13.151 7.087C13.151 8.49 14.265 9.294 16.004 7.534C17.839 5.463 19.108 2.367 19.159 2.241C19.234 2.061 19.299 2 19.535 2H21.996H22.006C22.005 2.003 22.005 2.006 22.004 2.009C21.779 3.059 19.558 6.405 18.815 7.444C18.803 7.46 18.792 7.477 18.781 7.494C18.454 8.028 18.188 8.618 18.826 9.448H18.827C18.885 9.518 19.036 9.682 19.256 9.91C19.94 10.616 22.286 13.03 22.494 13.99C22.356 14.012 22.206 13.996 19.881 14.001C19.386 14.001 18.999 13.261 17.522 11.771C16.194 10.479 15.332 9.951 14.547 9.951C13.023 9.951 13.134 11.188 13.148 12.684C13.153 14.306 13.143 13.793 13.154 13.895C13.065 13.93 12.81 14 12.145 14C5.8 14 1.668 3.929 1.509 2.004C1.564 1.999 2.321 2.002 4.055 2.001Z"/>
                                 </svg>

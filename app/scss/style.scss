@@ -721,6 +721,7 @@
         justify-content: space-between;
     }
     &-content__title {
+        display: block;
         margin-bottom: $base*4.5;
     }
     &-info__title {
@@ -836,8 +837,8 @@
 
 .radio-btn__fake {
     position: relative;
-    width: $base*4;
-    height: $base*4;
+    width: 16px;
+    height: 16px;
     border: 1px solid $color-primary-50;
     border-radius: 100%;
     &::before {
@@ -846,10 +847,11 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: $base*3;
-        height: $base*3;
+        width: 12px;
+        height: 12px;
         background-color: $color-primary-50;
         border-radius: 100%;
+        transition: opacity $transition;
         transition: opacity $transition ease-in-out;
         opacity: 0;
     }

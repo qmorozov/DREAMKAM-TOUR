@@ -321,7 +321,7 @@
     background: $color-primary-200;
     box-shadow: 0px $base*1.5 $base*3.5 rgba($color-secondary-100, 0.1);
     border-radius: $base*1.25;
-    transition: box-shadow .4s ease-in-out;
+    transition: all .4s ease-in-out;
     &__img img {
         border-radius: $base*1.25 $base*1.25 0px 0px;
         max-width: $base*72;
@@ -342,10 +342,8 @@
         font-size: $fs-x-small;
         color: $color-primary-400;
     }
-    @media (any-hover: hover) {
-        &:hover {
-            box-shadow: 0px $base*1.5 $base*5 rgba($color-secondary-100, 0.3);
-        }
+    &:hover {
+        box-shadow: 0px $base*1.5 $base*5 rgba($color-secondary-100, 0.3);
     }
 }
 

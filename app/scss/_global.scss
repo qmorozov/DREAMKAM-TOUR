@@ -81,7 +81,7 @@ body {
     line-height: $base*6;
     color: $color-primary-300;
     //////////////////////
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     /////////////////////
     position: relative;
     &::before {

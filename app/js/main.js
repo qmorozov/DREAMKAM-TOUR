@@ -116,9 +116,11 @@ btn.addEventListener('click', function(event) {
     navigation.classList.toggle('body_active');
     if (navigation.classList.contains('body_active')) {
         hideScroll();
+
     } else {
         showScroll();
     }
+
 });
 
 const hideScroll = () => {

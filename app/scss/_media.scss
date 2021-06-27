@@ -51,6 +51,12 @@
 // 991px
 @media (max-width: 991px) {
     // === GLOBAL ===
+     ::-webkit-scrollbar {
+        width: 0px;
+    }
+     :root {
+        scrollbar-width: 0px;
+    }
     .journey-time span {
         font-size: $base*5.75;
         line-height: $base*10;

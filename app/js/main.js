@@ -109,12 +109,12 @@ plus.addEventListener('click', () => {
     }
 });
 ////////////
-const navigation = document.querySelector('.header'),
+const navigation = document.querySelector('body'),
     btn = document.querySelector('.burger');
 btn.addEventListener('click', function(event) {
     btn.classList.toggle('burger_active');
-    navigation.classList.toggle('header_active');
-    if (navigation.classList.contains('header_active')) {
+    navigation.classList.toggle('body_active');
+    if (navigation.classList.contains('body_active')) {
         hideScroll();
     } else {
         showScroll();

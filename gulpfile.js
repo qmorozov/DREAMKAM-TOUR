@@ -1,11 +1,11 @@
-let gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    rename = require('gulp-rename'),
-    autoprefixer = require('gulp-autoprefixer'),
-    browserSync = require('browser-sync'),
-    concat = require('gulp-concat'),
-    uglify = require('gulp-uglify'),
-    cssmin = require('gulp-cssmin');
+let gulp = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
+let rename = require('gulp-rename');
+let autoprefixer = require('gulp-autoprefixer');
+let browserSync = require('browser-sync');
+let concat = require('gulp-concat');
+let uglify = require('gulp-uglify');
+let cssmin = require('gulp-cssmin');
 
 
 gulp.task('sass', function() {

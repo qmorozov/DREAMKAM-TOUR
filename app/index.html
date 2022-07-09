@@ -126,12 +126,12 @@
                         </div>
                         <div class="slider-button">
                             <div class="slider-button__prev">
-                                <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg width="16" height="8" viewBox="0 0 16 8" fill="none">
                                     <path d="M1.07291 4.75642C1.07309 4.75659 1.07323 4.75679 1.07343 4.75696L4.06375 7.73287C4.28778 7.9558 4.65012 7.95497 4.87311 7.73092C5.09608 7.5069 5.09522 7.14455 4.8712 6.92159L2.86349 4.92361L14.9834 4.92361C15.2994 4.92361 15.5557 4.6674 15.5557 4.35132C15.5557 4.03525 15.2994 3.77903 14.9834 3.77903L2.86352 3.77903L4.87117 1.78106C5.09519 1.55809 5.09605 1.19575 4.87309 0.971728C4.65009 0.747648 4.28772 0.746875 4.06372 0.969782L1.0734 3.94569C1.07323 3.94586 1.07309 3.94606 1.07289 3.94623C0.848748 4.16994 0.849463 4.53345 1.07291 4.75642Z" fill="white"/>
                                 </svg>
                             </div>
                             <div class="slider-button__next">
-                                <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg width="16" height="8" viewBox="0 0 16 8" fill="none">
                                     <path d="M14.9271 4.75642C14.9269 4.75659 14.9268 4.75679 14.9266 4.75696L11.9362 7.73287C11.7122 7.9558 11.3499 7.95497 11.1269 7.73092C10.9039 7.5069 10.9048 7.14455 11.1288 6.92159L13.1365 4.92361L1.01663 4.92361C0.70055 4.92361 0.444336 4.6674 0.444336 4.35132C0.444336 4.03525 0.70055 3.77903 1.01663 3.77903L13.1365 3.77903L11.1288 1.78106C10.9048 1.55809 10.904 1.19575 11.1269 0.971728C11.3499 0.747648 11.7123 0.746875 11.9363 0.969782L14.9266 3.94569C14.9268 3.94586 14.9269 3.94606 14.9271 3.94623C15.1513 4.16994 15.1505 4.53345 14.9271 4.75642Z" fill="white"/>
                                 </svg>
                             </div>
@@ -417,7 +417,7 @@
     <section class="cards">
         <div class="section-container">
             <div class="cards-wrapper swiper-container" data-mobile="false">
-                <div class="cards-items">
+                <div class="cards-items swiper-wrapper">
                     <div class="cards-item">
                         <div class="cards-item__img">
                             <img data-src="images/upload/cards-1.jpg" class="lazyload" alt="Card photo 1">
@@ -1106,24 +1106,24 @@
                                 </div>
                                 <div class="request-form__count" data-aos="fade-up">
                                     <label for="request-form__count" class="request-form__text">Количество человек</label>
-                                    <div class="btn-minus"></div>
-                                    <input class="request-input" id="request-form__count" type="number" value="1" readonly>
-                                    <div class="btn-plus"></div>
+                                    <div class="btn-minus"  ></div>
+                                    <input class="request-input" id="request-form__count" type="number" value="1">
+                                    <div class="btn-plus"   ></div>
                                 </div>
                             </div>
                             <div class="request-tariff">
                                 <div class="request-content__title" data-aos="fade-up">Тариф</div>
                                 <div class="request-tariff__item request-item" data-aos="fade-up">
-                                    <input type="radio" class="radio-btn" id="request-item__base" name="request-item__radio" checked>
-                                    <span class="radio-btn__fake"></span>
+                                    <input type="radio" class="radio-btn" id="request-item__base" name="request-item__radio" checked tabindex="0">
+                                    <span class="radio-btn__fake" tabindex="0"></span>
                                     <div class="radio-btn__info">
                                         <label class="radio-btn__text" for="request-item__base">Базовый (для камчадал)</label>
                                         <div class="radio-btn__price">79 000 руб</div>
                                     </div>
                                 </div>
                                 <div class="request-tariff__item request-item" data-aos="fade-up">
-                                    <input type="radio" class="radio-btn" id="request-item__average" name="request-item__radio">
-                                    <span class="radio-btn__fake"></span>
+                                    <input type="radio" class="radio-btn" id="request-item__average" name="request-item__radio" tabindex="0">
+                                    <span class="radio-btn__fake" tabindex="0"></span>
                                     <div class="radio-btn__info">
                                         <label for="request-item__average" class="radio-btn__text">Базовый + проживание</label>
                                         <div class="radio-btn__price">99 000 руб</div>

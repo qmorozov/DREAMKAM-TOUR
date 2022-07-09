@@ -262,8 +262,9 @@
         background: url(../images/default/clouds.png) no-repeat bottom center;
         background-size: cover;
         width: 100%;
-        height: 32%;
-        top: -12%;
+        height: -webkit-fill-available;
+        top: -17%;
+        height: 45%;
     }
 }
 
@@ -404,7 +405,7 @@
 
 // === FIFTH_SIXTH ===
 .fifth-sixth__wrapper {
-    height: $base*376.25;
+    height: $base*400;
     padding: $base*31 0px $base*22.5;
     background: url(../images/default/fifth-sixth-bg.jpg) round;
     background-size: contain;
@@ -481,7 +482,7 @@
 
 // === SEVENTH ===
 .seventh {
-    padding: $base*29 0px $base*14.25 0px;
+    padding: $base*45 0px $base*14.25 0px;
     position: relative;
     &::before {
         content: "";
@@ -489,8 +490,8 @@
         background: url(../images/default/clouds.png) no-repeat center;
         background-size: cover;
         width: 100%;
-        height: 22%;
-        top: -7%;
+        height: 45%;
+        top: -17%;
     }
     &-top__content {
         display: flex;
